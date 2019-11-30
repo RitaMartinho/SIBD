@@ -146,5 +146,3 @@ CREATE TABLE branch (
 );
 
 
-
-
