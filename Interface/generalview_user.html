@@ -10,81 +10,62 @@
 </head>
 <body>
     <header>
-        <h2> <a href="generalview_user.html"> Moneiys Bank</a></h2>
-        <img src="bank_logo.png" alt="bank_logo">
-        <div>
-            <h2>Username</h2>
-            <a href="login.html">Logout</a>
-        </div>
-    </header>
-   
-    <nav id="menu">
-            <!-- just for the hamburguer menu in responsive layout -->
-            <input type="checkbox" id="hamburger"> 
+        <h1> <a href="generalview_user.html"> Moneiys Bank</a></h1>
+        <h2> <a href="generalview_user.html"><img src="bank_logo.png" alt="bank_logo"> </h2></a>
+        <h3>Username</h3>
+        <a href="login.html">Logout</a>
+
+        <nav id="operations">
             <label class="hamburger" for="hamburger"></label>
-      
-            <ul>
-              <li><a href="generalview_user.html">See account</a></li>
-              <li><a href="generalview_user.html">Send Money</a></li>
-              <li><a href="generalview_user.html">Schedule appointment</a></li>
-              <li><a href="generalview_user.html">Make a payment</a></li>
-            </ul>
-    </nav>
-
+                <a href="generalview_user.html">See account</a>
+                <a href="generalview_user.html">Send Money</a>
+                <a href="generalview_user.html">Schedule appointment</a>
+                <a href="generalview_user.html">Make a payment</a>
+        </nav>
+    </header>
+    
     <section id="welcome">
-
-        <div>
-            <h1>
-                Welcome to your personal client page!
-            </h1>
-            <img src="welcome.png" alt="welcome">
-
-            <p>
-                You can: 
-                        .Manage your account
-                        .Send money to another client
-                        .Schedule an appointment
-                        .Make a payment
-            </p>
-        </div>
-
+        <h1>Welcome to your personal client page!</h1>
+        <img src="welcome.png" alt="welcome">
+        You can: 
+            <ul>
+                <li> Manage your account</li>
+                <li>Send money to another client</li>
+                <li>Schedule an appointment</li>
+                <li>Make a payment</li>
+            </ul>
     </section>
 
     <section id="about">
         <h2>About Moneiys Bank</h2>
-        <article>
-            <p>
-                A very very sad story because we have to this fucking sibd project without fucking knowlegde or guidance :D
-            </p>
+        <article id="aboutBank">
+            <p>A very very sad story because we have to this fucking sibd project without fucking knowlegde or guidance :D</p>
         </article>
     </section>
 
     <section id="aboutbranch">
-
-            <h2>About your branch</h2>
-            <article>
-                    <ul>
-                            <li>Chief:</li>
-                            <li>Address:</li>
-                            <li>Number of employees:</li>
-                           
-                    </ul>
-                </article>
+        <h2>About your branch</h2>
+        <article id="aboutBranch">
+            <ul>
+                <li>Chief:</li>
+                <li>Address:</li>
+                <li>Number of employees:</li>
+            </ul>
+        </article>
     </section>
 
     <section id="offers">
-
         <h2>Your bank gives you amazing offers</h2>
-        <h2>Check if your account meets the condition</h2>
-        <form>
-                
+        <section id="accountChecker">
+            <h2>Check if your account meets the condition</h2>
+            <form>   
                 <label>
                     Account Id: <input type="number" name="account_id">
                 </label>
-                
                 <input type="submit" value="Check">
-         </form>
-         <img src="offer.png" alt="offer">
+            </form>
+            <img src="offer.png" alt="offer">
+        </section>
     </section>
     <footer>
         <p>&copy; RitaEGonçalo, 2019</p>
