@@ -1,0 +1,23 @@
+body section#content img{
+    margin: 2em;
+    width: 12em;
+    height: 12em;
+}
+
+body section#content section#accountInfo {
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+body section#content nav#cardInfo{
+    display: grid;
+    align-items: flex-end;
+    text-align: center;
+}
+body section#content nav#cardInfo a{
+    text-decoration: none;
+    color: black;
+    padding: 1em 0;
+    border: 1px solid black;
+}

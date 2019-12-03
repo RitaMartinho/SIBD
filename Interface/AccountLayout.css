@@ -1,0 +1,16 @@
+body section#content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:"AccountPic AccountInfo CardLink";
+}
+
+/* CLIENT INFO AREA*/
+body section#client_account img{
+    grid-area: AccountPic;
+}
+body section#client_account section#accountInfo{
+    grid-area: AccountInfo;
+}
+body section#client_account nav{
+    grid-area: CardLink;
+}
