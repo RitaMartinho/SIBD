@@ -39,7 +39,7 @@ CREATE TABLE client(
     client_id INTEGER PRIMARY KEY REFERENCES person,
     birthdate TEXT, -- there's no date in sqlite
     tax_id NUMERIC,
-    age INTEGER, -- HOW DO I DO THIS
+   -- age INTEGER, -- HOW DO I DO THIS - A: PHP 
     client_branch INTEGER REFERENCES branch
 );
 
