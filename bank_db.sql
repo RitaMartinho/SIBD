@@ -114,7 +114,7 @@ CREATE TABLE offers(
 CREATE TABLE appointment (
 
     appointment_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    date TEXT,
+    --date TEXT,
     start_time TEXT,
     end_time TEXT,
     client INTEGER REFERENCES client,
