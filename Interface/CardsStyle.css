@@ -1,7 +1,12 @@
+body{
+    margin: 0 auto;
+    background-color: #edeff0;
+    
+}
 body section#content img{
     margin: 2em;
     width: 12em;
- }
+}
 
 body section#content section#cardInfo {
     display: grid;
@@ -15,4 +20,10 @@ body section#content section#cardInfo ul{
 }
 body section#content section#cardInfo:last-child {
     border-right: none;
+}
+
+/* FOOTER */
+body footer{
+    background-color: #d8cdc2;
+    padding: 0.2em;
 }

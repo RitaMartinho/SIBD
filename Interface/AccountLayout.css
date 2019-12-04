@@ -1,5 +1,6 @@
+
 body section#content{
-    margin-top: 15em;
+    margin-top: 10em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:"AccountPic AccountInfo CardLink";
