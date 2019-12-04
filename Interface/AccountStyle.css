@@ -16,6 +16,7 @@ body section#content nav#cardInfo{
     text-align: center;
 }
 body section#content nav#cardInfo a{
+    margin: 0 8em;
     text-decoration: none;
     color: black;
     padding: 1em 0;

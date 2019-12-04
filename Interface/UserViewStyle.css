@@ -1,19 +1,14 @@
 body section#welcome img{
     
-
-    margin-left: 2em;
-    margin-top: 6em;
-
-    width: 14em;
+    margin: 2em;
+    width: 12em;
+    height: 12em;
 }
 
 body section#offers img{
 
-    margin: 1.2em;
-
+    margin: 2em;
     width: 12em;
-    height: 12em;
-    
 }
 
 body section#welcome h1{
