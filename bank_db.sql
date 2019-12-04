@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.2.1 on terça dez 3 21:10:46 2019
+-- File generated with SQLiteStudio v3.2.1 on quarta dez 4 12:26:59 2019
 --
 -- Text encoding used: UTF-8
 --
@@ -10,6 +10,31 @@ BEGIN TRANSACTION;
 DROP TABLE IF EXISTS account;
 CREATE TABLE account (account_id INTEGER PRIMARY KEY AUTOINCREMENT, balance INTEGER, type TEXT, account_client INTEGER NOT NULL REFERENCES client);
 INSERT INTO account (account_id, balance, type, account_client) VALUES (1, 300, 'term', 25);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (2, -40, 'current', 26);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (3, 10001, 'current', 27);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (4, 1224, 'term', 28);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (5, 140, 'term', 29);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (6, 2040, 'current', 30);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (7, 20, 'term', 31);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (8, -1000, 'current', 32);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (9, 12243, 'current', 33);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (10, 23, 'current', 34);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (11, 2300, 'term', 35);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (12, 4567, 'term', 36);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (13, 1346, 'current', 37);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (14, 900, 'term', 38);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (15, 1268, 'current', 39);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (16, -54, 'current', 40);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (17, 134, 'current', 41);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (18, 9654, 'term', 42);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (19, 1908, 'term', 43);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (20, 560, 'current', 44);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (21, -5, 'term', 45);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (22, 890, 'current', 46);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (23, 1600, 'term', 47);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (24, 3456, 'current', 48);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (25, 8777, 'current', 49);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (26, 12000, 'term', 50);
 
 -- Table: appointment
 DROP TABLE IF EXISTS appointment;
@@ -50,6 +75,45 @@ CREATE TABLE card(
     associated_account INTEGER NOT NULL REFERENCES account,
     type_of_card INTEGER REFERENCES typeOfCard
 );
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (1, '2020-02-08', 659, 1, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (2, '2020-06-07', 614, 2, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (3, '2020-10-25', 861, 3, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (4, '2021-02-27', 408, 4, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (5, '2021-10-17', 386, 5, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (6, '2022-01-15', 257, 6, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (7, '2022-04-23', 220, 7, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (8, '2022-05-14', 421, 8, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (9, '2022-05-29', 188, 9, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (10, '2023-01-08', 243, 10, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (11, '2023-03-18', 443, 11, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (12, '2024-01-07', 269, 12, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (13, '2024-08-10', 953, 13, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (14, '2024-11-24', 747, 14, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (15, '2025-01-19', 782, 15, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (16, '2025-08-23', 648, 16, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (17, '2026-05-02', 249, 17, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (18, '2027-06-13', 597, 18, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (19, '2028-08-27', 119, 19, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (20, '2029-06-23', 254, 20, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (21, '2029-07-14', 633, 21, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (22, '2029-08-19', 298, 22, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (23, '2030-03-24', 920, 23, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (24, '2030-08-18', 545, 24, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (25, '2030-08-25', 273, 25, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (26, '2029-05-10', 115, 26, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (27, '2020-08-02', 750, 19, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (28, '2020-10-24', 182, 24, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (29, '2021-01-10', 609, 4, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (30, '2021-07-04', 962, 7, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (31, '2021-07-18', 121, 12, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (32, '2022-01-22', 812, 20, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (33, '2022-08-21', 888, 20, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (34, '2023-01-07', 788, 14, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (35, '2024-03-30', 475, 17, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (36, '2024-07-20', 588, 3, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (37, '2024-07-21', 326, 4, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (38, '2025-01-12', 601, 8, 2);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (39, '2025-02-02', 460, 11, 1);
 
 -- Table: client
 DROP TABLE IF EXISTS client;
@@ -290,13 +354,22 @@ INSERT INTO room (room_id, room_branch) VALUES (27, 5);
 
 -- Table: trans
 DROP TABLE IF EXISTS trans;
-CREATE TABLE trans ( -- for some reason transaction throws an error
-
-    transaction_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    money_exchanged INTEGER,
-    origin_account_id INTEGER NOT NULL REFERENCES account,
-    destiny_account_id INTEGER REFERENCES account
-);
+CREATE TABLE trans (transaction_id INTEGER PRIMARY KEY AUTOINCREMENT, money_exchanged INTEGER, origin_account_id INTEGER NOT NULL REFERENCES account, destiny_account_id INTEGER REFERENCES account, CONSTRAINT TransNotToSelf CHECK (destiny_account_id != origin_account_id));
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (1, 122, 1, 24);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (2, 140, 5, 16);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (3, 45, 4, 6);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (4, 78, 7, 20);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (5, 24, 13, NULL);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (6, 1111, 14, 17);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (7, 500, 2, 22);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (8, 63, 6, 5);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (9, 1, 8, 18);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (10, 70, 12, NULL);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (11, 200, 3, 25);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (12, 876, 7, 26);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (13, 1700, 9, 1);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (14, 12, 2, 4);
+INSERT INTO trans (transaction_id, money_exchanged, origin_account_id, destiny_account_id) VALUES (15, 60, 5, 15);
 
 -- Table: typeOfCard
 DROP TABLE IF EXISTS typeOfCard;
