@@ -1,4 +1,5 @@
 body section#content{
+    margin-top: 12em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:"CardPic Card1Info Card2Info";
