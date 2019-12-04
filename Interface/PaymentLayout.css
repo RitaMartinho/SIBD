@@ -1,0 +1,14 @@
+body section#content{
+    margin-top: 10em;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-areas:"PaymentPic PaymentInfo";
+}
+
+/* CARD INFO AREA*/
+body section#content img{
+    grid-area: PaymentPic;
+}
+body section#content section#PaymentInfo{
+    grid-area: PaymentInfo;
+}

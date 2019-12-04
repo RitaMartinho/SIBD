@@ -1,0 +1,14 @@
+body section#content{
+    margin-top: 10em;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-areas:"SendPic SendInfo";
+}
+
+/* CARD INFO AREA*/
+body section#content img{
+    grid-area: SendPic;
+}
+body section#content section#SendInfo{
+    grid-area: SendInfo;
+}
