@@ -20,11 +20,7 @@ body section#welcome h1{
 /* FOOTER */
 body footer{
     background-color: #d8cdc2;
-    padding: 0.5em;
-}
-
-body header{
-    background-color: #d8cdc2;
+    padding: 0.2em;
 }
 
 
