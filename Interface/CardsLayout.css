@@ -1,0 +1,16 @@
+body section#content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:"CardPic Card1Info Card2Info";
+}
+
+/* CARD INFO AREA*/
+body section#content img{
+    grid-area: CardPic;
+}
+body section#content>section#cardInfo{
+    grid-area: Card1Info;
+}
+body section#content section#cardInfo:nth-child(3){ /*1st child is img */
+    grid-area: Card2Info;
+}

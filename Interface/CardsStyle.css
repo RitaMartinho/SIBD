@@ -1,0 +1,18 @@
+body section#content img{
+    margin: 2em;
+    width: 12em;
+ }
+
+body section#content section#cardInfo {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    margin: 2em 0;
+    border-right: 2px solid black;
+}
+body section#content section#cardInfo ul{
+    list-style: none;
+}
+body section#content section#cardInfo:last-child {
+    border-right: none;
+}
