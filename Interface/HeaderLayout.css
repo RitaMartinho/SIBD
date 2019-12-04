@@ -1,5 +1,9 @@
 body header {
-    
+
+    overflow: hidden;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
     display: grid;
     grid-template-rows: 0.25fr 0.5fr;
     grid-template-columns: 0.5fr 0.5fr;

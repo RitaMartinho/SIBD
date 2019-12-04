@@ -1,16 +1,8 @@
 html{
     font-family: 'Times New Roman', Times, serif;
 }
-body header{
 
-    overflow: hidden;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-
-}
 body header a{
-
     font-size: 1.8em;
     padding: 1em;
     text-decoration: none;
@@ -40,7 +32,6 @@ body header section#username a{
     font-weight: bold;
 } 
 
-
 /* NAV*/
 body header nav a{
 
@@ -50,7 +41,6 @@ body header nav a{
 }
 
 body header nav a#SeeAccount{
-
     background-color: #2C338A;
 }
 body header nav a#SendMoney{
