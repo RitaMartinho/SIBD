@@ -1,8 +1,6 @@
-body section#welcome img{
-    
-    margin: 2em;
-    width: 12em;
-    height: 12em;
+body{
+    margin: 0 auto;
+    background-color: #edeff0;
 }
 
 body section#offers img{
@@ -17,53 +15,29 @@ body section#welcome h1{
     text-align: center;
     margin-left: 2em;
     margin-top: 6em;
-
-
 }
 
 /* FOOTER */
-
 body footer{
-
     background-color: #d8cdc2;
     padding: 0.5em;
 }
 
 body header{
-
     background-color: #d8cdc2;
 }
 
 
 body section#content #welcome{
-
-   
     border-bottom: 4px solid black;
 }
 
-body section#content #about{
-
-  
+body section#content #about{  
     border-bottom: 4px solid black;
 }
 body section#content #aboutBranch{
-
     border-bottom: 4px solid black;
 }
 body section#content #offers{
-
-
     border-bottom: 4px solid black;
 }
-
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 102px;
-  }
