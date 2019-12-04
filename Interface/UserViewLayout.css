@@ -1,24 +1,44 @@
+body{
+
+
+    margin: 0 auto;
+    background-color: #edeff0;
+}
+
 body section#content {
+
+    margin-top: 15em;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr;
     grid-template-areas:"Welcome" 
                         "About"
                         "AboutBranch"
-                        "Offers"
+                        "Offers";
+
 }
 
 /* WELCOME AREA*/
 body section#welcome{
+
     grid-area: Welcome;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "WelcomeText WelcomePic WelcomeList";
+    justify-content: center;
+}
+
+body section#welcome h1{
+
+    margin : 1em;
+    grid-area: WelcomeText;
 }
 
 body section#welcome img{
+    margin : 1em;
     grid-area: WelcomePic;
 }
 body section#welcome ul{
+    margin : 1em;
     grid-area: WelcomeList;
 }
 
@@ -29,6 +49,7 @@ body section#about{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "AboutText RandomInfo ClearSpace";
+    align-items: center;
 }
 
 body section#about h2{
@@ -43,7 +64,8 @@ body section#aboutBranch{
     grid-area: AboutBranch;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "AboutBranchText List ClearSpace";
+    grid-template-areas: "AboutBranchText List GoogleMaps";
+    align-items: center;
 }
 body section#aboutBranch h2{
     grid-area: AboutBranchText;
@@ -52,12 +74,22 @@ body section#aboutBranch article#aboutBranchList{
     grid-area: List;
 }
 
+body section#aboutBranch iframe{
+
+    grid-area: GoogleMaps;
+    width= 10em;
+    height=12em;; 
+    frameborder="0"; 
+    style="border:0; " allowfullscreen="";
+}
+
 /* OFFERS AREA*/
 body section#offers{
     grid-area: Offers;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "OffersText OffersChecker OfferPic";
+    align-items: center;
 }
 body section#offers h2{
     grid-area: OffersText;

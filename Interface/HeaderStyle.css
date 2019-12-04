@@ -1,8 +1,18 @@
 html{
     font-family: 'Times New Roman', Times, serif;
 }
+body header{
 
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+
+}
 body header a{
+
+    font-size: 1.8em;
+    padding: 1em;
     text-decoration: none;
     color: black;
 }
@@ -25,19 +35,23 @@ body header section#username{
     padding: 1em 0em;
 }
 body header section#username a{
-    border: 1px solid #8c2d19;
+
+    padding: 1em;
+    font-weight: bold;
 } 
 
 
 /* NAV*/
 body header nav a{
+
     text-align: center;
-    padding-top: 0.5em;
+    padding: 0.5em;
+    border-radius: 10px;
 }
 
 body header nav a#SeeAccount{
 
-    background-color: #2C334B;
+    background-color: #2C338A;
 }
 body header nav a#SendMoney{
     background-color: #A4AC9A;
@@ -48,3 +62,4 @@ body header nav a#Schedule{
 body header nav a#Payment{
     background-color: #7B93B1;
 }
+
