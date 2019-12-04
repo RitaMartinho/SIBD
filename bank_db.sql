@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.2.1 on quarta dez 4 12:26:59 2019
+-- File generated with SQLiteStudio v3.2.1 on quarta dez 4 15:35:49 2019
 --
 -- Text encoding used: UTF-8
 --
@@ -246,57 +246,58 @@ INSERT INTO offers (insurer_id, insurance_id, card_type_id) VALUES (3, 15, 2);
 
 -- Table: person
 DROP TABLE IF EXISTS person;
-CREATE TABLE person (person_id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT, last_name TEXT, address TEXT);
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (1, 'Theresa', 'Campbell', '2805  Harley Vincent Drive');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (2, 'Robert', 'Dickens', '3677  Quarry Drive');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (3, 'Nicola', 'Russell', '317  Meadow Lane');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (4, 'Felicity', 'Tucker', '4066  Oakway Lane');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (5, 'Wanda', 'Miller', '1736  Broadcast Drive');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (6, 'Natalie', 'Jones', '3390  Elliott Street');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (7, 'Lauren', 'Skinner', '3862  Johnson Street');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (8, 'Paul', 'Campbell', '424  Coulter Lane');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (9, 'Lauren', 'Lee', '460  Willow Greene Drive');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (10, 'Harry', 'Butler', '5004  Tully Street');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (11, 'Megan', 'Wilkins', '1602  James Martin Circle');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (12, 'Paul', 'Harris', '1333  Sigley Road');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (13, 'Kimberly', 'Mackenzie', NULL);
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (14, 'Stephanie', 'Stewart', '1173  Nicholas Street');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (15, 'Felicity', 'Gray', NULL);
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (16, 'Keith', 'Allan', '1458  Michigan Avenue');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (17, 'Dorothy', 'MacDonald', '3053  Hampton Meadows');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (18, 'Dan', 'Peters', '4249  Hewes Avenue');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (19, 'Emma', 'Lambert', '1903  Young Road');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (20, 'Christopher', 'Paterson', '1209  Franklin Avenue');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (21, 'Boris', 'Simpson', '2567  Arron Smith Drive');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (22, 'Ruth', 'Walker', '2867  Chardonnay Drive');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (23, 'Owen', 'Vance', NULL);
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (24, 'Julian', 'Miller', '634  Kessla Way');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (25, 'Charles', 'Newman', '565  Nixon Avenue');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (26, 'Una', 'Langdon', '4537  Virginia Street');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (27, 'Joanne', 'Oliver', '1743  Cantebury Drive');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (28, 'Fiona', 'North', '2990  Poe Road');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (29, 'Felicity', 'Tucker', '1868  Oakmound Road');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (30, 'Wanda', 'Miller', NULL);
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (31, 'Natalie', 'Jones', '644  Jennifer Lane');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (32, 'Lauren', 'Skinner', '2931  Mcwhorter Road');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (33, 'Paul', 'Campbell', '3086  Freshour Circle');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (34, 'Lauren', 'Lee', '1998  Sunrise Road');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (35, 'Harry', 'Butler', '3227  Spadafore Drive');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (36, 'Megan', 'Wilkins', '3971  Poplar Lane');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (37, 'Paul', 'Harris', '2709  Scheuvront Drive');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (38, 'Kimberly', 'Mackenzie', '996  Creekside Lane');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (39, 'Stephanie', 'Stewart', '4576  Broadway Avenue');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (40, 'Edward', 'Ogden', '1222  Grant View Drive');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (41, 'William', 'Hemmings', '3013  Reeves Street');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (42, 'Heather', 'Slater', '1111  Levy Court');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (43, 'Liam', 'Black', '61  Ray Court');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (44, 'Leonard', 'Greene', '4809  Joseph Street');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (45, 'Cameron', 'Abraham', NULL);
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (46, 'Ava', 'Burgess', '372  Catherine Drive');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (47, 'Max', 'Nash', '4688  Roane Avenue');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (48, 'Alexandra', 'Mitchell', '1622  Saint Marys Avenue');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (49, 'Audrey', 'Jackson', '3503  Douglas Dairy Road');
-INSERT INTO person (person_id, first_name, last_name, address) VALUES (50, 'Dylan', 'Knox', NULL);
+CREATE TABLE person (person_id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT, last_name TEXT, address TEXT, username TEXT, password TEXT, admin BOOLEAN);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (1, 'Theresa', 'Campbell', '2805  Harley Vincent Drive', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (2, 'Robert', 'Dickens', '3677  Quarry Drive', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (3, 'Nicola', 'Russell', '317  Meadow Lane', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (4, 'Felicity', 'Tucker', '4066  Oakway Lane', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (5, 'Wanda', 'Miller', '1736  Broadcast Drive', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (6, 'Natalie', 'Jones', '3390  Elliott Street', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (7, 'Lauren', 'Skinner', '3862  Johnson Street', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (8, 'Paul', 'Campbell', '424  Coulter Lane', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (9, 'Lauren', 'Lee', '460  Willow Greene Drive', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (10, 'Harry', 'Butler', '5004  Tully Street', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (11, 'Megan', 'Wilkins', '1602  James Martin Circle', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (12, 'Paul', 'Harris', '1333  Sigley Road', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (13, 'Kimberly', 'Mackenzie', NULL, NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (14, 'Stephanie', 'Stewart', '1173  Nicholas Street', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (15, 'Felicity', 'Gray', NULL, NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (16, 'Keith', 'Allan', '1458  Michigan Avenue', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (17, 'Dorothy', 'MacDonald', '3053  Hampton Meadows', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (18, 'Dan', 'Peters', '4249  Hewes Avenue', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (19, 'Emma', 'Lambert', '1903  Young Road', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (20, 'Christopher', 'Paterson', '1209  Franklin Avenue', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (21, 'Boris', 'Simpson', '2567  Arron Smith Drive', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (22, 'Ruth', 'Walker', '2867  Chardonnay Drive', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (23, 'Owen', 'Vance', NULL, NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (24, 'Julian', 'Miller', '634  Kessla Way', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (25, 'Charles', 'Newman', '565  Nixon Avenue', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (26, 'Una', 'Langdon', '4537  Virginia Street', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (27, 'Joanne', 'Oliver', '1743  Cantebury Drive', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (28, 'Fiona', 'North', '2990  Poe Road', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (29, 'Felicity', 'Tucker', '1868  Oakmound Road', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (30, 'Wanda', 'Miller', NULL, NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (31, 'Natalie', 'Jones', '644  Jennifer Lane', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (32, 'Lauren', 'Skinner', '2931  Mcwhorter Road', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (33, 'Paul', 'Campbell', '3086  Freshour Circle', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (34, 'Lauren', 'Lee', '1998  Sunrise Road', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (35, 'Harry', 'Butler', '3227  Spadafore Drive', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (36, 'Megan', 'Wilkins', '3971  Poplar Lane', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (37, 'Paul', 'Harris', '2709  Scheuvront Drive', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (38, 'Kimberly', 'Mackenzie', '996  Creekside Lane', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (39, 'Stephanie', 'Stewart', '4576  Broadway Avenue', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (40, 'Edward', 'Ogden', '1222  Grant View Drive', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (41, 'William', 'Hemmings', '3013  Reeves Street', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (42, 'Heather', 'Slater', '1111  Levy Court', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (43, 'Liam', 'Black', '61  Ray Court', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (44, 'Leonard', 'Greene', '4809  Joseph Street', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (45, 'Cameron', 'Abraham', NULL, NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (46, 'Ava', 'Burgess', '372  Catherine Drive', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (47, 'Max', 'Nash', '4688  Roane Avenue', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (48, 'Alexandra', 'Mitchell', '1622  Saint Marys Avenue', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (49, 'Audrey', 'Jackson', '3503  Douglas Dairy Road', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (50, 'Dylan', 'Knox', NULL, NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (51, 'Admin', 'Admin', 'Admin place', 'admin', 'adminspace', 1);
 
 -- Table: rating
 DROP TABLE IF EXISTS rating;
