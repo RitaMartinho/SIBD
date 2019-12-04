@@ -7,13 +7,16 @@ body section#content img{
     width: 12em;
 }
 body section#content section#SendInfo {
-    display: grid;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-body section#content section#SendInfo ul{
-    list-style: none;
+body section#content section#SendInfo h2 {
+   padding: 0.25em 0;
 }
-
+body section#content section#SendInfo form label{
+    display: block;
+}
 
 /* FOOTER */
 body footer{

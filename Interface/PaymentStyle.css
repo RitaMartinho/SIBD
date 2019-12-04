@@ -7,13 +7,17 @@ body section#content img{
     width: 12em;
 }
 body section#content section#PaymentInfo {
-    display: grid;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-body section#content section#PaymentInfo ul{
-    list-style: none;
-}
-
+body section#content section#PaymentInfo h2 {
+    padding: 0.25em 0;
+ }
+ body section#content section#PaymentInfo form label{
+     display: block;
+ }
+ 
 /* FOOTER */
 body footer{
     background-color: #d8cdc2;

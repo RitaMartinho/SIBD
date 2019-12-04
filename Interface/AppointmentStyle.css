@@ -7,13 +7,17 @@ body section#content img{
     width: 12em;
 }
 body section#content section#AppointmentInfo {
-    display: grid;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-body section#content section#AppointmentInfo ul{
-    list-style: none;
-}
-
+body section#content section#AppointmentInfo h2 {
+    padding: 0.25em 0;
+ }
+ body section#content section#AppointmentInfo form label{
+     display: block;
+ }
+ 
 /* FOOTER */
 body footer{
     background-color: #d8cdc2;
