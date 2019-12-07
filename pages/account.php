@@ -18,7 +18,8 @@
     <section id="content">
         <img src="img/bank-account.png" alt="accountlogo"> 
         <section id="accountInfo"> 
-            <ul><h1>Client_name account:</h1>
+            <h2>Client_name account:</h2>
+            <ul>
                 <li> ID:_______</li>
                 <li>Balance:_______</li>
                 <li>Type:_______</li>

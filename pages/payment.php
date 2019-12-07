@@ -18,13 +18,15 @@
     <section id="content">
         <img src="img/pay.png" alt="accountlogo"> 
         <section id="PaymentInfo"> 
-            <ul><h1>Your Payment:</h1>
+            <h2>Your Payment:</h2>
+            <ul>
                 <form id="form1" action="../actions/action_payment.php" method="post">
-                    <li>To: <input type="text" name="destiny"></li> 
-                    <li>How much:<input type="text" name="quantity"></li>
-                </form>                
+                <label>To: <input type="text" name="destiny" required></label> 
+                <label>How much:<input type="text" name="quantity" required></label>
+            </form>
+            <section id="button">                
                 <button type="submit" form="form1">Pay</button>
-            </ul>
+            </section>
         </section>
     </section>
     <footer>

@@ -17,16 +17,24 @@
     <?php draw_header();?>
     <section id="content">
         <img src="img/appointment.png" alt="accountlogo"> 
-        <section id="AppointmentInfo"> 
-            <ul>
-                <form id="form1" action="action_scheduleAppointment.php" method="post">
-                    <li>Choose a day: <input type="text" name="day"></li> 
-                    <li>Choose a start-hour:<input type="text" name="startHour"></li>    
-                    <li>Choose an employee:<input type="text" name="employee"></li>
-                </form>                
+        <section id="AppointmentInfo">  
+            <form id="form1" action="action_scheduleAppointment.php" method="post">
+                    <label>Choose a day: <input type="text" name="day" required></label> 
+                    <label>Choose a start-hour:<input type="text" name="startHour"required></label>    
+                    <label>Choose an employee:
+                        <select required>
+                            <option value="" selected ></option>
+                            <option value="johan">Joan</option>
+                            <option value="rita">Rita</option>
+                            <option value="jabier">Jabier</option>
+                        </select>   
+                    </label>
+            </form>
+            <section id="button">
                 <button type="submit" form="form1">Schedule</button>
-                <p>All appointments have a duration of 30min!</p>
-            </ul>
+            </section>                
+            <p>All appointments have a duration of 30min!</p>
+            
         </section>
     </section>
     <footer>
