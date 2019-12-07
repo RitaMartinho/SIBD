@@ -31,9 +31,16 @@
         <img src="img/appointment.png" alt="accountlogo"> 
         <section id="AppointmentInfo">  
             <form id="form1">
-                    <label>Choose a day: <input type="text" name="day"></label> 
-                    <label>Choose a start-hour:<input type="text" name="startHour"></label>    
-                    <label>Choose an employee:<input type="text" name="employee"></label>
+                    <label>Choose a day: <input type="text" name="day" required></label> 
+                    <label>Choose a start-hour:<input type="text" name="startHour"required></label>    
+                    <label>Choose an employee:
+                        <select required>
+                            <option value="" selected ></option>
+                            <option value="johan">Joan</option>
+                            <option value="rita">Rita</option>
+                            <option value="jabier">Jabier</option>
+                        </select>   
+                    </label>
             </form>
             <section id="button">
                 <button type="submit" form="form1">Schedule</button>
