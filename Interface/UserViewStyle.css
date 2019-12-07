@@ -17,6 +17,12 @@ body section#welcome h1{
     margin-top: 6em;
 }
 
+body section#welcome img{
+
+    width:12em;
+    align-self: center;
+}
+
 /* FOOTER */
 body footer{
     background-color: #d8cdc2;

@@ -58,3 +58,22 @@ body header nav a#Payment{
     background-color: #7B93B1;
 }
 
+body header nav a#Payment:hover{
+     background-color: lightgray;
+     border: 2px solid #7B93B1;
+}
+
+body header nav a#Schedule:hover{
+    background-color:lightgray;
+    border: 2px solid #877D7F;
+}
+
+body header nav a#SendMoney:hover{
+    background-color: lightgray;
+    border: 2px solid #A4AC9A;
+}
+
+body header nav a#SeeAccount:hover{
+    background-color: lightgray;
+    border: 2px solid #2C338A;
+}

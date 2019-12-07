@@ -22,11 +22,17 @@ body section#content nav#cardInfo{
     text-align: center;
 }
 body section#content nav#cardInfo a{
+
+    background:  #2C338A;
+    border-radius: 10px;
     margin: 0 8em;
     text-decoration: none;
     color: black;
     padding: 1em 0;
-    border: 1px solid black;
+    border:none;
+    cursor: pointer;
+
+    /*border: 1px solid black;*/
 }
 
 /* FOOTER */
