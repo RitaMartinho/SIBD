@@ -18,7 +18,7 @@
     <section id="content">
         <section id="welcome">
             <h1>Welcome to your personal client page!</h1>
-            <img src="welcome.png" alt="welcome"> 
+            <img src="img/welcome.png" alt="welcome"> 
             <ul>You can:
                 <li> Manage your account</li>
                 <li>Send money to another client</li>
@@ -54,7 +54,7 @@
                     <input type="submit" value="Check">
                 </form>
             </section>
-            <img src="offer.png" alt="offer">
+            <img src="img/offer.png" alt="offer">
         </section>
     </section>
     <footer>

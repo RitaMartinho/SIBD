@@ -19,7 +19,7 @@
         <img src="img/send_money.png" alt="accountlogo"> 
         <section id="SendInfo"> 
             <ul><h1>Send Money</h1>
-                <form id="form1" action="">
+                <form id="form1" action="action_sendMoney.php" method="post">
                     <li> To: <input type="text" name="destiny"></li> 
                     <li>How much?<input type="text" name="quantity"></li>    
                 </form>                

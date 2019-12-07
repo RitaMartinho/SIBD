@@ -26,7 +26,7 @@
             </ul>
         </section>   
         <nav id="cardInfo">
-            <a href="cardsInfo.html">See info about my cards</a>
+            <a href="cards.php">See info about my cards</a>
         </nav>
     </section>
     <footer>

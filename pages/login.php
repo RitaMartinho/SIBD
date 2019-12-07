@@ -11,7 +11,7 @@
     <header>
         <h1>Welcome to Moneiys Bank</h1>
     </header>
-    <form>
+    <form action="../actions/action_login.php" method="post">
         <h3>Log in</h3>
         <label>
             User Name: <input type="text" name="username">

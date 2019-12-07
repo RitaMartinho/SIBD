@@ -1,12 +1,12 @@
 <?php function draw_header(){ ?>
     <header>
         <section id="logo">
-            <h1><a href="generalview_user.html"> Moneiys Bank</a></h1>
-            <img src="bank_logo.png" alt="bank_logo">
+            <h1><a href="generalview_user.php"> Moneiys Bank</a></h1>
+            <img src="img/bank_logo.png" alt="bank_logo">
         </section>
         <section id="username">
             Username
-            <a href="login.html">Logout</a>
+            <a href="login.php">Logout</a>
         </section>
         <nav id="operations">
                 <a href="account.php" id="SeeAccount">See account</a>

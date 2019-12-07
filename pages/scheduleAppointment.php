@@ -19,7 +19,7 @@
         <img src="img/appointment.png" alt="accountlogo"> 
         <section id="AppointmentInfo"> 
             <ul>
-                <form id="form1" action="">
+                <form id="form1" action="action_scheduleAppointment.php" method="post">
                     <li>Choose a day: <input type="text" name="day"></li> 
                     <li>Choose a start-hour:<input type="text" name="startHour"></li>    
                     <li>Choose an employee:<input type="text" name="employee"></li>

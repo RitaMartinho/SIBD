@@ -19,7 +19,7 @@
         <img src="img/pay.png" alt="accountlogo"> 
         <section id="PaymentInfo"> 
             <ul><h1>Your Payment:</h1>
-                <form id="form1" action="">
+                <form id="form1" action="../actions/action_payment.php" method="post">
                     <li>To: <input type="text" name="destiny"></li> 
                     <li>How much:<input type="text" name="quantity"></li>
                 </form>                
