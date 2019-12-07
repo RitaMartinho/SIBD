@@ -20,10 +20,10 @@
         <section id="AppointmentInfo">  
             <form id="form1" action="action_scheduleAppointment.php" method="post">
                     <label>Choose a day: <input type="text" name="day" required></label> 
-                    <label>Choose a start-hour:<input type="text" name="startHour"required></label>    
+                    <label>Choose a start-hour:<input type="text" name="startHour" required></label>    
                     <label>Choose an employee:
                         <select required>
-                            <option value="" selected ></option>
+                            <option value="" disabled selected >List Employes</option>
                             <option value="johan">Joan</option>
                             <option value="rita">Rita</option>
                             <option value="jabier">Jabier</option>

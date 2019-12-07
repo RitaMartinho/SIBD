@@ -19,7 +19,8 @@
         <section id="welcome">
             <h1>Welcome to your personal client page!</h1>
             <img src="img/welcome.png" alt="welcome"> 
-            <ul>You can:
+            <ul>
+                <li>You can:</li>
                 <li> Manage your account</li>
                 <li>Send money to another client</li>
                 <li>Schedule an appointment</li>

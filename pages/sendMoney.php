@@ -18,7 +18,7 @@
     <section id="content">
         <img src="img/send_money.png" alt="accountlogo"> 
         <section id="SendInfo"> 
-            <ul><h1>Send Money</h1>
+            <h2>Send Money</h2>
             <form id="form1" action="action_sendMoney.php" method="post">
                 <label> 
                         To: <input type="text" name="destiny" required>
@@ -28,7 +28,6 @@
                 </label>   
             </form>                
                 <button type="submit" form="form1" >Send</button>
-            </ul>
         </section>
     </section>
     <footer>
