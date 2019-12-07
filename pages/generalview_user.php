@@ -1,5 +1,8 @@
-<!DOCTYPE html>
+<?php 
+    include_once('../templates/tpl_common.php');
+?>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,28 +14,12 @@
     <title>Bank System</title>
 </head>
 <body>
-    <header>
-        <section id="logo">
-            <h1><a href="generalview_user.html"> Moneiys Bank</a></h1>
-            <img src="img/bank_logo.png" alt="bank_logo">
-        </section>
-        <section id="username">
-            Username
-            <a href="login.html">Logout</a>
-        </section>
-        <nav id="operations">
-                <a href="account.html" id="SeeAccount">See account</a>
-                <a href="sendMoney.html" id="SendMoney">Send Money</a>
-                <a href="scheduleAppointment.html" id="Schedule">Schedule appointment</a>
-                <a href="payment.html" id="Payment">Make a payment</a>
-        </nav>
-    </header>
+   <?php draw_header();?>
     <section id="content">
         <section id="welcome">
-            <h2>Welcome to your personal client page!</h2>
+            <h1>Welcome to your personal client page!</h1>
             <img src="img/welcome.png" alt="welcome"> 
-            <ul>
-                <li>You can:</li>
+            <ul>You can:
                 <li> Manage your account</li>
                 <li>Send money to another client</li>
                 <li>Schedule an appointment</li>
@@ -42,7 +29,7 @@
         <section id="about">
             <h2>About Moneiys Bank</h2>
             <article id="aboutBank">
-                <p>A very very sad story because we have </p>
+                <p>A very very sad story because we have to this fucking sibd project without fucking knowlegde or guidance :D</p>
             </article>
         </section>
         <section id="aboutBranch">

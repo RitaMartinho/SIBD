@@ -11,18 +11,24 @@
     <header>
         <h1>Welcome to Moneiys Bank</h1>
     </header>
-    <form>
-        <h3>Register</h3>
+    <form action="../actions/action_login.php" method="post">
+        <h3>Log in</h3>
         <label>
             User Name: <input type="text" name="username">
         </label>
         <label>
             Password: <input type="password" name="password">
         </label>
-        <label>
-            Confirm Password: <input type="password" name="confirmpassword">
-        </label>
-        <input type="submit" value="SIGN UP">
+        <input type="submit" value="LOG IN">
     </form>
+    <div id="forgot">
+        <a href="login.html">Forgot Password?</a>
+    </div>
+    <div id="newUser">
+        New User?
+        <form action="register.php">
+            <input type="submit" value="SIGN UP">
+        </form>
+    </div>
 </body>
 </html>

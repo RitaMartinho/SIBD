@@ -1,3 +1,7 @@
+<?php 
+    include_once('../templates/tpl_common.php');
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -11,34 +15,17 @@
     <title>Bank System</title>
 </head>
 <body>
-    <header>
-        <section id="logo">
-            <h1><a href="generalview_user.html"> Moneiys Bank</a></h1>
-            <img src="bank_logo.png" alt="bank_logo">
-        </section>
-        <section id="username">
-            Username
-            <a href="login.html">Logout</a>
-        </section>
-        <nav id="operations">
-                <a href="account.html" id="SeeAccount">See account</a>
-                <a href="sendMoney.html" id="SendMoney">Send Money</a>
-                <a href="scheduleAppointment.html" id="Schedule">Schedule appointment</a>
-                <a href="payment.html" id="Payment">Make a payment</a>
-        </nav>
-    </header>
+    <?php draw_header();?>
     <section id="content">
         <img src="img/cards.png" alt="accountlogo"> 
-        <section id="cardInfo1"> 
-            <h2>Card 1:</h2>
-            <ul>
+        <section id="cardInfo"> 
+            <ul><h1>Card 1:</h1>
                 <li> CW:_______</li>
                 <li>Expiry Date:_______</li>    
             </ul>
         </section>
-        <section id="cardInfo2">
-            <h2>Card 2:</h2>
-            <ul>
+        <section id="cardInfo"> 
+            <ul><h1>Card 2:</h1>
                 <li> CW:_______</li>
                 <li>Expiry Date:_______</li>    
             </ul>
