@@ -1,0 +1,88 @@
+html{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body header{
+    background-color: #d8cdc2;
+}
+
+
+body header a{
+    font-size: 1.8em;
+    padding: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+/* LOGO */
+body header section#logo h1{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+body header section#logo img{
+    vertical-align: middle;
+    width: 3.5em;
+}
+
+/* NAV*/
+body header nav a{
+
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+
+body header nav a#Branchs{
+    background-color: #2C338A;
+}
+body header nav a#Clients{
+    background-color: #A4AC9A;
+}
+body header nav a#Employees{
+    background-color: #877D7F;
+}
+body header nav a#Appointments{
+    background-color: #7B93B1;
+}
+
+body header nav a#Offers{
+    background-color: #2C338A;
+}
+body header nav a#Ratings{
+    background-color: #A4AC9A;
+}
+
+/*HOVER*/
+
+body header nav a#Branchs:hover{
+    background-color: lightgray;
+    border: 2px solid #2C338A;
+}
+
+body header nav a#Clients:hover{
+    background-color: lightgray;
+    border: 2px solid #A4AC9A;
+}
+
+body header nav a#Employees:hover{
+    background-color:lightgray;
+    border: 2px solid #877D7F;
+}
+
+body header nav a#Appointments:hover{
+     background-color: lightgray;
+     border: 2px solid #7B93B1;
+}
+
+body header nav a#Offers:hover{
+    background-color: lightgray;
+    border: 2px solid #2C338A;
+}
+
+
+body header nav a#Ratings:hover{
+    background-color: lightgray;
+    border: 2px solid #A4AC9A;
+}
+

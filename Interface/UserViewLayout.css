@@ -17,7 +17,7 @@ body section#welcome{
     justify-content: center;
 }
 
-body section#welcome h1{
+body section#welcome h2{
     margin : 1em;
     grid-area: WelcomeText;
 }
