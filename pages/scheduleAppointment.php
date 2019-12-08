@@ -1,5 +1,8 @@
-<!DOCTYPE html>
+<?php 
+    include_once('../templates/tpl_common.php');
+?>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,31 +14,16 @@
     <title>Bank System</title>
 </head>
 <body>
-    <header>
-        <section id="logo">
-            <h1><a href="generalview_user.html"> Moneiys Bank</a></h1>
-            <img src="bank_logo.png" alt="bank_logo">
-        </section>
-        <section id="username">
-            Username
-            <a href="login.html">Logout</a>
-        </section>
-        <nav id="operations">
-                <a href="account.html" id="SeeAccount">See account</a>
-                <a href="sendMoney.html" id="SendMoney">Send Money</a>
-                <a href="scheduleAppointment.html" id="Schedule">Schedule appointment</a>
-                <a href="payment.html" id="Payment">Make a payment</a>
-        </nav>
-    </header>
+    <?php draw_header();?>
     <section id="content">
         <img src="img/appointment.png" alt="accountlogo"> 
         <section id="AppointmentInfo">  
-            <form id="form1" action="action_scheduleAppointment.php" method="post">
+            <form id="form1" action="../actions/action_scheduleAppointment.php" method="post">
                     <label>Choose a day: <input type="text" name="day" required></label> 
-                    <label>Choose a start-hour:<input type="text" name="startHour"required></label>    
+                    <label>Choose a start-hour:<input type="text" name="startHour" required></label>    
                     <label>Choose an employee:
                         <select required>
-                            <option value="" selected ></option>
+                            <option value="" disabled selected >List Employes</option>
                             <option value="johan">Joan</option>
                             <option value="rita">Rita</option>
                             <option value="jabier">Jabier</option>
