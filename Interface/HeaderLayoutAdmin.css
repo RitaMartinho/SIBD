@@ -1,4 +1,4 @@
-ody header {
+body header {
 
     overflow: hidden;
     position: fixed; 
@@ -8,9 +8,7 @@ ody header {
     grid-template-rows: 0.25fr 0.5fr;
     grid-template-columns: 0.5fr 0.5fr;
     grid-template-areas:"Title Logout"
-                        "Nav Nav";
-    grid-auto-flow: row;
-    
+                        "Nav Nav";    
 }
 
 body header section#logo{

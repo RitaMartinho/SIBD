@@ -1,5 +1,6 @@
 body section#content {
-
+    
+    margin-top: 12em;
     display: grid;
     grid-template-rows: 1.5fr;
     grid-template-areas:"Welcome";
