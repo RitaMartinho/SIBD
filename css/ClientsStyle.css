@@ -1,0 +1,33 @@
+body{
+    margin: 0 auto;
+    background-color: #edeff0;   
+}
+body section#content img{
+    margin: 2em;
+    width: 12em;
+}
+body section#content section#ClientsInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+body section#content section#ClientsInfo h2 {
+   padding: 0.25em 0;
+}
+body section#content section#ClientsInfo form label{
+    display: block;
+}
+body section#content section#SearchResults {
+    margin: 3em 0;
+    border-left: 1px solid black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/* FOOTER */
+body footer{
+    background-color: #d8cdc2;
+    padding: 0.2em;
+}

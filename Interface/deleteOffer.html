@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="HeaderLayoutAdmin.css" rel="stylesheet">
+    <link href="HeaderStyleAdmin.css" rel="stylesheet">
+    <link href="../css/EmployeesStyle.css" rel="stylesheet">
+    <link href="../css/ClientsLayout.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <section id="logo">
+            <h1><a href="generalview_admin.html"> Moneiys Bank</a></h1>
+            <img src="img/bank_logo.png" alt="bank_logo">
+        </section>
+        <section id="logout">
+            <a href="login.html">Logout</a>
+        </section>
+        <nav id="operations">
+                <a href="generalview_admin.html" id="Branchs">Branchs</a>
+                <a href="generalview_admin.html" id="Clients">Clients</a>
+                <a href="generalview_admin.html" id="Employees">Employees</a>
+                <a href="generalview_admin.html" id="Appointments">Appointments</a>
+                <a href="generalview_admin.html" id="Offers">Offers</a>
+                <a href="generalview_admin.html" id="Ratings">Ratings</a>
+        </nav>
+    </header>
+    <section id="content">
+        <section id="Client">
+            <img src="img/admin.png" alt="welcome_admin"> 
+            <section id="ClientsInfo">
+                <h2>Offers Available:</h2>
+                GIANT TABLE
+            </section>
+            <section id="SearchResults">
+                <form id="form1" action="../actions/action_removeOffer.php">
+                    <label>
+                        <input type="text" name="Insurer" placeholder="Insurer"></li>
+                    </label>
+                    <label>
+                        <input type="text" name="Insurance" placeholder="Insurance"></li>
+                    </label>
+                </form>
+                <section id="Clientbutton">
+                    <button type="submit" form="form1">Delete Offer</button>  
+                </section>
+            </section>
+        </section>
+    </section>
+    <footer>
+        <p>&copy; RitaEGonçalo, 2019</p>
+    </footer>
+</body>
+</html>
