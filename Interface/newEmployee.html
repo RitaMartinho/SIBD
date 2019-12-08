@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="HeaderLayoutAdmin.css" rel="stylesheet">
+    <link href="HeaderStyleAdmin.css" rel="stylesheet">
+    <link href="../css/EmployeesStyle.css" rel="stylesheet">
+    <link href="../css/ClientsLayout.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <section id="logo">
+            <h1><a href="generalview_admin.html"> Moneiys Bank</a></h1>
+            <img src="img/bank_logo.png" alt="bank_logo">
+        </section>
+        <section id="logout">
+            <a href="login.html">Logout</a>
+        </section>
+        <nav id="operations">
+                <a href="generalview_admin.html" id="Branchs">Branchs</a>
+                <a href="generalview_admin.html" id="Clients">Clients</a>
+                <a href="generalview_admin.html" id="Employees">Employees</a>
+                <a href="generalview_admin.html" id="Appointments">Appointments</a>
+                <a href="generalview_admin.html" id="Offers">Offers</a>
+                <a href="generalview_admin.html" id="Ratings">Ratings</a>
+        </nav>
+    </header>
+    <section id="content">
+        <section id="Client">
+            <img src="img/admin.png" alt="welcome_admin"> 
+            <section id="ClientsInfo">
+                <h2>Search:</h2>
+                <form id="form1" action="../actions/action_clientSearch">
+                    <label>
+                        <input type="text" name="firstName" placeholder="First Name"></li>
+                    </label>
+                    <label>
+                        <input type="text" name="lastName" placeholder="Last Name"></li>
+                    </label>
+                </form>
+                <section id="Clientbutton">
+                    <button type="submit" form="form1">GO</button>
+                </section>
+                <section id="Employeebutton">
+                    <h2>Or:</h2>
+                    <button type="submit"> <a href="new.html"> Add new</a></button>
+                </section>
+            </section>
+            <section id="SearchResults">
+                <form id="form2" action="../actions/action_addEmployee.php">
+                    <label>
+                        <input type="text" name="firstName" placeholder="First Name"></li>
+                    </label>
+                    <label>
+                        <input type="text" name="lastName" placeholder="Last Name"></li>
+                    </label>
+                    <label>
+                        <input type="text" name="birthday" placeholder="Birthday"></li>
+                    </label>
+                    <label>
+                        <input type="text" name="address" placeholder="Address"></li>
+                    </label>
+                    <label>
+                        <input type="text" name="branchID" placeholder="Branch ID"></li>
+                    </label>
+                </form>
+                <section id="Clientbutton">
+                    <button type="submit" form="form2">ADD</button>
+                </section>
+            </section>
+        </section>
+    </section>
+    
+    <footer>
+        <p>&copy; RitaEGonçalo, 2019</p>
+    </footer>
+</body>
+</html>
