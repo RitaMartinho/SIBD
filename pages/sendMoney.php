@@ -19,15 +19,17 @@
         <img src="img/send_money.png" alt="accountlogo"> 
         <section id="SendInfo"> 
             <h2>Send Money</h2>
-            <form id="form1" action="action_sendMoney.php" method="post">
+            <form id="form1" action="../actions/action_sendMoney.php" method="post">
                 <label> 
                         To: <input type="text" name="destiny" required>
                 </label>
                 <label >
                         How much?<input type="text" name="quantity" required>  
                 </label>   
-            </form>                
+            </form>   
+            <section id="button">
                 <button type="submit" form="form1" >Send</button>
+            </section>             
         </section>
     </section>
     <footer>
