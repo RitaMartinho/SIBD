@@ -1,5 +1,10 @@
 
 /* CLIENTS AREA*/
+
+body section#content{
+
+    margin-top: 10em;
+}
 body section#Client{
     grid-area: Client;
     display: grid;
@@ -9,7 +14,8 @@ body section#Client{
 }
 
 body section#Client img{
-    margin : 1em;
+
+    margin :20% 5%;
     grid-area: ClientPic;
 }
 

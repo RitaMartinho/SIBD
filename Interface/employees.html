@@ -29,15 +29,15 @@
     </header>
     <section id="content">
         <section id="Client">
-            <img src="img/admin.png" alt="welcome_admin"> 
+            <img src="img/employee.png" alt="welcome_admin"> 
             <section id="ClientsInfo">
                 <h2>Search:</h2>
                 <form id="form1" action="../actions/action_clientSearch">
                     <label>
-                        <input type="text" name="firstName" placeholder="First Name"></li>
+                        <input type="text" name="firstName" placeholder="First Name">
                     </label>
                     <label>
-                        <input type="text" name="lastName" placeholder="Last Name"></li>
+                        <input type="text" name="lastName" placeholder="Last Name">
                     </label>
                 </form>
                 <section id="Clientbutton">
@@ -45,7 +45,9 @@
                 </section>
                 <section id="Employeebutton">
                     <h2>Or:</h2>
-                    <button type="submit"> <a href="newEmployee.html"> Add new</a></button>
+                    <form>
+                        <button type="submit" formaction="newEmployee.html">Add new</button>
+                    </form>
                 </section>
             </section>
         </section>

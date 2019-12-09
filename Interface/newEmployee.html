@@ -29,15 +29,15 @@
     </header>
     <section id="content">
         <section id="Client">
-            <img src="img/admin.png" alt="welcome_admin"> 
+            <img src="img/employee.png" alt="welcome_admin"> 
             <section id="ClientsInfo">
                 <h2>Search:</h2>
                 <form id="form1" action="../actions/action_clientSearch">
                     <label>
-                        <input type="text" name="firstName" placeholder="First Name"></li>
+                        <input type="text" name="firstName" placeholder="First Name">
                     </label>
                     <label>
-                        <input type="text" name="lastName" placeholder="Last Name"></li>
+                        <input type="text" name="lastName" placeholder="Last Name">
                     </label>
                 </form>
                 <section id="Clientbutton">
@@ -45,31 +45,33 @@
                 </section>
                 <section id="Employeebutton">
                     <h2>Or:</h2>
-                    <button type="submit"> <a href="new.html"> Add new</a></button>
+                    <form>
+                        <button type="submit" formaction="new.html"> Add new</button>
+                    </form>
                 </section>
             </section>
             <section id="SearchResults">
                 <form id="form2" action="../actions/action_addEmployee.php">
                     <label>
-                        <input type="text" name="firstName" placeholder="First Name"></li>
+                        <input type="text" name="firstName" placeholder="First Name">
                     </label>
                     <label>
-                        <input type="text" name="lastName" placeholder="Last Name"></li>
+                        <input type="text" name="lastName" placeholder="Last Name">
                     </label>
                     <label>
-                        <input type="text" name="birthday" placeholder="Birthday"></li>
+                        <input type="text" name="birthday" placeholder="Birthday">
                     </label>
                     <label>
-                        <input type="text" name="address" placeholder="Address"></li>
+                        <input type="text" name="address" placeholder="Address">
                     </label>
                     <label>
-                        <input type="text" name="branch" placeholder="Branch"></li>
+                        <input type="text" name="branch" placeholder="Branch">
                     </label>
                     <label>
-                        <input type="text" name="room" placeholder="Room"></li>
+                        <input type="text" name="room" placeholder="Room">
                     </label>
                 </form>
-                <section id="Clientbutton">
+                <section id="Button">
                     <button type="submit" form="form2">ADD</button>
                 </section>
             </section>

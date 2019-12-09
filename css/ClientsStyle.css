@@ -2,8 +2,9 @@ body{
     margin: 0 auto;
     background-color: #edeff0;   
 }
+
 body section#content img{
-    margin: 2em;
+    
     width: 12em;
 }
 body section#content section#ClientsInfo {
