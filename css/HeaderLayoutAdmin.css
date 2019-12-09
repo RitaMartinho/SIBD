@@ -1,0 +1,31 @@
+body header {
+
+    overflow: hidden;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    display: grid;
+    grid-template-rows: 0.25fr 0.5fr;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-areas:"Title Logout"
+                        "Nav Nav";    
+}
+
+body header section#logo{
+    grid-area: Title;
+} 
+
+boyd header section#logout{
+    grid-area: Logout;
+}
+
+body header nav#operations{
+    grid-area: Nav;
+    display: grid;
+    grid-template-columns: 0.17fr 0.17fr 0.17fr 0.17fr 0.17fr 0.17fr;
+    grid-template-areas:"BranchsLink ClientsLink EmployeesLink AppointmentsLink OffersLink RatingsLink";
+}
+
+body header nav#operations a#Branchs{
+    grid-area: BranchsLink;
+}
