@@ -1,5 +1,11 @@
 <?php 
     include_once('../templates/tpl_common.php');
+    include_once('../database/connection.php');
+    include_once('../database/branch.php');
+
+    $Chief=getChiefBranch("nata");
+    $Address=getBranchAddress("nata");
+    $NrEmployees=getNrEmployeesBranch("nata");
 ?>
 
 <!DOCTYPE html>
@@ -37,9 +43,9 @@
             <h2>About your branch</h2>
             <article id="aboutBranchList">
                 <ul>
-                    <li>Chief:</li>
-                    <li>Address:</li>
-                    <li>Number of employees:</li>
+                    <li>Chief:<?= " ".$Chief['first_name'] ." " .$Chief['last_name']?></li>
+                    <li>Address:<?=" ".$Address?></li>
+                    <li>Number of employees:<?=" ".$NrEmployees['nrEmployees'] ?></li>
                 </ul>
             </article>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.3063677535565!2d-74.18650588516556!3d40.777278341557405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c254e4eabb71ef%3A0x66c27b361ac14028!2s74%20Belmont%20Ave%2C%20Belleville%2C%20NJ%2007109%2C%20EUA!5e0!3m2!1spt-PT!2spt!4v1575393777215!5m2!1spt-PT!2spt" ></iframe>
