@@ -1,32 +1,20 @@
+<?php
+    include_once('../templates/tpl_common.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="HeaderLayoutAdmin.css" rel="stylesheet">
-    <link href="HeaderStyleAdmin.css" rel="stylesheet">
+    <link href="../css/HeaderLayoutAdmin.css" rel="stylesheet">
+    <link href="../css/HeaderStyleAdmin.css" rel="stylesheet">
     <link href="../css/ClientsStyle.css" rel="stylesheet">
     <link href="../css/ClientsLayout.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <section id="logo">
-            <h1><a href="generalview_admin.html"> Moneiys Bank</a></h1>
-            <img src="img/bank_logo.png" alt="bank_logo">
-        </section>
-        <section id="logout">
-            <a href="login.html">Logout</a>
-        </section>
-        <nav id="operations">
-                <a href="generalview_admin.html" id="Branchs">Branchs</a>
-                <a href="generalview_admin.html" id="Clients">Clients</a>
-                <a href="generalview_admin.html" id="Employees">Employees</a>
-                <a href="generalview_admin.html" id="Appointments">Appointments</a>
-                <a href="generalview_admin.html" id="Offers">Offers</a>
-                <a href="generalview_admin.html" id="Ratings">Ratings</a>
-        </nav>
-    </header>
+    <?php draw_AdminHeader();?>
     <section id="content">
         <section id="Client">
             <img src="img/client.png" alt="welcome_admin"> 

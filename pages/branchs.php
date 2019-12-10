@@ -15,7 +15,7 @@
     <title>Bank System</title>
 </head>
 <body>
-    <?php draw_AdminHeader() ?>
+    <?php draw_AdminHeader();?>
     <section id="content">
         <img src="img/branch.png" alt="branchlogo">
         <section id="branchs">

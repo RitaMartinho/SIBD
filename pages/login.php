@@ -21,9 +21,6 @@
         </label>
         <input type="submit" value="LOG IN">
     </form>
-    <div id="forgot">
-        <a href="login.html">Forgot Password?</a>
-    </div>
     <div id="newUser">
         New User?
         <form action="register.php">
