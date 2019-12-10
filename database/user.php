@@ -1,8 +1,37 @@
 <?php
     include_once('connection.php');
 
-    //get client_id by client_username
+    //adds user to Database with hashed password
+    function createUser($firstName, $lastName, $address, $username, $password) {
+        global $db;
 
+        $options = ['cost' => 12];
+        $pass_hashed = password_hash($password, PASSWORD_DEFAULT, $options);
+
+        $stmt = $db->prepare('INSERT INTO person VALUES(NULL, 
+                             ?, --first_name
+                             ?, --last_name
+                             ?, --address
+                             ?, --username
+                             ?, -- password
+                             NULL, -- admin
+                             )');
+        $stmt->execute([$username, $lastName, $address, $username, $pass_hashed]);
+        return $stmt->fetch();  
+    }
+
+    //Returns true if theres a $username in the database with the $password
+    function verifyUser($username, $password) {
+        global $conn;  
+
+        $stmt = $conn->prepare('SELECT * FROM Users WHERE Username = ?');
+        $stmt->execute(array($username));
+        $user = $stmt->fetch();
+
+        return ($user !== false && password_verify($password, $user['Password']));
+    }
+
+    //get client_id by client_username
     function getClientID($username){
 
         global $db;
