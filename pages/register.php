@@ -11,10 +11,19 @@
     <header>
         <h1>Welcome to Moneiys Bank</h1>
     </header>
-    <form>
+    <form action='../actions/action_register.php'>
         <h3>Register</h3>
         <label>
             User Name: <input type="text" name="username">
+        </label>
+        <label>
+            First Name: <input type="text" name="firstName">
+        </label>
+        <label>
+            Last Name: <input type="text" name="lastName">
+        </label>
+        <label>
+            Address: <input type="text" name="address">
         </label>
         <label>
             Password: <input type="password" name="password">
