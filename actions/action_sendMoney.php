@@ -1,12 +1,10 @@
 <?php 
-    if(!isset($_POST['destiny']) || !isset($_POST['quantity']) ){
-        //TODO
-        //PRINT ERROR MESSAGE
-    }
-    else {
-        $destiny =$_POST['destiny'];
-        $quantity =$_POST['quantity'];
-        //TODO
-        // SQL ADD $quantity to $destiny
+    include_once('../database/connection.php');
+    include_once('../database/account.php');
+    include_once('../database/users.php');
+    
+    // $origin = getAccountID($_SESSION['username']);
+    if(checkIfSendMoneyIsPossible($_POST['quantity'], $_POST['destiny'], $origin)){
+
     }
 ?>

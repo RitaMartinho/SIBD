@@ -30,7 +30,9 @@
         if( $ret === false){
             return false;
         }
-
+        if(!is_numeric($money)){
+            return false;
+        }
 
         $stmt=$db->prepare('SELECT balance from account where account_id=?');
         $stmt->execute(array($origin_account));
