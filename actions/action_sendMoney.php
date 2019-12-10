@@ -5,6 +5,6 @@
     
     // $origin = getAccountID($_SESSION['username']);
     if(checkIfSendMoneyIsPossible($_POST['quantity'], $_POST['destiny'], $origin)){
-
-    }
+        echo "GOOD PAYMENT";
+    }else echo "NO GOOD";
 ?>
