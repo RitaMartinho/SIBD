@@ -5,7 +5,7 @@
             <img src="img/bank_logo.png" alt="bank_logo">
         </section>
         <section id="username">
-            Username
+            <?= $_SESSION['username'] ?>
             <a href="login.php">Logout</a>
         </section>
         <nav id="operations">

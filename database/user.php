@@ -1,6 +1,5 @@
 <?php
-    include_once('connection.php');
-
+    
     //adds user to Database with hashed password
     function createUser($firstName, $lastName, $address, $username, $password) {
         global $db;
@@ -14,9 +13,9 @@
                              ?, --address
                              ?, --username
                              ?, -- password
-                             NULL, -- admin
+                             NULL -- admin
                              )');
-        $stmt->execute([$username, $lastName, $address, $username, $pass_hashed]);
+        $stmt->execute([$firstName, $lastName, $address, $username, $pass_hashed]);
         return $stmt->fetch();  
     }
 
