@@ -1,7 +1,5 @@
 <?php
 
-    include_once('connection.php');
-
     //WORKS
     //returns true if account_id is on database and false if not
     function checkIfAccountExists($account_id){
@@ -104,7 +102,6 @@
     }
 
     function getInfoCards($username){
-
         global $db;
         $stmt= $db->prepare('SELECT cvv, expiry_date, card_type from card
         JOIN 
@@ -119,9 +116,7 @@
                     WHERE username = ?
                     )
                     ON client=account_client)');
-
         $stmt->execute(array($username));
         return $stmt->fetchAll();
     }
-
 ?>

@@ -1,11 +1,6 @@
 <?php
-
-    include_once('connection.php');
-
     function getListEmployees($username){
-
         global $db;
-
         $stmt=$db->prepare('SELECT first_name,last_name
         FROM person
         JOIN
@@ -27,10 +22,7 @@
              )
         )
         ON employee_id = person_id');
-
         $stmt->execute(array($username));
-
         return $stmt->fetchAll();
     }
-
-?>
+?> 
