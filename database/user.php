@@ -1,36 +1,8 @@
 <?php
-    
-    //adds user to Database with hashed password
-    function createUser($firstName, $lastName, $address, $username, $password) {
-        global $db;
-
-        $options = ['cost' => 12];
-        $pass_hashed = password_hash($password, PASSWORD_DEFAULT, $options);
-
-        $stmt = $db->prepare('INSERT INTO person VALUES(NULL, 
-                             ?, --first_name
-                             ?, --last_name
-                             ?, --address
-                             ?, --username
-                             ?, -- password
-                             NULL -- admin
-                             )');
-        $stmt->execute([$firstName, $lastName, $address, $username, $pass_hashed]);
-        return $stmt->fetch();  
-    }
-
-    //Returns true if theres a $username in the database with the $password
-    function verifyUser($username, $password) {
-        global $db;  
-
-        $stmt = $db->prepare('SELECT * FROM person WHERE username = ?');
-        $stmt->execute(array($username));
-        $user = $stmt->fetch();
-
-        return ($user !== false && password_verify($password, $user['password']));
-    }
+    include_once('connection.php');
 
     //get client_id by client_username
+
     function getClientID($username){
 
         global $db;
@@ -58,9 +30,7 @@
         if( $ret === false){
             return false;
         }
-        if(!is_numeric($money)){
-            return false;
-        }
+
 
         $stmt=$db->prepare('SELECT balance from account where account_id=?');
         $stmt->execute(array($origin_account));

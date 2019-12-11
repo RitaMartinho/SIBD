@@ -5,8 +5,9 @@
     include_once('offers.php');
     include_once('utilities.php');
     include_once('account.php');
+    include_once('employee.php');
+    include_once('appointment.php');
 
-    $ret=getAccountIdBalanceType("nata");
-    var_dump($ret);
+    deleteOffer("RitaSeguros", "bue boa","credit");
     
 ?>

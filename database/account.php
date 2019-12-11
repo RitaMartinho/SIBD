@@ -103,4 +103,25 @@
         return $stmt->fetch();
     }
 
+    function getInfoCards($username){
+
+        global $db;
+        $stmt= $db->prepare('SELECT cvv, expiry_date, card_type from card
+        JOIN 
+            typeOfCard ON type_of_card = card_type_id
+            WHERE = (SELECT account_id from account 
+                JOIN(
+                
+                    SELECT client_id AS client
+                    FROM person
+                        JOIN
+                        client ON client_id = person_id
+                    WHERE username = ?
+                    )
+                    ON client=account_client)');
+
+        $stmt->execute(array($username));
+        return $stmt->fetchAll();
+    }
+
 ?>

@@ -1,5 +1,5 @@
 <?php
-
+    include_once('connection.php');
     include_once('user.php');
 
     //WORKS
@@ -88,7 +88,7 @@
              ON branch_id=branch;');
 
         $stmt->execute(array($username));
-        return $stmt->fetchColumn();
+        return $stmt->fetch();
     }
 
     //WORKS
