@@ -88,7 +88,7 @@
              ON branch_id=branch;');
 
         $stmt->execute(array($username));
-        return $stmt->fetchColumn();
+        return $stmt->fetch();
     }
 
     //WORKS

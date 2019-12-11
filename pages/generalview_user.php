@@ -45,7 +45,7 @@
             <article id="aboutBranchList">
                 <ul>
                     <li>Chief:<?= " ".$Chief['first_name'] ." " .$Chief['last_name']?></li>
-                    <li>Address:<?=" ".$Address?></li>
+                    <li>Address:<?=" ".$Address['address']?></li>
                     <li>Number of employees:<?=" ".$NrEmployees['nrEmployees'] ?></li>
                 </ul>
             </article>
