@@ -25,13 +25,14 @@
             <img src="img/bank_logo.png" alt="bank_logo">
         </section>
         <section id="logout">
+            <?= $_SESSION['username'] ?>
             <a href="login.html">Logout</a>
         </section>
         <nav id="operations">
                 <a href="branchs.php" id="Branchs">Branchs</a>
                 <a href="clients.php" id="Clients">Clients</a>
                 <a href="employees.php" id="Employees">Employees</a>
-                <a href="appointements.php" id="Appointments">Appointments</a>
+                <!-- <a href="appointements.php" id="Appointments">Appointments</a> -->
                 <a href="offers.php" id="Offers">Offers</a>
                 <a href="ratings.php" id="Ratings">Ratings</a>
         </nav>

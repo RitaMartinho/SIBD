@@ -4,9 +4,9 @@
     include_once('../database/branch.php');
     include_once('../includes/sessions.php');
 
-    $Chief=getChiefBranch("nata");
-    $Address=getBranchAddress("nata");
-    $NrEmployees=getNrEmployeesBranch("nata");
+    $Chief=getChiefBranch("nata");//argument is the user's username
+    $Address=getBranchAddress("nata");//argument is the user's username
+    $NrEmployees=getNrEmployeesBranch("nata");//argument is the user's username
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +45,7 @@
             <article id="aboutBranchList">
                 <ul>
                     <li>Chief:<?= " ".$Chief['first_name'] ." " .$Chief['last_name']?></li>
-                    <li>Address:<?=" ".$Address?></li>
+                    <li>Address:<?=" ".$Address['address']?></li>
                     <li>Number of employees:<?=" ".$NrEmployees['nrEmployees'] ?></li>
                 </ul>
             </article>
