@@ -2,6 +2,9 @@
     include_once('../templates/tpl_common.php');
     include_once('../database/connection.php');
     include_once('../includes/sessions.php');
+    include_once('../database/offers.php');
+
+    $AllOffers=getAllOffers();
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +25,18 @@
             <img src="img/offer.png" alt="welcome_admin"> 
             <section id="ClientsInfo">
                 <h2>Offers Available:</h2>
-                GIANT TABLE
+                <table>
+                    <tr>
+                        <th scope="col">Insurer</th>
+                        <th>Insurance</th>
+                    </tr>                    
+                        <?php foreach($AllOffers as $offer){?> 
+                            <tr>
+                                <td><?= $offer['insurance_name']?></td>
+                                <td><?= $offer['insurer_name']?></td>
+                            </tr>
+                        <?php } ?>
+                </table>
                 <section id="Clientbutton">
                     <form>
                         <button type="submit" formaction="newOffer.php">Add Offer</button>

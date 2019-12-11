@@ -19,6 +19,16 @@ body section#content section#ClientsInfo {
 body section#content section#ClientsInfo h2 {
    padding: 0.25em 0;
 }
+body section#content section#Client table {
+    border-collapse: collapse;
+}
+body section#content section#Client table th{
+    border: 1px solid black;
+}
+body section#content section#Client table td{
+    padding: 0.5em;;
+    border: 1px solid black;
+} 
 body section#content section#ClientsInfo form label{
     display: block;
 }
