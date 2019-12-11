@@ -1,5 +1,4 @@
 <?php
-        include_once('connection.php');
         function setAppointment($username, $day, $hour, $employee_first_name, $employee_last_name){
             global $db;
             //get client_id by username
