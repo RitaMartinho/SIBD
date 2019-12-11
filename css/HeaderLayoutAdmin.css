@@ -22,8 +22,8 @@ boyd header section#logout{
 body header nav#operations{
     grid-area: Nav;
     display: grid;
-    grid-template-columns: 0.17fr 0.17fr 0.17fr 0.17fr 0.17fr 0.17fr;
-    grid-template-areas:"BranchsLink ClientsLink EmployeesLink AppointmentsLink OffersLink RatingsLink";
+    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-areas:"BranchsLink ClientsLink EmployeesLink OffersLink RatingsLink";
 }
 
 body header nav#operations a#Branchs{

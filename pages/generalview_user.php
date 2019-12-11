@@ -4,9 +4,9 @@
     include_once('../database/branch.php');
     include_once('../includes/sessions.php');
 
-    $Chief=getChiefBranch("nata");
-    $Address=getBranchAddress("nata");
-    $NrEmployees=getNrEmployeesBranch("nata");
+    $Chief=getChiefBranch("nata");//argument is the user's username
+    $Address=getBranchAddress("nata");//argument is the user's username
+    $NrEmployees=getNrEmployeesBranch("nata");//argument is the user's username
 ?>
 
 <!DOCTYPE html>
