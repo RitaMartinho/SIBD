@@ -1,7 +1,7 @@
 <?php 
     include_once('../database/connection.php');
     include_once('../database/account.php');
-    include_once('../database/users.php');
+    include_once('../database/user.php');
     
 
     // $origin = getAccountID($_SESSION['username']);
