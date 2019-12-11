@@ -21,9 +21,9 @@
 
     //Returns true if theres a $username in the database with the $password
     function verifyUser($username, $password) {
-        global $conn;  
+        global $db;  
 
-        $stmt = $conn->prepare('SELECT * FROM Users WHERE Username = ?');
+        $stmt = $db->prepare('SELECT * FROM Users WHERE Username = ?');
         $stmt->execute(array($username));
         $user = $stmt->fetch();
 
