@@ -23,11 +23,11 @@
     function verifyUser($username, $password) {
         global $db;  
 
-        $stmt = $db->prepare('SELECT * FROM Users WHERE Username = ?');
+        $stmt = $db->prepare('SELECT * FROM person WHERE username = ?');
         $stmt->execute(array($username));
         $user = $stmt->fetch();
 
-        return ($user !== false && password_verify($password, $user['Password']));
+        return ($user !== false && password_verify($password, $user['password']));
     }
 
     //get client_id by client_username
