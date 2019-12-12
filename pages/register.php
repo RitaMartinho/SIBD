@@ -1,3 +1,10 @@
+<?php 
+    include_once('../database/connection.php');
+    include_once('../database/branch.php');
+
+    $AllBranches = getAllBranches();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +31,13 @@
         </label>
         <label>
             Address: <input type="text" name="address">
+        </label>
+        <label>
+            Branch: <select name="branchAddress"> 
+                    <?php foreach($AllBranches as $BranchAdress) {?> 
+                        <option value= "<?=$BranchAdress['address']?>" ><?=$BranchAdress['address']?></option> }
+                    <?php }?> 
+                    </select>
         </label>
         <label>
             Password: <input type="password" name="password">

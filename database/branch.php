@@ -114,6 +114,15 @@
         return $stmt->fetch();
     }
 
+    function getAllBranches(){
+
+        global $db;
+
+        $stmt=$db->prepare('SELECT address FROM branch');
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
     //WORKS
     //draw according with branch address
     function drawIFrame($branch_address){

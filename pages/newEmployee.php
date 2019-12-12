@@ -49,9 +49,6 @@
                         <input type="text" name="lastName" placeholder="Last Name">
                     </label>
                     <label>
-                        <input type="text" name="birthday" placeholder="Birthday">
-                    </label>
-                    <label>
                         <input type="text" name="address" placeholder="Address">
                     </label>
                     <label>

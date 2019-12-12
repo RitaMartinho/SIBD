@@ -4,9 +4,17 @@
     include_once('../database/branch.php');
     include_once('../includes/sessions.php');
 
-    $Chief=getChiefBranch("nata");//argument is the user's username
-    $Address=getBranchAddress("nata");//argument is the user's username
-    $NrEmployees=getNrEmployeesBranch("nata");//argument is the user's username
+    if(!isset($_SESSION['username']) ) {
+        header('Location: login.php');
+    }
+
+    $Chief=getChiefBranch($_SESSION['username']);   
+    $Address=getBranchAddress($_SESSION['username']);   
+    $NrEmployees=getNrEmployeesBranch($_SESSION['username']);   
+
+    // $Chief=getChiefBranch("nata");//argument is the user's username
+    // $Address=getBranchAddress("nata");//argument is the user's username
+    // $NrEmployees=getNrEmployeesBranch("nata");//argument is the user's username
 ?>
 
 <!DOCTYPE html>
