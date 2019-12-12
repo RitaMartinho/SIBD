@@ -1,22 +1,30 @@
 <?php
-    include_once('../database/user.php');
     include_once('../database/connection.php');
+    include_once('../database/user.php');
+    include_once('../database/branch.php');
     
-    var_dump($_POST);
-    die;
+    // var_dump($_POST);
+    // die;
 
     if($_POST['confirmpassword'] === $_POST['password']){
-        $username = $_POST['username'];
-        $firstName = $_POST['firstName'];
-        $lastName=$_POST['lastName'];
-        $address=$_POST['address'];
-        $branchAddress=$_POST['branchAddress'];
-        $password=$_POST['password'];
+        $username       =   $_POST['username'];
+        $firstName      =   $_POST['firstName'];
+        $lastName       =   $_POST['lastName'];
+        $address        =   $_POST['address'];
+        $branchAddress  =   $_POST['branchAddress'];
+        $password       =   $_POST['password'];
+        $birthday       =   $_POST['birthday'];
+        $taxID          =   $_POST['taxID'];
+
+        // ADD BIRHTDAY AND TAXID TO REGISTER PAGE
+
         createUser($firstName, $lastName, $address, $username, $password);
-        
-        // $clientID= MAKE FUNCTION TO GET HIS person_ID 
-        // and make $clientID equal to that
-        //ADD ALSO TO CLIENT TABLE (client_id = person_id)
+        $clientID=getPersonID($username);
+        $branchID=getBranchID($branchAddress);
+        // var_dump($clientID);
+        // var_dump($branchID);
+        // die;
+        addClient($clientID, $birthday, $taxID, $branchID);
         
         include_once('../includes/sessions.php');
         $_SESSION['username'] = $username;

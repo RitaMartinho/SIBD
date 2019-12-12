@@ -24,6 +24,15 @@
         $user = $stmt->fetch();
         return ($user !== false && password_verify($password, $user['password']));
     }
+    //get person_id by username
+    function getPersonID($username){
+        global $db;
+        $stmt= $db->prepare('SELECT person_id
+            FROM person
+            WHERE username LIKE ? ');
+        $stmt->execute(array($username));
+        return $stmt->fetch();
+    }
     //get client_id by client_username
     function getClientID($username){
         global $db;
@@ -33,8 +42,17 @@
                 client ON client_id = person_id
             WHERE username LIKE ? ');
         $stmt->execute(array($username));
-        return $stmt->fetch;
+        return $stmt->fetch();
     }
+
+    function addClient($clientID, $birthdate, $taxID, $clientBranch){
+        global $db;
+
+        $stmt= $db->prepare('INSERT INTO client VALUES(?, ?, ?, ?)');
+        $stmt->execute(array($clientID, $birthdate ,$taxID, $clientBranch));
+        return $stmt->fetch()?true:false;
+    }
+
     function checkIfSendMoneyIsPossible($money, $destiny_account, $origin_account){
         global $db;
         /*first check if destiny account exists*/

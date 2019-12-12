@@ -30,6 +30,12 @@
             Last Name: <input type="text" name="lastName">
         </label>
         <label>
+            Birthday: <input type="date" name="birthday" placeholder="YYYY-MM-DD">
+        </label>
+        <label>
+            TAX ID: <input type="text" name="taxID">
+        </label>
+        <label>
             Address: <input type="text" name="address">
         </label>
         <label>
