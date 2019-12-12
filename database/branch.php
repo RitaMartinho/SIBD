@@ -155,8 +155,14 @@
         
         global $db;
 
-        $stmt=$db->prepare('SELECT branch_id,
-            address,ß
+        
+
+        if($criteria != null && $criteriaASCDESC != null){
+
+            echo "jugiga";
+
+            $stmt=$db->prepare('SELECT branch_id,
+            address,
             nrEmployees,
             nrClients,
             nrRooms
@@ -188,11 +194,56 @@
                 
             )
             ON room_branch = branch_id
-            ORDER by ? ?
+            ORDER by nrRooms ASC
+            LIMIT 2 offset 2*(1 -1)');
+
+            $full_criteria=$criteria." ".$criteriaASCDESC;
+            //$stmt->bindParam(':s',$criteria);
+            $stmt->execute();
+            return $stmt->fetchAll();
+            
+        }
+
+        else{
+
+            echo "yaaa";
+            $stmt=$db->prepare('SELECT branch_id,
+            address,
+            nrEmployees,
+            nrClients,
+            nrRooms
+            FROM branch
+            JOIN
+            (
+                SELECT count(*) AS nrEmployees,
+                    employee_branch_id
+                FROM employee
+                GROUP BY employee_branch_id
+                
+            )
+            ON employee_branch_id = branch_id
+            JOIN
+            (
+                SELECT count(*) AS nrClients,
+                    client_branch
+                FROM client
+                GROUP BY client_branch
+                
+            )
+            ON client_branch = branch_id
+            JOIN
+            (
+                SELECT count(*) AS nrRooms,
+                    room_branch
+                FROM room
+                GROUP BY room_branch
+                
+            )
+            ON room_branch = branch_id
             LIMIT 2 offset 2*(? -1)');
 
-        $stmt->execute(array($criteria,$criteriaASCDESC, $page));
-        $stmt->fetchAll();
-
+            $stmt->execute(array($criteria,$criteriaASCDESC, $page));
+            return $stmt->fetchAll();
+        }
     }
 ?>

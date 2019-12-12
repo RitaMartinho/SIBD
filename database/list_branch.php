@@ -5,7 +5,9 @@
     $nrEmployees=null;
     $nrClients=null;
     $nrRooms=null;
+    $ASCorDESC=null;
 
+    //get options
     if(isset($_GET['nrEmployees'])){
         $nrEmployees= $_GET['nrEmployees']; 
     }
@@ -18,6 +20,9 @@
         $nrRooms=$_GET['nrRooms'];
     }
 
+    
+
+    //get page
     if(isset($_GET['page']))
         $page=$_GET['page'];
     else
