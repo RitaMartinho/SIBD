@@ -26,13 +26,12 @@
         </section>
         <section id="logout">
             <?= $_SESSION['username'] ?>
-            <a href="login.html">Logout</a>
+            <a href="../actions/action_logout.php">Logout</a>
         </section>
         <nav id="operations">
                 <a href="branchs.php" id="Branchs">Branchs</a>
                 <a href="clients.php" id="Clients">Clients</a>
                 <a href="employees.php" id="Employees">Employees</a>
-                <!-- <a href="appointements.php" id="Appointments">Appointments</a> -->
                 <a href="offers.php" id="Offers">Offers</a>
                 <a href="ratings.php" id="Ratings">Ratings</a>
         </nav>
