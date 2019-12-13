@@ -1,5 +1,4 @@
 <?php
-    include_once('connection.php');
 
     //works
     //gets client's offers by account_id
