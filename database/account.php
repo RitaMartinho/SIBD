@@ -108,7 +108,7 @@
         $stmt= $db->prepare('SELECT cvv, expiry_date, card_type from card
         JOIN 
             typeOfCard ON type_of_card = card_type_id
-            WHERE = (SELECT account_id from account 
+            WHERE associated_account = (SELECT account_id from account 
                 JOIN(
                 
                     SELECT client_id AS client

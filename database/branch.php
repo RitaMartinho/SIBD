@@ -159,7 +159,6 @@
 
         if($criteria != null && $criteriaASCDESC != null){
 
-            echo "jugiga";
 
             $stmt=$db->prepare('SELECT branch_id,
             address,
@@ -206,7 +205,6 @@
 
         else{
 
-            echo "yaaa";
             $stmt=$db->prepare('SELECT branch_id,
             address,
             nrEmployees,
@@ -245,5 +243,27 @@
             $stmt->execute(array($criteria,$criteriaASCDESC, $page));
             return $stmt->fetchAll();
         }
+    }
+    //get a list of rooms available in a branch or null if there isn't
+    function getRoomsAvailable($branch_id){
+
+        global $db;
+
+        $stmt= $db->prepare('SELECT room_id
+            FROM (
+                SELECT room_id,
+                    room_branch AS branch
+                FROM room
+                WHERE NOT EXISTS (
+                            SELECT employee_room_id
+                                FROM employee
+                                WHERE employee_room_id = room_id
+                        )
+            )
+            WHERE branch = ?');
+
+        $stmt->execute(array($branch_id));
+        return $stmt->fetchAll();
+                
     }
 ?>
