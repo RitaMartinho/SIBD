@@ -194,11 +194,11 @@
             )
             ON room_branch = branch_id
             ORDER by nrRooms ASC
-            LIMIT 2 offset 2*(1 -1)');
+            LIMIT 2 offset 2*(? -1)');
 
             $full_criteria=$criteria." ".$criteriaASCDESC;
             //$stmt->bindParam(':s',$criteria);
-            $stmt->execute();
+            $stmt->execute(array($page));
             return $stmt->fetchAll();
             
         }
@@ -240,7 +240,7 @@
             ON room_branch = branch_id
             LIMIT 2 offset 2*(? -1)');
 
-            $stmt->execute(array($criteria,$criteriaASCDESC, $page));
+            $stmt->execute(array($page));
             return $stmt->fetchAll();
         }
     }
@@ -265,5 +265,16 @@
         $stmt->execute(array($branch_id));
         return $stmt->fetchAll();
                 
+    }
+
+
+    function getNumberOfBranchs(){
+
+        global $db; 
+
+        $stmt= $db->prepare('SELECT count(*) as nrOfBranchs from branch');
+        $stmt->execute();
+
+        return $stmt->fetchColumn();
     }
 ?>
