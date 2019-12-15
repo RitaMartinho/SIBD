@@ -2,6 +2,21 @@
     include_once('../templates/tpl_common.php');
     include_once('../database/connection.php');
     include_once('../includes/sessions.php');
+    include_once('../database/branch.php');
+
+    $total_branchs=getNumberOfBranchs();
+    $branchs_per_page=2;
+
+
+    function drawPagination($total_branchs, $branchs_per_page){
+        for( $i= 1; $i< intval($total_branchs)/intval($branchs_per_page); $i++){
+            
+            ?>
+            <a href="list_branch.php?page=<?=$i?>"><?=$i?></a>;
+            <?php
+        }
+
+    }
 ?>
 
 <!DOCTYPE html>
@@ -24,14 +39,14 @@
             <form method="GET" id="form1">
                     <label>Order by:
                         <select id="criteria">
-                            <option value="None" selected >None</option>
+                            <option value="" disabled selected >None</option>
                             <option value="Number of employees">Number of employees</option>
                             <option value="Number of clients">Number of clients</option>
                             <option value="Number of rooms">Number of rooms</option>
                         </select>  
                     </label> 
                     <select id="order">
-                            <option value="None" selected >None</option>
+                            <option value="" disabled selected >None</option>
                             <option value="ASC">ASC</option>
                             <option value="DESC">DESC</option>                
                     </select>
@@ -48,8 +63,10 @@
                     </ul>
     
                     <div class="pagination">
-                        <a href="">&lt;</a>
-                        <a href="">&gt;</a>
+                        
+                        <?php
+                        drawPagination($total_branchs, $branchs_per_page);
+                        ?>
                     </div>
 
                 </section>
