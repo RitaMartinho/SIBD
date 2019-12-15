@@ -13,6 +13,12 @@
             
             ?>
             <a href="list_branch.php?page=<?=$i?>"><?=$i?></a>;
+            <?php  
+        }
+
+        if((intval($total_branchs)%intval($branchs_per_page))!=0){
+            ?>
+            <a href="list_branch.php?page=<?=$i?>"><?=$i?></a>;
             <?php
         }
 
