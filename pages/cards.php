@@ -1,7 +1,10 @@
 <?php 
     include_once('../templates/tpl_common.php');
     include_once('../database/connection.php');
+    include_once('../database/account.php');
     include_once('../includes/sessions.php');
+
+    $cardInfo = getInfoCards('nata');
 ?>
 
 <!DOCTYPE html>
@@ -20,20 +23,16 @@
     <?php draw_header();?>
     <section id="content">
         <img src="img/cards.png" alt="accountlogo"> 
-        <section id="cardInfo1"> 
-            <h2>Card 1:</h2>
-            <ul>
-                <li> CW:_______</li>
-                <li>Expiry Date:_______</li>    
-            </ul>
-        </section>
-        <section id="cardInfo2">
-            <h2>Card 2:</h2>
-            <ul>
-                <li> CW:_______</li>
-                <li>Expiry Date:_______</li>    
-            </ul>
-        </section>
+        <?php $i=1; 
+        foreach($cardInfo as $cardInfo) {?>
+            <section id="cardInfo1"> 
+                <h2>Card <?= $i ?>:</h2>
+                <ul>
+                    <li> CVV: <?= $cardInfo['cvv']?></li>
+                    <li>Expiry Date: <?= $cardInfo['expiry_date']?></li>    
+                </ul>
+            </section>
+        <?php $i++; }?>
     </section>
     <footer>
         <p>&copy; RitaEGonçalo, 2019</p>
