@@ -64,6 +64,26 @@
         return $stmt->fetch()?true:false;
     }
 
+    function attributeAccount($clientID){
+
+        global $db;
+        $stmt=$db->prepare('INSERT INTO account VALUES(null, "500","term",?)');
+        $stmt->execute(array($clientID));
+        return $stmt->fetch()?true:false;
+    }
+
+    function attributeCard($clientID){
+
+        global $db;
+        $stmt=$db->prepare('SELECT account_id from account where account_client=?');
+        $stmt->execute(array($clientID));
+        $account=$stmt->fetchColumn();
+
+        $stmt=$db->prepare('INSERT INTO card VALUES(null, "2020-01-29","111", ?, "1")');
+        $stmt->execute(array($account));
+        return $stmt->fetch()?true:false;
+    }
+
     function checkIfSendMoneyIsPossible($money, $destiny_account, $origin_account){
 
         global $db;

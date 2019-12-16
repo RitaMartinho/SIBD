@@ -25,11 +25,14 @@
         // var_dump($branchID);
         // die;
         addClient($clientID, $birthday, $taxID, $branchID);
+        attributeAccount($clientID);
+        attributeCard($clientID);
         
         include_once('../includes/sessions.php');
         $_SESSION['username'] = $username;
         header("Location: ../pages/generalview_user.php");
     } else echo ("<h1>PASSWORDS DONT MATCH!</h1>");
+
 
 
 ?>
