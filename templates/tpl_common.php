@@ -6,7 +6,7 @@
         </section>
         <section id="username">
             <?= $_SESSION['username'] ?>
-            <a href="login.php">Logout</a>
+            <a href="../actions/action_logout.php">Logout</a>
         </section>
         <nav id="operations">
                 <a href="account.php" id="SeeAccount">See account</a>

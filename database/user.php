@@ -24,6 +24,13 @@
         $user = $stmt->fetch();
         return ($user !== false && password_verify($password, $user['password']));
     }
+    function verifyAdmin($username){
+        global $db;
+        $stmt = $db->prepare('SELECT admin FROM person WHERE username LIKE ?');
+        $stmt->execute(array($username));
+        return $stmt->fetchColumn();
+    }
+
     //get person_id by username
     function getPersonID($username){
         global $db;

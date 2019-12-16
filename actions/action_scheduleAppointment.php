@@ -22,7 +22,7 @@
 
         if(setAppointment($username, $day, $startHour, $first_name, $last_name)){
             ?> <h1>APPOINTMENT ADDED</h1><?php
-        } else ?> <h1>APPOINTMENT ADDED</h1><?php
+        } else ?> <h1>APPOINTMENT REJECTED</h1><?php
         // SQL ADD appointment
     }
 ?>

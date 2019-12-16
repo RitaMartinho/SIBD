@@ -3,7 +3,6 @@
     include_once('../database/connection.php');
     include_once('../database/employee.php');
     include_once('../includes/sessions.php');
-
     $listEmployees = getListEmployees('nata');
 ?>
 
@@ -24,7 +23,7 @@
         <img src="img/appointment.png" alt="accountlogo"> 
         <section id="AppointmentInfo">  
             <form id="form1" action="../actions/action_scheduleAppointment.php" method="get">
-                    <label>Choose a day: <input type="text" name="day" required></label> 
+                    <label>Choose a day: <input type="date" name="day" required></label> 
                     <label>Choose a start-hour:<input type="text" name="startHour" required></label>    
                     <label>Choose an employee:
                         <select name="employee" required>
