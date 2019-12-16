@@ -15,5 +15,6 @@
     include_once('account.php');
     include_once('employee.php');
 
-    addEmployee("rita", "martinho","odf","123","4", "21");
+    $ret=getBranchAdmin(null,"1", null);
+    var_dump($ret);
 ?>

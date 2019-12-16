@@ -1,11 +1,10 @@
 <?php
 
-    require_once('branch.php');
+    require_once('../database/branch.php');
 
-    $nrEmployees=null;
-    $nrClients=null;
-    $nrRooms=null;
-    $ASCorDESC=null;
+    $criteria=null;
+    $criteriaASCDESC=null;
+    
 
     //get options
     if(isset($_GET['nrEmployees'])){
@@ -19,8 +18,6 @@
     if(isset($_GET['nrRooms'])){
         $nrRooms=$_GET['nrRooms'];
     }
-
-    
 
     //get page
     if(isset($_GET['page']))

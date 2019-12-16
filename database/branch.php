@@ -87,7 +87,7 @@
              ON branch_id=branch;');
 
         $stmt->execute(array($username));
-        return $stmt->fetch();
+        return $stmt->fetchColumn();
     }
 
     function getBranchID($address){
@@ -171,94 +171,75 @@
         
         global $db;
 
-        
-
-        if($criteria != null && $criteriaASCDESC != null){
-
-
-            $stmt=$db->prepare('SELECT branch_id,
-            address,
-            nrEmployees,
-            nrClients,
-            nrRooms
-            FROM branch
-            JOIN
-            (
-                SELECT count(*) AS nrEmployees,
-                    employee_branch_id
-                FROM employee
-                GROUP BY employee_branch_id
-                
-            )
-            ON employee_branch_id = branch_id
-            JOIN
-            (
-                SELECT count(*) AS nrClients,
-                    client_branch
-                FROM client
-                GROUP BY client_branch
-                
-            )
-            ON client_branch = branch_id
-            JOIN
-            (
-                SELECT count(*) AS nrRooms,
-                    room_branch
-                FROM room
-                GROUP BY room_branch
-                
-            )
-            ON room_branch = branch_id
-            ORDER by nrRooms ASC
-            LIMIT 2 offset 2*(? -1)');
-
-            $full_criteria=$criteria." ".$criteriaASCDESC;
-            //$stmt->bindParam(':s',$criteria);
-            $stmt->execute(array($page));
-            return $stmt->fetchAll();
+        $query = 'SELECT branch_id,
+        address,
+        nrEmployees,
+        nrClients,
+        nrRooms
+        FROM branch
+        JOIN
+        (
+            SELECT count(*) AS nrEmployees,
+                employee_branch_id
+            FROM employee
+            GROUP BY employee_branch_id
             
+        )
+        ON employee_branch_id = branch_id
+        JOIN
+        (
+            SELECT count(*) AS nrClients,
+                client_branch
+            FROM client
+            GROUP BY client_branch
+            
+        )
+        ON client_branch = branch_id
+        JOIN
+        (
+            SELECT count(*) AS nrRooms,
+                room_branch
+            FROM room
+            GROUP BY room_branch
+            
+        )
+        ON room_branch = branch_id ';
+
+        if(strcmp("nrRooms",$criteria)==0){
+
+            if(strcmp("ASC",$criteriaASCDESC)==0){
+                $query.='ORDER BY nrRooms ASC ';
+            }
+            else if(strcmp("DESC",$criteriaASCDESC)==0){
+                $query.='ORDER BY nrRooms DESC ';
+            }
         }
 
-        else{
+        else if(strcmp("nrClients",$criteria)==0){
 
-            $stmt=$db->prepare('SELECT branch_id,
-            address,
-            nrEmployees,
-            nrClients,
-            nrRooms
-            FROM branch
-            JOIN
-            (
-                SELECT count(*) AS nrEmployees,
-                    employee_branch_id
-                FROM employee
-                GROUP BY employee_branch_id
-                
-            )
-            ON employee_branch_id = branch_id
-            JOIN
-            (
-                SELECT count(*) AS nrClients,
-                    client_branch
-                FROM client
-                GROUP BY client_branch
-                
-            )
-            ON client_branch = branch_id
-            JOIN
-            (
-                SELECT count(*) AS nrRooms,
-                    room_branch
-                FROM room
-                GROUP BY room_branch
-                
-            )
-            ON room_branch = branch_id
-            LIMIT 2 offset 2*(? -1)');
-
-            $stmt->execute(array($page));
-            return $stmt->fetchAll();
+            if(strcmp("ASC",$criteriaASCDESC)==0){
+                $query.='ORDER BY nrCLients ASC ';
+            }
+            else if(strcmp("DESC",$criteriaASCDESC)==0){
+                $query.='ORDER BY nrClients DESC ';
+            }
         }
+
+        else if(strcmp("nrEmployees",$criteria)==0){
+
+            if(strcmp("ASC",$criteriaASCDESC)==0){
+                $query.='ORDER BY nrEmployees ASC ';
+            }
+            else if(strcmp("DESC",$criteriaASCDESC)==0){
+                $query.='ORDER BY nrEmployees DESC ';
+            }
+        }
+
+        $query.='LIMIT 2 offset 2*(? -1)';
+        $stmt=$db->prepare($query);
+        $stmt->execute(array($page));
+        return $stmt->fetchAll();
+        
     }
     //get a list of rooms available in a branch or null if there isn't
     function getRoomsAvailable($branch_id){
