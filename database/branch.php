@@ -95,7 +95,7 @@
 
         $stmt=$db->prepare('SELECT branch_id FROM branch WHERE address LIKE ?');
         $stmt->execute(array($address));
-        return $stmt->fetch();
+        return $stmt->fetchColumn();
     }
     //WORKS
     //gets nr of employees on branch from username

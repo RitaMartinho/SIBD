@@ -31,7 +31,7 @@
             FROM person
             WHERE username LIKE ? ');
         $stmt->execute(array($username));
-        return $stmt->fetch();
+        return $stmt->fetchColumn();
     }
     //get client_id by client_username
 
