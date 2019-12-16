@@ -2,6 +2,11 @@
     include_once('../templates/tpl_common.php');
     include_once('../database/connection.php');
     include_once('../includes/sessions.php');
+
+    // TODO: CHECK IF USER IS ADMIN 
+    if(!isset($_SESSION['username']) ) {
+        header('Location: login.php');
+    }
 ?>
 
 <!DOCTYPE html>

@@ -1,7 +1,10 @@
 <?php 
     include_once('../templates/tpl_common.php');
     include_once('../database/connection.php');
+    include_once('../database/employee.php');
     include_once('../includes/sessions.php');
+
+    $listEmployees = getListEmployees('nata');
 ?>
 
 <!DOCTYPE html>
@@ -20,15 +23,15 @@
     <section id="content">
         <img src="img/appointment.png" alt="accountlogo"> 
         <section id="AppointmentInfo">  
-            <form id="form1" action="../actions/action_scheduleAppointment.php" method="post">
+            <form id="form1" action="../actions/action_scheduleAppointment.php" method="get">
                     <label>Choose a day: <input type="text" name="day" required></label> 
                     <label>Choose a start-hour:<input type="text" name="startHour" required></label>    
                     <label>Choose an employee:
-                        <select required>
+                        <select name="employee" required>
                             <option value="" disabled selected >List Employes</option>
-                            <option value="johan">Joan</option>
-                            <option value="rita">Rita</option>
-                            <option value="jabier">Jabier</option>
+                            <?php foreach($listEmployees as $employee) {?>
+                                <option value="<?= $employee['first_name']." ".$employee['last_name']?>"><?= $employee['first_name']." ".$employee['last_name']?></option>
+                            <?php } ?>
                         </select>   
                     </label>
             </form>

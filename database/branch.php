@@ -90,6 +90,13 @@
         return $stmt->fetch();
     }
 
+    function getBranchID($address){
+        global $db;
+
+        $stmt=$db->prepare('SELECT branch_id FROM branch WHERE address LIKE ?');
+        $stmt->execute(array($address));
+        return $stmt->fetch();
+    }
     //WORKS
     //gets nr of employees on branch from username
     function getNrEmployeesBranch($username){
@@ -112,6 +119,15 @@
         
         $stmt->execute(array($username));
         return $stmt->fetch();
+    }
+
+    function getAllBranches(){
+
+        global $db;
+
+        $stmt=$db->prepare('SELECT address FROM branch');
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 
     //WORKS
