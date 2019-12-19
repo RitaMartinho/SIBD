@@ -24,7 +24,22 @@
         $user = $stmt->fetch();
         return ($user !== false && password_verify($password, $user['password']));
     }
+    function verifyAdmin($username){
+        global $db;
+        $stmt = $db->prepare('SELECT admin FROM person WHERE username LIKE ?');
+        $stmt->execute(array($username));
+        return $stmt->fetchColumn();
+    }
 
+    //get person_id by username
+    function getPersonID($username){
+        global $db;
+        $stmt= $db->prepare('SELECT person_id
+            FROM person
+            WHERE username LIKE ? ');
+        $stmt->execute(array($username));
+        return $stmt->fetchColumn();
+    }
     //get client_id by client_username
 
     function getClientID($username){
@@ -38,10 +53,36 @@
             WHERE username LIKE ? ');
 
         $stmt->execute(array($username));
-
-        return $stmt->fetch;
+        return $stmt->fetch();
     }
 
+    function addClient($clientID, $birthdate, $taxID, $clientBranch){
+        global $db;
+
+        $stmt= $db->prepare('INSERT INTO client VALUES(?, ?, ?, ?)');
+        $stmt->execute(array($clientID, $birthdate ,$taxID, $clientBranch));
+        return $stmt->fetch()?true:false;
+    }
+
+    function attributeAccount($clientID){
+
+        global $db;
+        $stmt=$db->prepare('INSERT INTO account VALUES(null, "500","term",?)');
+        $stmt->execute(array($clientID));
+        return $stmt->fetch()?true:false;
+    }
+
+    function attributeCard($clientID){
+
+        global $db;
+        $stmt=$db->prepare('SELECT account_id from account where account_client=?');
+        $stmt->execute(array($clientID));
+        $account=$stmt->fetchColumn();
+
+        $stmt=$db->prepare('INSERT INTO card VALUES(null, "2020-01-29","111", ?, "1")');
+        $stmt->execute(array($account));
+        return $stmt->fetch()?true:false;
+    }
 
     function checkIfSendMoneyIsPossible($money, $destiny_account, $origin_account){
 
@@ -98,6 +139,8 @@
         global $db;
 
         if(!is_numeric($destiny_account)){ //accepts any destiny account 
+            
+            echo "numeric";
             return false;
         } 
 
@@ -107,6 +150,8 @@
         $origin_balance= $stmt->fetchColumn(); // to get a string and not an array
 
 
+        echo intval($origin_balance);
+        echo intval($money);
 
         if(intval($origin_balance) >= intval($money)){
 

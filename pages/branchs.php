@@ -12,7 +12,13 @@
         for( $i= 1; $i< intval($total_branchs)/intval($branchs_per_page); $i++){
             
             ?>
-            <a href="list_branch.php?page=<?=$i?>"><?=$i?></a>;
+            <a href="list_branch.php?page=<?=$i?>"><?=$i?></a>
+            <?php  
+        }
+
+        if((intval($total_branchs)%intval($branchs_per_page))!=0){
+            ?>
+            <a href="list_branch.php?page=<?=$i?>"><?=$i?></a>
             <?php
         }
 

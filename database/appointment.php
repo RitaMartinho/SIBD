@@ -38,8 +38,6 @@
                 $start_time_database=strtotime($start_date['start_time']);
 
                 if($start_time_database===$start_time_user){
-
-                    echo "Nooo";
                     return false;
                 }
             }

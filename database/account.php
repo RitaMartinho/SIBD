@@ -58,7 +58,7 @@
 
         $stmt->execute(array($username));
 
-        return $stmt->fetch();  
+        return $stmt->fetchColumn();  
     }
 
     //WORKS

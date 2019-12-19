@@ -87,9 +87,16 @@
              ON branch_id=branch;');
 
         $stmt->execute(array($username));
-        return $stmt->fetch();
+        return $stmt->fetchColumn();
     }
 
+    function getBranchID($address){
+        global $db;
+
+        $stmt=$db->prepare('SELECT branch_id FROM branch WHERE address LIKE ?');
+        $stmt->execute(array($address));
+        return $stmt->fetchColumn();
+    }
     //WORKS
     //gets nr of employees on branch from username
     function getNrEmployeesBranch($username){
@@ -112,6 +119,15 @@
         
         $stmt->execute(array($username));
         return $stmt->fetch();
+    }
+
+    function getAllBranches(){
+
+        global $db;
+
+        $stmt=$db->prepare('SELECT address FROM branch');
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 
     //WORKS
@@ -143,7 +159,7 @@
         if(strcmp("215 Alienta Ln, Ladera Ranch, California", $branch_address)==0){
 
             ?>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.1651034062693!2d-117.598639!3d33.54908639999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dceda059b528dd%3A0x46308ca517e720d!2s215%20Alienta%20Ln%2C%20Ladera%20Ranch%2C%20CA%2092694%2C%20USA!5e0!3m2!1sen!2spt!4v1575931797853!5m2!1sen!2spt"</iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.1651034062693!2d-117.598639!3d33.54908639999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dceda059b528dd%3A0x46308ca517e720d!2s215%20Alienta%20Ln%2C%20Ladera%20Ranch%2C%20CA%2092694%2C%20USA!5e0!3m2!1sen!2spt!4v1575931797853!5m2!1sen!2spt"></iframe>
             <?php
             
         }
@@ -155,94 +171,75 @@
         
         global $db;
 
-        
-
-        if($criteria != null && $criteriaASCDESC != null){
-
-
-            $stmt=$db->prepare('SELECT branch_id,
-            address,
-            nrEmployees,
-            nrClients,
-            nrRooms
-            FROM branch
-            JOIN
-            (
-                SELECT count(*) AS nrEmployees,
-                    employee_branch_id
-                FROM employee
-                GROUP BY employee_branch_id
-                
-            )
-            ON employee_branch_id = branch_id
-            JOIN
-            (
-                SELECT count(*) AS nrClients,
-                    client_branch
-                FROM client
-                GROUP BY client_branch
-                
-            )
-            ON client_branch = branch_id
-            JOIN
-            (
-                SELECT count(*) AS nrRooms,
-                    room_branch
-                FROM room
-                GROUP BY room_branch
-                
-            )
-            ON room_branch = branch_id
-            ORDER by nrRooms ASC
-            LIMIT 2 offset 2*(1 -1)');
-
-            $full_criteria=$criteria." ".$criteriaASCDESC;
-            //$stmt->bindParam(':s',$criteria);
-            $stmt->execute();
-            return $stmt->fetchAll();
+        $query = 'SELECT branch_id,
+        address,
+        nrEmployees,
+        nrClients,
+        nrRooms
+        FROM branch
+        JOIN
+        (
+            SELECT count(*) AS nrEmployees,
+                employee_branch_id
+            FROM employee
+            GROUP BY employee_branch_id
             
+        )
+        ON employee_branch_id = branch_id
+        JOIN
+        (
+            SELECT count(*) AS nrClients,
+                client_branch
+            FROM client
+            GROUP BY client_branch
+            
+        )
+        ON client_branch = branch_id
+        JOIN
+        (
+            SELECT count(*) AS nrRooms,
+                room_branch
+            FROM room
+            GROUP BY room_branch
+            
+        )
+        ON room_branch = branch_id ';
+
+        if(strcmp("nrRooms",$criteria)==0){
+
+            if(strcmp("ASC",$criteriaASCDESC)==0){
+                $query.='ORDER BY nrRooms ASC ';
+            }
+            else if(strcmp("DESC",$criteriaASCDESC)==0){
+                $query.='ORDER BY nrRooms DESC ';
+            }
         }
 
-        else{
+        else if(strcmp("nrClients",$criteria)==0){
 
-            $stmt=$db->prepare('SELECT branch_id,
-            address,
-            nrEmployees,
-            nrClients,
-            nrRooms
-            FROM branch
-            JOIN
-            (
-                SELECT count(*) AS nrEmployees,
-                    employee_branch_id
-                FROM employee
-                GROUP BY employee_branch_id
-                
-            )
-            ON employee_branch_id = branch_id
-            JOIN
-            (
-                SELECT count(*) AS nrClients,
-                    client_branch
-                FROM client
-                GROUP BY client_branch
-                
-            )
-            ON client_branch = branch_id
-            JOIN
-            (
-                SELECT count(*) AS nrRooms,
-                    room_branch
-                FROM room
-                GROUP BY room_branch
-                
-            )
-            ON room_branch = branch_id
-            LIMIT 2 offset 2*(? -1)');
-
-            $stmt->execute(array($criteria,$criteriaASCDESC, $page));
-            return $stmt->fetchAll();
+            if(strcmp("ASC",$criteriaASCDESC)==0){
+                $query.='ORDER BY nrCLients ASC ';
+            }
+            else if(strcmp("DESC",$criteriaASCDESC)==0){
+                $query.='ORDER BY nrClients DESC ';
+            }
         }
+
+        else if(strcmp("nrEmployees",$criteria)==0){
+
+            if(strcmp("ASC",$criteriaASCDESC)==0){
+                $query.='ORDER BY nrEmployees ASC ';
+            }
+            else if(strcmp("DESC",$criteriaASCDESC)==0){
+                $query.='ORDER BY nrEmployees DESC ';
+            }
+        }
+
+        $query.='LIMIT 2 offset 2*(? -1)';
+        $stmt=$db->prepare($query);
+        $stmt->execute(array($page));
+        return $stmt->fetchAll();
+        
     }
     //get a list of rooms available in a branch or null if there isn't
     function getRoomsAvailable($branch_id){
@@ -265,5 +262,16 @@
         $stmt->execute(array($branch_id));
         return $stmt->fetchAll();
                 
+    }
+
+
+    function getNumberOfBranchs(){
+
+        global $db; 
+
+        $stmt= $db->prepare('SELECT count(*) as nrOfBranchs from branch');
+        $stmt->execute();
+
+        return $stmt->fetchColumn();
     }
 ?>
