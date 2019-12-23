@@ -22,7 +22,8 @@
                    person ON employee_id = person_id
         )
         ON room = employee_room_id
-        group by rating.appointment having (rating_score >= ?)');
+        group by rating.appointment having (rating_score >= ?)
+        order by rating_score ASC');
 
         $stmt->execute(array($min_rating));
         return $stmt->fetchAll();
