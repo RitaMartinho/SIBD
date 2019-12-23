@@ -22,7 +22,26 @@ body section#welcome img{
     width:12em;
     align-self: center;
 }
+body table{
+    border-collapse: collapse;
+}
+body table, th, td {
+    border: 1px solid black;
+} 
 
+body th,td{
+    text-align: center;
+    vertical-align: bottom;
+    padding: 0.3em;
+}
+
+body tr:nth-child(odd){
+    background-color:#DCDCDC;
+}
+
+body tr:first-child{
+    background-color:#A9A9A9;
+}
 /* FOOTER */
 body footer{
     background-color: #d8cdc2;

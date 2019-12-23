@@ -2,7 +2,10 @@
     include_once('../templates/tpl_common.php');
     include_once('../database/connection.php');
     include_once('../database/branch.php');
+    include_once('../database/account.php');
+    include_once('../database/offers.php');
     include_once('../includes/sessions.php');
+
 
     if(!isset($_SESSION['username']) ) {
         header('Location: login.php');
@@ -12,9 +15,10 @@
     $Address=getBranchAddress($_SESSION['username']);   
     $NrEmployees=getNrEmployeesBranch($_SESSION['username']);   
 
-    // $Chief=getChiefBranch("nata");//argument is the user's username
-    // $Address=getBranchAddress("nata");//argument is the user's username
-    // $NrEmployees=getNrEmployeesBranch("nata");//argument is the user's username
+    $account_id = getAccountID($_SESSION['username']);
+    $listOfOffers=getClientsOffer($account_id);
+    $nrOffers= getNumberOfOffers($listOfOffers);
+
 ?>
 
 <!DOCTYPE html>
@@ -63,9 +67,20 @@
         </section>
         <section id="offers">
             <h2>Your bank gives you amazing offers</h2>
-            <section id="accountChecker">
-                <h2>Check if your account meets the condition</h2>
-                <button onclick="location.href='../pages/generalview_user_offers.php#listOffers'" type="button">check</button>
+            <section id="listOffers">
+                <table>
+                    <tr>
+                        <th>Insurer</th><th>Insurer</th>
+                    </tr>
+                    <?php foreach($listOfOffers as $offers){?>
+                        <tr> 
+                            <td><?=$offers['insurer_name']?></td> <td><?=$offers['insurance_name']?></td>
+                        </tr>
+                    <?php }?>
+                    <tr>
+                        <td>Total</td><td><?=$nrOffers?></td>
+                    </tr>
+                </table>
             </section>
             <img src="img/offer.png" alt="offer">
         </section>

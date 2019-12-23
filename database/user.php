@@ -139,6 +139,8 @@
         global $db;
 
         if(!is_numeric($destiny_account)){ //accepts any destiny account 
+            
+            echo "numeric";
             return false;
         } 
 
@@ -148,6 +150,8 @@
         $origin_balance= $stmt->fetchColumn(); // to get a string and not an array
 
 
+        echo intval($origin_balance);
+        echo intval($money);
 
         if(intval($origin_balance) >= intval($money)){
 
