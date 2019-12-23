@@ -16,6 +16,10 @@ body section#content section#accountInfo {
     text-align: center;
 }
 
+body section#content section#accountInfo ul{
+    list-style-type: none;
+}
+
 body section#content nav#cardInfo{
     display: grid;
     align-items: flex-end;

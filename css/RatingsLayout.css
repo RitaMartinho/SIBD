@@ -1,0 +1,38 @@
+
+body section#content{
+
+    margin-top: 10em;
+}
+body section#Rating{
+    grid-area: Rating;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "RatingPic RatingSearch RatingMedium";
+    justify-content: center;
+}
+
+body section#Rating img{
+
+    margin :20% 5%;
+    grid-area: RatingPic;
+}
+
+body section#Rating section#orderby{
+    display: block;
+    margin : 1em;
+    grid-area: RatingSearch;
+}
+
+body section#Rating section#average{
+    margin: 1em;
+    grid-area: RatingMedium;
+}
+
+
+body section#Rating section#average h2{
+    text-align: center;
+}
+
+body section#Rating section#average p{
+    text-align: center;
+}

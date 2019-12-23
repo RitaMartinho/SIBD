@@ -3,7 +3,8 @@ html{
 }
 
 body header{
-    background-color: #d8cdc2;
+    /*background-color: #d8cdc2;*/
+    background-color: white;
 }
 
 
@@ -45,23 +46,29 @@ body header nav a{
 }
 
 body header nav a#Branchs{
-    background-color: #2C338A;
+    /*background-color: #2C338A;*/
+    background-color: #96858F;
 }
 body header nav a#Clients{
-    background-color: #A4AC9A;
+    /*background-color: #A4AC9A;*/
+    background-color: #6D7993;
 }
 body header nav a#Employees{
-    background-color: #877D7F;
+    /*background-color: #877D7F;*/
+    background-color: #9099A2;
 }
 body header nav a#Appointments{
-    background-color: #7B93B1;
+    /*background-color: #7B93B1;*/
+
 }
 
 body header nav a#Offers{
-    background-color: #2C338A;
+    /*background-color: #2C338A;*/
+    background-color: #D5D5D5;
 }
 body header nav a#Ratings{
-    background-color: #A4AC9A;
+    /*background-color: #A4AC9A;*/
+    background-color: #96858F;
 }
 
 /*HOVER*/
