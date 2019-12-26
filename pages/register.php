@@ -1,6 +1,7 @@
 <?php 
     include_once('../database/connection.php');
     include_once('../database/branch.php');
+    include_once('../includes/sessions.php');
 
     $AllBranches = getAllBranches();
 ?>
@@ -18,6 +19,11 @@
     <header>
         <h1>Welcome to Moneiys Bank</h1>
     </header>
+    <?php if (isset($_SESSION['message'])) { ?>
+        <div class="message">
+          <?=$_SESSION['message']?>
+        </div>
+      <?php } ?>
     <form action='../actions/action_register.php' method='post'>
         <h3>Register</h3>
         <label>

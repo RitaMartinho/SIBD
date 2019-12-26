@@ -14,6 +14,11 @@
                 <a href="scheduleAppointment.php" id="Schedule">Schedule appointment</a>
                 <a href="payment.php" id="Payment">Make a payment</a>
         </nav>
+        <?php if (isset($_MESSAGE)) { ?>
+        <div class="message">
+          <?=$_MESSAGE?>
+        </div>
+      <?php } ?>
     </header>
 <?php } 
 

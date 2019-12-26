@@ -28,8 +28,8 @@
         global $db;
         $stmt = $db->prepare('SELECT admin FROM person WHERE username LIKE ?');
         $stmt->execute(array($username));
-        $stmt->fetchColumn();
-        return ($stmt === 1) ? true : false;
+        $admin = $stmt->fetchColumn();
+        return ($admin == "1") ? true : false;
     }
 
     //get person_id by username
