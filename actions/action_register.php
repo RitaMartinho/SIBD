@@ -26,7 +26,7 @@
             $_SESSION['username'] = $username;
             header("Location: ../pages/generalview_user.php");
         } catch(PDOException $e) {
-            if (strpos($e->getMessage(), 'users_pkey') !== false)
+            if (strpos($e->getMessage(), 'person.username') !== false)
                 $_SESSION['message'] = 'Username already exists!';
             else
                 $_SESSION['message'] = 'Registration failed!';
