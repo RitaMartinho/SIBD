@@ -24,7 +24,16 @@
         <section id="AppointmentInfo">  
             <form id="form1" action="../actions/action_scheduleAppointment.php" method="get">
                     <label>Choose a day: <input type="date" name="day" required></label> 
-                    <label>Choose a start-hour:<input type="text" name="startHour" required></label>    
+                    <label>Choose a start-hour:<select name="startHour" required>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                    </select>  
                     <label>Choose an employee:
                         <select name="employee" required>
                             <option value="" disabled selected >List Employes</option>
