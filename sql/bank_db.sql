@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.2.1 on Sun Dec 15 14:55:49 2019
+-- File generated with SQLiteStudio v3.2.1 on Thu Dec 26 23:09:04 2019
 --
 -- Text encoding used: UTF-8
 --
@@ -15,7 +15,7 @@ INSERT INTO account (account_id, balance, type, account_client) VALUES (4, 1224,
 INSERT INTO account (account_id, balance, type, account_client) VALUES (5, 140, 'term', 29);
 INSERT INTO account (account_id, balance, type, account_client) VALUES (6, 2040, 'current', 30);
 INSERT INTO account (account_id, balance, type, account_client) VALUES (7, 16, 'term', 31);
-INSERT INTO account (account_id, balance, type, account_client) VALUES (8, -1000, 'current', 32);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (8, -950, 'current', 32);
 INSERT INTO account (account_id, balance, type, account_client) VALUES (9, 12243, 'current', 33);
 INSERT INTO account (account_id, balance, type, account_client) VALUES (10, 23, 'current', 34);
 INSERT INTO account (account_id, balance, type, account_client) VALUES (11, 2300, 'term', 35);
@@ -34,6 +34,10 @@ INSERT INTO account (account_id, balance, type, account_client) VALUES (23, 1600
 INSERT INTO account (account_id, balance, type, account_client) VALUES (24, 3456, 'current', 48);
 INSERT INTO account (account_id, balance, type, account_client) VALUES (25, 8777, 'current', 49);
 INSERT INTO account (account_id, balance, type, account_client) VALUES (26, 12000, 'term', 50);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (27, 500, 'term', 53);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (28, 500, 'term', 55);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (29, 500, 'term', 56);
+INSERT INTO account (account_id, balance, type, account_client) VALUES (30, 400, 'term', 57);
 
 -- Table: appointment
 CREATE TABLE appointment (appointment_id INTEGER PRIMARY KEY AUTOINCREMENT, start_time TEXT, end_time TEXT, room INTEGER REFERENCES room (room_id) ON DELETE NO ACTION, client_1 INTEGER REFERENCES client (client_id) ON DELETE NO ACTION NOT NULL, client_2 INTEGER REFERENCES client (client_id) ON DELETE NO ACTION, CONSTRAINT correct_time CHECK (strftime('%s', end_time) > strftime('%s', start_time)));
@@ -52,8 +56,6 @@ INSERT INTO appointment (appointment_id, start_time, end_time, room, client_1, c
 INSERT INTO appointment (appointment_id, start_time, end_time, room, client_1, client_2) VALUES (13, '2018/11/14 15:45', '2018/11/14 16:15', 24, 44, NULL);
 INSERT INTO appointment (appointment_id, start_time, end_time, room, client_1, client_2) VALUES (14, '2019/11/29 14:00', '2019/11/29 14:30', 10, 37, NULL);
 INSERT INTO appointment (appointment_id, start_time, end_time, room, client_1, client_2) VALUES (15, '2018/10/19 16:45', '2018/10/19 17:15', 19, 48, 50);
-INSERT INTO appointment (appointment_id, start_time, end_time, room, client_1, client_2) VALUES (16, '2019/05/19 15:00', '2019/05/19 15:30', 1, 31, NULL);
-INSERT INTO appointment (appointment_id, start_time, end_time, room, client_1, client_2) VALUES (17, '2019/05/19 15:30', '2019/05/19 16:00', 1, 31, NULL);
 
 -- Table: branch
 CREATE TABLE branch (
@@ -111,6 +113,9 @@ INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) V
 INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (37, '2024-07-21', 326, 4, 1);
 INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (38, '2025-01-12', 601, 8, 2);
 INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (39, '2025-02-02', 460, 11, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (40, '2020-01-29', 111, 28, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (41, '2020-01-29', 111, 29, 1);
+INSERT INTO card (card_id, expiry_date, cvv, associated_account, type_of_card) VALUES (42, '2020-01-29', 111, 30, 1);
 
 -- Table: client
 CREATE TABLE client (client_id INTEGER PRIMARY KEY REFERENCES person (person_id) ON DELETE CASCADE, birthdate TEXT, tax_id NUMERIC, client_branch INTEGER REFERENCES branch (branch_id) ON DELETE NO ACTION);
@@ -140,10 +145,14 @@ INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (47, '20
 INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (48, '2001-02-09', 217549, 4);
 INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (49, '2001-11-06', NULL, 4);
 INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (50, '1998-04-19', NULL, 4);
+INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (53, '19/04/1998', 12345, 3);
+INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (55, '19/04/1998', 1234, 3);
+INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (56, '1998-12-06', 123456, 5);
+INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (57, '1998/04/19', 123, 5);
 
 -- Table: employee
-CREATE TABLE employee (employee_id INTEGER PRIMARY KEY REFERENCES person (person_id) ON DELETE CASCADE, phone_number INTEGER, employee_branch_id INTEGER NOT NULL REFERENCES branch (branch_id) ON DELETE NO ACTION ON UPDATE NO ACTION, employee_room_id INTEGER REFERENCES room (room_id) ON DELETE SET NULL ON UPDATE NO ACTION);
-INSERT INTO employee (employee_id, phone_number, employee_branch_id, employee_room_id) VALUES (1, '202-555-0234', 1, 1);
+CREATE TABLE employee (employee_id INTEGER PRIMARY KEY REFERENCES person (first_name) ON DELETE CASCADE ON UPDATE NO ACTION, phone_number INTEGER, employee_branch_id INTEGER NOT NULL REFERENCES branch (branch_id) ON DELETE NO ACTION ON UPDATE NO ACTION, employee_room_id INTEGER REFERENCES room (room_branch) ON DELETE SET NULL ON UPDATE NO ACTION);
+INSERT INTO employee (employee_id, phone_number, employee_branch_id, employee_room_id) VALUES (1, '202-555-0129', 1, 1);
 INSERT INTO employee (employee_id, phone_number, employee_branch_id, employee_room_id) VALUES (2, '202-555-0115', 1, 2);
 INSERT INTO employee (employee_id, phone_number, employee_branch_id, employee_room_id) VALUES (3, '202-555-0124', 1, 3);
 INSERT INTO employee (employee_id, phone_number, employee_branch_id, employee_room_id) VALUES (4, '202-555-0173', 1, 4);
@@ -167,8 +176,6 @@ INSERT INTO employee (employee_id, phone_number, employee_branch_id, employee_ro
 INSERT INTO employee (employee_id, phone_number, employee_branch_id, employee_room_id) VALUES (22, '202-555-0136', 5, 25);
 INSERT INTO employee (employee_id, phone_number, employee_branch_id, employee_room_id) VALUES (23, '202-555-0190', 5, 26);
 INSERT INTO employee (employee_id, phone_number, employee_branch_id, employee_room_id) VALUES (24, '202-555-0116', 5, 27);
-INSERT INTO employee (employee_id, phone_number, employee_branch_id, employee_room_id) VALUES (64, 123, 4, 21);
-INSERT INTO employee (employee_id, phone_number, employee_branch_id, employee_room_id) VALUES (65, 123, 4, 21);
 
 -- Table: insurance
 CREATE TABLE insurance(
@@ -224,8 +231,8 @@ INSERT INTO offers (insurer_id, insurance_id, card_type_id) VALUES (5, 13, 2);
 INSERT INTO offers (insurer_id, insurance_id, card_type_id) VALUES (3, 15, 2);
 
 -- Table: person
-CREATE TABLE person (person_id INTEGER PRIMARY KEY ASC AUTOINCREMENT, first_name TEXT, last_name TEXT, address TEXT, username TEXT, password TEXT, admin BOOLEAN);
-INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (1, 'Theresa', 'Campbell', '27 St Express', NULL, NULL, 0);
+CREATE TABLE person (person_id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT, last_name TEXT, address TEXT, username TEXT, password TEXT, admin BOOLEAN);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (1, 'Theresa', 'Campbell', '2805  Harley Vincent Drive', NULL, NULL, 0);
 INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (2, 'Robert', 'Dickens', '3677  Quarry Drive', NULL, NULL, 0);
 INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (3, 'Nicola', 'Russell', '317  Meadow Lane', NULL, NULL, 0);
 INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (4, 'Felicity', 'Tucker', '4066  Oakway Lane', NULL, NULL, 0);
@@ -255,7 +262,7 @@ INSERT INTO person (person_id, first_name, last_name, address, username, passwor
 INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (28, 'Fiona', 'North', '2990  Poe Road', NULL, NULL, 0);
 INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (29, 'Felicity', 'Tucker', '1868  Oakmound Road', NULL, NULL, 0);
 INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (30, 'Wanda', 'Miller', NULL, NULL, NULL, 0);
-INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (31, 'Natalie', 'Jones', '644  Jennifer Lane', 'nata', NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (31, 'Natalie', 'Jones', '644  Jennifer Lane', 'nata', '', 0);
 INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (32, 'Lauren', 'Skinner', '2931  Mcwhorter Road', NULL, NULL, 0);
 INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (33, 'Paul', 'Campbell', '3086  Freshour Circle', NULL, NULL, 0);
 INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (34, 'Lauren', 'Lee', '1998  Sunrise Road', NULL, NULL, 0);
@@ -276,8 +283,12 @@ INSERT INTO person (person_id, first_name, last_name, address, username, passwor
 INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (49, 'Audrey', 'Jackson', '3503  Douglas Dairy Road', NULL, NULL, 0);
 INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (50, 'Dylan', 'Knox', NULL, NULL, NULL, 0);
 INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (51, 'Admin', 'Admin', 'Admin place', 'admin', 'adminspace', 1);
-INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (64, 'rita', 'martinho', 'odf', NULL, NULL, 0);
-INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (65, 'rita', 'martinho', 'odf', NULL, NULL, 0);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (52, 'rita', 'martinho', 'odf', 'rita', '$2y$12$qZSJMEX4n.5p1BHFCqsPEOvJkHxVyk4s.fZXaX5pXKWeozxVJAMzq', NULL);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (53, 'Rita', 'Martinho', 'odf', 'ritix', '$2y$12$u.TzeMwGO9QJ/NJyYcd6VOzlkaI4EsdmDhguhJOmQXAIqWz8Ku26m', NULL);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (54, NULL, NULL, NULL, NULL, '$2y$12$ywa0TefpXwZ0SxeGvcr4BePDxdny5EZmu.404AXyF/g1GZ1m1XN5G', NULL);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (55, 'Rita', 'Martinho', 'odf', 'ritix1', '$2y$12$lR7qaXB9fJ8jwwL7zHSECuVbVhVjvk6usDXitOcyuQEzZERY6G3QK', NULL);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (56, 'joana', 'sousa', 'çdjwoefh', 'joana', '$2y$12$94sto.gCQtJPP9dwQcqCUuZMKDkATfSX0yWEh8K.vxNoGipMpRfMO', NULL);
+INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (57, 'Rita', 'Martinho', 'odf', 'ritix2', '$2y$12$hviLnqBW9SNmchc5oocwJuQeESp04Gd94pNwKUiJQgHT5jmlhyb7.', NULL);
 
 -- Table: rating
 CREATE TABLE rating (client_1 INTEGER REFERENCES client (client_id) NOT NULL, appointment INTEGER REFERENCES appointment (appointment_id) NOT NULL, rating_score INTEGER NOT NULL, client_2 INTEGER REFERENCES client (client_id), rating_score_2 CHECK (0 <= rating_score_2 <= 10), PRIMARY KEY (client_1, appointment, client_2), CONSTRAINT correct_range CHECK (0 <= rating_score <= 10));
