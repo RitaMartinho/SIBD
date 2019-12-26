@@ -2,6 +2,10 @@
     include_once('../templates/tpl_common.php');
     include_once('../database/connection.php');
     include_once('../includes/sessions.php');
+    include_once('../database/employee.php');
+
+    $info=getInfoEmployee($_GET['firstName'], $_GET['lastName']);
+    var_dump($info);
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +26,7 @@
             <img src="img/employee.png" alt="welcome_admin"> 
             <section id="ClientsInfo">
                 <h2>Search:</h2>
-                <form id="form1" action="../actions/action_clientSearch">
+                <form id="form1" action="../pages/employeesSearch.php" method='get'>
                     <label>
                         <input type="text" name="firstName" placeholder="First Name">
                     </label>
@@ -42,16 +46,19 @@
             </section>
             <section id="SearchResults">
                     <ul>
-                        <li>First Name:</li>
-                        <li>Last Name:</li>
-                        <li>Birthday:</li>
-                        <li>Address:</li>
-                        <li>Branch:</li>
-                        <li>Account ID:</li>   
+                        <li>First Name: <?=$info['first_name']?></li>
+                        <li>Last Name: <?=$info['last_name']?></li>
+                        <li>Address: <?=$info['address']?></li>
+                        <li>Room ID: <?=$info['room_id']?></li>
+                        <li>Branch: <?=$info['branch']?></li>
+                        <li>Employee ID: <?=$info['employee_id']?></li>   
                     </ul>
-                    <form action="FIRED.PHP">
-                        <button type="submit">FIRE!</button>
+                    <form id="form2" action="../actions/action_removeEmployee.php "method="get">
+                       <input type="hidden" name=" firstName" value="<?=$info['first_name']?>">
+                       <input type="hidden" name=" lastName" value="<?=$info['last_name']?>">
+
                     </form>
+                    <button form="form2" type="submit">FIRE!</button>
                 </section>
         </section>
     </section>

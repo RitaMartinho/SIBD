@@ -242,11 +242,11 @@
         
     }
     //get a list of rooms available in a branch or null if there isn't
-    function getRoomsAvailable($branch_id){
+    function getRoomsAvailable(){
 
         global $db;
 
-        $stmt= $db->prepare('SELECT room_id
+        $stmt= $db->prepare('SELECT room_id,branch
             FROM (
                 SELECT room_id,
                     room_branch AS branch
@@ -256,10 +256,9 @@
                                 FROM employee
                                 WHERE employee_room_id = room_id
                         )
-            )
-            WHERE branch = ?');
+            )');
 
-        $stmt->execute(array($branch_id));
+        $stmt->execute();
         return $stmt->fetchAll();
                 
     }

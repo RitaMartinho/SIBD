@@ -22,7 +22,7 @@
             <img src="img/employee.png" alt="welcome_admin"> 
             <section id="ClientsInfo">
                 <h2>Search:</h2>
-                <form id="form1" action="../actions/action_employeeSearch.php">
+                <form id="form1" action="../pages/employeesSearch.php" method='get'>
                     <label>
                         <input type="text" name="firstName" placeholder="First Name">
                     </label>

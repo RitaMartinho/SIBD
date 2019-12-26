@@ -2,6 +2,9 @@
     include_once('../templates/tpl_common.php');
     include_once('../database/connection.php');
     include_once('../includes/sessions.php');
+    include_once('../database/branch.php');
+
+    $roomBranch=getRoomsAvailable();
 ?>
 
 <!DOCTYPE html>
@@ -22,8 +25,7 @@
             <img src="img/employee.png" alt="welcome_admin"> 
             <section id="ClientsInfo">
                 <h2>Search:</h2>
-                <form id="form1" action="../actions/action_employeeSearch.php">
-                    <label>
+                <form id="form1" action="../pages/employeesSearch.php" method='get'>
                         <input type="text" name="firstName" placeholder="First Name">
                     </label>
                     <label>
@@ -32,12 +34,6 @@
                 </form>
                 <section id="Clientbutton">
                     <button type="submit" form="form1">GO</button>
-                </section>
-                <section id="Employeebutton">
-                    <h2>Or:</h2>
-                    <form>
-                        <button type="submit" formaction="new.html"> Add new</button>
-                    </form>
                 </section>
             </section>
             <section id="SearchResults">
@@ -52,10 +48,14 @@
                         <input type="text" name="address" placeholder="Address">
                     </label>
                     <label>
-                        <input type="text" name="branch" placeholder="Branch">
+                        <select name="branchAndRoom">
+                            <?php foreach($roomBranch as $row){?>
+                                <option value="<?=$row['room_id']?>.<?=$row['branch']?>">Room: <?=$row['room_id']?> Branch: <?=$row['branch']?></option>
+                            <?php } ?>
+                        </select>
                     </label>
                     <label>
-                        <input type="text" name="room" placeholder="Room">
+                        <input type="text" name="phoneNumber" placeholder="PhoneNumber">
                     </label>
                 </form>
                 <section id="Button">

@@ -41,7 +41,7 @@
         <label>
             Branch: <select name="branchAddress"> 
                     <?php foreach($AllBranches as $BranchAdress) {?> 
-                        <option value= "<?=$BranchAdress['address']?>" ><?=$BranchAdress['address']?></option> }
+                        <option value= "<?=$BranchAdress['address']?>" ><?=$BranchAdress['address']?></option> 
                     <?php }?> 
                     </select>
         </label>

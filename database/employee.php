@@ -41,7 +41,7 @@
 
         $stmt->execute(array($first_name, $last_name));
 
-        return $stmt->fetchAll();
+        return $stmt->fetch();
     }
 
     function fireEmployee($first_name, $last_name){
