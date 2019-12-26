@@ -5,7 +5,6 @@
     include_once('../database/employee.php');
 
     $info=getInfoEmployee($_GET['firstName'], $_GET['lastName']);
-    var_dump($info);
 ?>
 
 <!DOCTYPE html>
@@ -45,20 +44,23 @@
                 </section>
             </section>
             <section id="SearchResults">
+                <?php foreach ($info as $infoEmployee){?>
                     <ul>
-                        <li><b>First Name:</b> <?=$info['first_name']?></li>
-                        <li><b>Last Name:</b> <?=$info['last_name']?></li>
-                        <li><b>Address:</b> <?=$info['address']?></li>
-                        <li><b>Room ID:</b> <?=$info['room_id']?></li>
-                        <li><b>Branch:</b> <?=$info['branch']?></li>
-                        <li><b>Employee ID:</b> <?=$info['employee_id']?></li>   
+                        <li><b>First Name:</b> <?=$infoEmployee['first_name']?></li>
+                        <li><b>Last Name:</b> <?=$infoEmployee['last_name']?></li>
+                        <li><b>Address:</b> <?=$infoEmployee['address']?></li>
+                        <li><b>Room ID:</b> <?=$infoEmployee['room_id']?></li>
+                        <li><b>Branch:</b> <?=$infoEmployee['branch']?></li>
+                        <li><b>Employee ID:</b> <?=$infoEmployee['employee_id']?></li>   
                     </ul>
-                    <form id="form2" action="../actions/action_removeEmployee.php "method="get">
-                       <input type="hidden" name=" firstName" value="<?=$info['first_name']?>">
-                       <input type="hidden" name=" lastName" value="<?=$info['last_name']?>">
 
+                    <form id="form2" action="../actions/action_removeEmployee.php "method="get">
+                       <input type="hidden" name=" firstName" value="<?=$infoEmployee['first_name']?>">
+                       <input type="hidden" name=" lastName" value="<?=$infoEmployee['last_name']?>">
                     </form>
                     <button form="form2" type="submit">FIRE!</button>
+                <?php } ?>
+                    
                 </section>
         </section>
     </section>

@@ -4,9 +4,12 @@
     include_once('../includes/sessions.php');
     include_once('../database/client.php');
 
+    $age=array();
     $info=getClientInfo($_GET['firstName'],$_GET['lastName']);
-    $age=getClientAge($info['birthdate']);
-    
+    foreach($info as $clientInfo){
+        array_push($age,getClientAge($clientInfo['birthdate']));
+    }
+   
 ?>
 
 <!DOCTYPE html>
@@ -40,14 +43,18 @@
                 </section>
             </section>
             <section id="SearchResults">
-                <ul>
-                    <li><b>First Name:</b> <?=$info['first_name']?></li>
-                    <li><b>Last Name:</b> <?=$info['last_name']?></li>
-                    <li><b>Age:</b> <?=$age?></li>
-                    <li><b>Address:</b> <?=$info['address']?></li>
-                    <li><b>Branch:</b> <?=$info['branch']?></li>
-                    <li><b>Account ID:</b> <?=$info['account_id']?></li>   
-                </ul>
+                <?php for($i=0;$i<count($age);$i++){
+                    foreach ( $info as $infoClient) {?>
+                        <ul>
+                            <li><b>First Name:</b> <?=$infoClient['first_name']?></li>
+                            <li><b>Last Name:</b> <?=$infoClient['last_name']?></li>
+                            <li><b>Age:</b> <?=$age[$i]?></li>
+                            <li><b>Address:</b> <?=$infoClient['address']?></li>
+                            <li><b>Branch:</b> <?=$infoClient['branch']?></li>
+                            <li><b>Account ID:</b> <?=$infoClient['account_id']?></li>   
+                        </ul>
+                    <?php }?>
+                <?php } ?>
             </section>
         </section>
     </section>

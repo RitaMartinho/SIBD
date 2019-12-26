@@ -28,7 +28,7 @@
                                 ON client_id=account_client');
         $stmt->execute(array($first_name, $last_name));
 
-        return $stmt->fetch();
+        return $stmt->fetchAll();
     }
 
 ?>
