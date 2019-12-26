@@ -2,13 +2,8 @@
 
     //WORKS REALLY WELL
     //gets age by client_id
-    function getClientAge($client_id){
+    function getClientAge($birthDate){
     
-        global $db;
-
-        $stmt=$db->prepare('SELECT birthdate from client where client_id= ? ');
-        $stmt->execute(array($client_id));
-        $birthDate=$stmt->fetchColumn();
         $age = date_diff(date_create($birthDate), date_create('now'))->y;
 
         return $age;
@@ -20,7 +15,7 @@
 
         global $db;
 
-        $stmt=$db->prepare('SELECT client_id, first_name, last_name, address, client_branch as branch, account_id
+        $stmt=$db->prepare('SELECT client_id, first_name,last_name, birthdate, address, client_branch as branch, account_id
                             FROM client JOIN( 
                                 SELECT *
                                 from person where (first_name like ? and last_name like ?)
@@ -33,7 +28,7 @@
                                 ON client_id=account_client');
         $stmt->execute(array($first_name, $last_name));
 
-        return $stmt->fetchAll();
+        return $stmt->fetch();
     }
 
 ?>

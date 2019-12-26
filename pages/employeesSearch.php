@@ -46,12 +46,12 @@
             </section>
             <section id="SearchResults">
                     <ul>
-                        <li>First Name: <?=$info['first_name']?></li>
-                        <li>Last Name: <?=$info['last_name']?></li>
-                        <li>Address: <?=$info['address']?></li>
-                        <li>Room ID: <?=$info['room_id']?></li>
-                        <li>Branch: <?=$info['branch']?></li>
-                        <li>Employee ID: <?=$info['employee_id']?></li>   
+                        <li><b>First Name:</b> <?=$info['first_name']?></li>
+                        <li><b>Last Name:</b> <?=$info['last_name']?></li>
+                        <li><b>Address:</b> <?=$info['address']?></li>
+                        <li><b>Room ID:</b> <?=$info['room_id']?></li>
+                        <li><b>Branch:</b> <?=$info['branch']?></li>
+                        <li><b>Employee ID:</b> <?=$info['employee_id']?></li>   
                     </ul>
                     <form id="form2" action="../actions/action_removeEmployee.php "method="get">
                        <input type="hidden" name=" firstName" value="<?=$info['first_name']?>">

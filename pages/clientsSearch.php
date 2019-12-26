@@ -1,5 +1,12 @@
 <?php
     include_once('../templates/tpl_common.php');
+    include_once('../database/connection.php');
+    include_once('../includes/sessions.php');
+    include_once('../database/client.php');
+
+    $info=getClientInfo($_GET['firstName'],$_GET['lastName']);
+    $age=getClientAge($info['birthdate']);
+    
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +27,7 @@
             <img src="img/client.png" alt="welcome_admin"> 
             <section id="ClientsInfo">
                 <h2>Search:</h2>
-                <form id="form1" action="../actions/action_clientSearch">
+                <form id="form1" action="../pages/clientsSearch.php">
                     <label>
                         <input type="text" name="firstName" placeholder="First Name">
                     </label>
@@ -34,12 +41,12 @@
             </section>
             <section id="SearchResults">
                 <ul>
-                    <li>First Name:</li>
-                    <li>Last Name:</li>
-                    <li>Age:</li>
-                    <li>Address:</li>
-                    <li>Branch:</li>
-                    <li>Account ID:</li>   
+                    <li><b>First Name:</b> <?=$info['first_name']?></li>
+                    <li><b>Last Name:</b> <?=$info['last_name']?></li>
+                    <li><b>Age:</b> <?=$age?></li>
+                    <li><b>Address:</b> <?=$info['address']?></li>
+                    <li><b>Branch:</b> <?=$info['branch']?></li>
+                    <li><b>Account ID:</b> <?=$info['account_id']?></li>   
                 </ul>
             </section>
         </section>

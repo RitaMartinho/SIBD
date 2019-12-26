@@ -23,7 +23,7 @@
             <img src="img/client.png" alt="welcome_admin"> 
             <section id="ClientsInfo">
                 <h2>Search:</h2>
-                <form id="form1" action="../actions/action_clientSearch.php">
+                <form id="form1" action="../pages/clientsSearch.php">
                     <label>
                         <input type="text" name="firstName" placeholder="First Name">
                     </label>
