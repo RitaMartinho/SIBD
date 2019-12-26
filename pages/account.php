@@ -36,8 +36,7 @@
             <a href="cards.php">See info about my cards</a>
         </nav>
     </section>
-    <footer>
-        <p>&copy; RitaEGonçalo, 2019</p>
-    </footer>
+    <?php draw_footer() ?>
+    
 </body>
 </html>

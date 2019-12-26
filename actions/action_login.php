@@ -6,7 +6,7 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
  
-    if (verifyUser($username, $password)== true) {
+    if (verifyUser($username, $password)) {
       $_SESSION['username'] = $username;
       if(verifyAdmin($username)){
         header('Location: ../pages/generalview_admin.php'); 

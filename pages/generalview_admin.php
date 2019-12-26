@@ -3,8 +3,7 @@
     include_once('../database/connection.php');
     include_once('../includes/sessions.php');
 
-    // TODO: CHECK IF USER IS ADMIN 
-    if(!isset($_SESSION['username']) ) {
+    if(!isset($_SESSION['username']) || !verifyAdmin($_SESSION['username']) ) {
         header('Location: login.php');
     }
 ?>
@@ -33,9 +32,7 @@
             </ul>
         </section>
     </section>
-    <footer>
-        <p>&copy; RitaEGonçalo, 2019</p>
-    </footer>
+    <?php draw_footer() ?>
 
 </body>
 </html>
