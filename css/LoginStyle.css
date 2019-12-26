@@ -9,6 +9,11 @@ body > header{
     border-bottom-style: solid;
 }
 
+body .message{
+    text-align: left;
+    color: red;
+}
+
 body > header a{
     text-decoration: none;
     color: black;

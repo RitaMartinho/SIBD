@@ -19,13 +19,13 @@
     <header>
         <h1>Welcome to Moneiys Bank</h1>
     </header>
-    <?php if (isset($_SESSION['message'])) { ?>
-        <div class="message">
-          <?=$_SESSION['message']?>
-        </div>
-      <?php } ?>
     <form action='../actions/action_register.php' method='post'>
-        <h3>Register</h3>
+    <h3>Register</h3>
+        <?php if (isset($_SESSION['message'])) { ?>
+            <div class="message">
+                <?=$_SESSION['message']?>
+            </div>
+            <?php } ?>
         <label>
             User Name: <input type="text" name="username">
         </label>
