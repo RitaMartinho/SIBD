@@ -44,12 +44,12 @@
         return $stmt->fetchAll();
     }
 
-    function fireEmployee($first_name, $last_name){
+    function fireEmployee($id){
 
         global $db;
 
-        $stmt= $db->prepare('DELETE from person where first_name like ? and last_name like ?');
-        $stmt->execute(array($first_name, $last_name));
+        $stmt= $db->prepare('DELETE from person where person_id=?');
+        $stmt->execute(array($id));
         
     }
 
