@@ -1,6 +1,6 @@
 body{
     margin: 0 auto;
-    background-color: #edeff0;
+    background-color: white;
 }
 
 
@@ -27,7 +27,7 @@ body section#content nav#cardInfo{
 }
 body section#content nav#cardInfo a{
 
-    background:  #2C338A;
+    background:  #96858F;
     border-radius: 10px;
     margin: 0 8em;
     text-decoration: none;
@@ -41,6 +41,6 @@ body section#content nav#cardInfo a{
 
 /* FOOTER */
 body footer{
-    background-color: #d8cdc2;
+    background-color: #D5D5D5;
     padding: 0.2em;
 }

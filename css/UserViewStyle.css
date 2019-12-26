@@ -1,6 +1,6 @@
 body{
     margin: 0 auto;
-    background-color: #edeff0;
+    background-color: white;
 }
 
 body section#offers img{
@@ -21,6 +21,10 @@ body section#welcome img{
 
     width:12em;
     align-self: center;
+}
+
+body li{
+    list-style: none;
 }
 body table{
     border-collapse: collapse;
@@ -44,7 +48,7 @@ body tr:first-child{
 }
 /* FOOTER */
 body footer{
-    background-color: #d8cdc2;
+    background-color: #D5D5D5;
     padding: 0.2em;
 }
 
