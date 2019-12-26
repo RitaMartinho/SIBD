@@ -58,8 +58,6 @@
             </section>
         </section>
     </section>
-    <footer>
-        <p>&copy; RitaEGonçalo, 2019</p>
-    </footer>
-</body>
+    <?php draw_footer() ?>
+    
 </html>

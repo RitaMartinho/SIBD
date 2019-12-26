@@ -34,8 +34,7 @@
             </section>
         <?php $i++; }?>
     </section>
-    <footer>
-        <p>&copy; RitaEGonçalo, 2019</p>
-    </footer>
+    <?php draw_footer() ?>
+    
 </body>
 </html>

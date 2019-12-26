@@ -85,9 +85,7 @@
             <img src="img/offer.png" alt="offer">
         </section>
     </section>
-    <footer>
-        <p>&copy; RitaEGonçalo, 2019</p>
-    </footer>
+    <?php draw_footer() ?>
 
 </body>
 </html>

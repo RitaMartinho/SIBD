@@ -15,6 +15,12 @@
                 <a href="payment.php" id="Payment">Make a payment</a>
         </nav>
     </header>
+<?php } 
+
+function draw_footer(){ ?>
+    <footer>
+        <p>&copy; RitaEGonçalo, 2019</p>
+    </footer>
 <?php } ?>
 
 
