@@ -57,10 +57,6 @@ body header nav a#Employees{
     /*background-color: #877D7F;*/
     background-color: #9099A2;
 }
-body header nav a#Appointments{
-    /*background-color: #7B93B1;*/
-
-}
 
 body header nav a#Offers{
     /*background-color: #2C338A;*/
@@ -75,32 +71,28 @@ body header nav a#Ratings{
 
 body header nav a#Branchs:hover{
     background-color: lightgray;
-    border: 2px solid #2C338A;
+    border: 2px solid #96858F;
 }
 
 body header nav a#Clients:hover{
     background-color: lightgray;
-    border: 2px solid #A4AC9A;
+    border: 2px solid #6D7993;
 }
 
 body header nav a#Employees:hover{
     background-color:lightgray;
-    border: 2px solid #877D7F;
+    border: 2px solid #9099A2;
 }
 
-body header nav a#Appointments:hover{
-     background-color: lightgray;
-     border: 2px solid #7B93B1;
-}
 
 body header nav a#Offers:hover{
     background-color: lightgray;
-    border: 2px solid #2C338A;
+    border: 2px solid #D5D5D5;
 }
 
 
 body header nav a#Ratings:hover{
     background-color: lightgray;
-    border: 2px solid #A4AC9A;
+    border: 2px solid #96858F;
 }
 

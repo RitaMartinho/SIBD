@@ -16,24 +16,26 @@
     <link href="../css/HeaderStyleAdmin.css" rel="stylesheet">
     <link href="../css/EmployeesStyle.css" rel="stylesheet">
     <link href="../css/ClientsLayout.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Moneiys Bank</title>
 </head>
 <body>
     <?php draw_AdminHeader();?>
     <section id="content">
         <section id="Client">
-            <img src="img/offer.png" alt="welcome_admin"> 
+            <img src="img/offer.png" alt="offers_logo"> 
             <section id="ClientsInfo">
                 <h2>Offers Available:</h2>
                 <table>
                     <tr>
                         <th scope="col">Insurer</th>
                         <th>Insurance</th>
+                        <th>Card type</th>
                     </tr>                    
                         <?php foreach($AllOffers as $offer){?> 
                             <tr>
-                                <td><?= $offer['insurance_name']?></td>
                                 <td><?= $offer['insurer_name']?></td>
+                                <td><?= $offer['insurance_name']?></td>
+                                <td><?= $offer['card_type']?></td>
                             </tr>
                         <?php } ?>
                 </table>

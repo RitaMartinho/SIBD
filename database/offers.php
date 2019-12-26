@@ -47,6 +47,11 @@
         $stmt->execute(array($typeOfCard));
         
         $card_id=$stmt->fetchColumn();
+
+        if($card_id==null){
+
+            return false;
+        }
         
         //We have to do this since it's not a primary key
         //check if already exists in database an insurer with given name
@@ -106,7 +111,7 @@
         //finally add the offer
         $stmt=$db->prepare('INSERT INTO offers VALUES (?, ?, ?)');
         $stmt->execute(array($insurer_id, $insurance_id,$card_id));
-
+        return true;
     }
 
     //MAYBE ADD A DROPDOWN TO BE EASIER?
@@ -126,9 +131,12 @@
 
         $info=$stmt->fetch();
 
+        if($info==null){
+            return false;
+        }
         $stmt=$db->prepare('DELETE FROM offers where (insurer_id =? and insurance_id=? and card_type_id=?) ');
         $stmt->execute(array($info['insurer_id'], $info['insurance_id'], $info['card_type_id']));
-
+        return true;
 
     }
 
