@@ -54,13 +54,12 @@
                         <li><b>Employee ID:</b> <?=$infoEmployee['employee_id']?></li>   
                     </ul>
 
-                    <form id="form2" action="../actions/action_removeEmployee.php "method="get">
-                       <input type="hidden" name=" firstName" value="<?=$infoEmployee['first_name']?>">
-                       <input type="hidden" name=" lastName" value="<?=$infoEmployee['last_name']?>">
+                    <form id="form2" action="../actions/action_removeEmployee.php"method="get">
+                       <input type="hidden" name="id" value="<?=$infoEmployee['employee_id']?>">
+                       <button type="submit">FIRE!</button>
                     </form>
-                    <button form="form2" type="submit">FIRE!</button>
-                <?php } ?>
                     
+                <?php } ?>      
                 </section>
         </section>
     </section>

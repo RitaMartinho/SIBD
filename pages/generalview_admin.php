@@ -3,7 +3,10 @@
     include_once('../database/connection.php');
     include_once('../includes/sessions.php');
     include_once('../database/user.php');
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 
     if(!isset($_SESSION['username']) || !verifyAdmin($_SESSION['username']) ) {
         header('Location: login.php');

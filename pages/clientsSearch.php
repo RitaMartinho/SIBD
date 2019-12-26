@@ -6,9 +6,6 @@
 
     $age=array();
     $info=getClientInfo($_GET['firstName'],$_GET['lastName']);
-    foreach($info as $clientInfo){
-        array_push($age,getClientAge($clientInfo['birthdate']));
-    }
    
 ?>
 
@@ -43,17 +40,15 @@
                 </section>
             </section>
             <section id="SearchResults">
-                <?php for($i=0;$i<count($age);$i++){
-                    foreach ( $info as $infoClient) {?>
+                    <?php foreach ( $info as $infoClient) {?>
                         <ul>
                             <li><b>First Name:</b> <?=$infoClient['first_name']?></li>
                             <li><b>Last Name:</b> <?=$infoClient['last_name']?></li>
-                            <li><b>Age:</b> <?=$age[$i]?></li>
+                            <li><b>Age:</b> <?=getClientAge($infoClient['birthdate'])?></li>
                             <li><b>Address:</b> <?=$infoClient['address']?></li>
                             <li><b>Branch:</b> <?=$infoClient['branch']?></li>
                             <li><b>Account ID:</b> <?=$infoClient['account_id']?></li>   
                         </ul>
-                    <?php }?>
                 <?php } ?>
             </section>
         </section>
