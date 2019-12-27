@@ -1,8 +1,9 @@
 body section#content {
     margin-top: 12em;
     display: grid;
-    grid-template-rows: 1.5fr 1fr 1fr 1fr;
-    grid-template-areas:"Welcome" 
+    grid-template-rows: 0.1fr 1.5fr 1fr 1fr 1fr;
+    grid-template-areas:"Message"
+                        "Welcome" 
                         "About"
                         "AboutBranch"
                         "Offers";

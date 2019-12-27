@@ -27,6 +27,11 @@
 <body>
    <?php draw_header();?>
     <section id="content">
+        <?php if (isset($_SESSION['message'])) { ?>
+            <div class="message">
+                <?=$_SESSION['message']?>
+            </div>
+        <?php unset($_SESSION['message']); } ?>
         <section id="welcome">
             <h1>Welcome to your personal client page!</h1>
             <img src="img/welcome.png" alt="welcome"> 

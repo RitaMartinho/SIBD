@@ -99,6 +99,7 @@
         }
 
         if(!is_numeric($money)){
+            $_SESSION['message'] = 'Quantity needs to be numeric!';
             return false;
         }
 

@@ -48,7 +48,12 @@ body footer{
     padding: 0.2em;
 }
 
-
+body .message{
+    text-align: center;
+    color: green;
+    grid-area: Message;
+    font-size: 1.5em;
+}
 body section#content #welcome{
     border-bottom: 4px solid black;
 }
