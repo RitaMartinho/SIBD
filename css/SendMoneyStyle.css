@@ -18,6 +18,11 @@ body section#content section#SendInfo form label{
     display: block;
 }
 
+body .message{
+    text-align: left;
+    color: red;
+}
+
 body button{
 
     background:#A4AC9A;

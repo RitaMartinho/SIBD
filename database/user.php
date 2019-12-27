@@ -94,6 +94,7 @@
         $ret=checkIfAccountExists($destiny_account);
 
         if( $ret === false){
+            $_SESSION['message'] = 'Destiny Account does not exist!';
             return false;
         }
 
@@ -131,6 +132,7 @@
         }
 
         else{
+            $_SESSION['message'] = 'Theres not enough money in your account!';
             return false;
         }
     }

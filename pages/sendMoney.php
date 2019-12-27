@@ -27,7 +27,12 @@
                 <label >
                         How much?<input type="text" name="quantity" required>  
                 </label>   
-            </form>   
+            </form>
+            <?php if (isset($_SESSION['message'])) { ?>
+                <div class="message">
+                    <?=$_SESSION['message']?>
+                </div>
+            <?php unset($_SESSION['message']); } ?>   
             <section id="button">
                 <button type="submit" form="form1" >Send</button>
             </section>             

@@ -5,7 +5,8 @@
     include_once('../includes/sessions.php');
     
     $origin = getAccountID($_SESSION['username']);
-    if(checkIfSendMoneyIsPossible($_POST['quantity'], $_POST['destiny'], $origin)){
+    if(checkIfSendMoneyIsPossible($_POST['quantity'], $_POST['destiny'], $origin))
         header("Location:../pages/generalview_user.php");
-    }else echo "NO GOOD";
+    else header('Location: ' . $_SERVER['HTTP_REFERER']);
+
 ?>

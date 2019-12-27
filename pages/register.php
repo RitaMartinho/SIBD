@@ -25,7 +25,7 @@
             <div class="message">
                 <?=$_SESSION['message']?>
             </div>
-            <?php unset($_SESSION['message']); } ?>
+        <?php unset($_SESSION['message']); } ?>
         <label>
             User Name: <input type="text" name="username">
         </label>
