@@ -40,7 +40,9 @@
                 </section>
             </section>
             <section id="SearchResults">
-                    <?php foreach ( $info as $infoClient) {?>
+                    <?php if(empty($info)) {
+                        ?>  <h2> No client with that name</h2> <?php
+                    } else foreach ( $info as $infoClient) {?>
                         <ul>
                             <li><b>First Name:</b> <?=$infoClient['first_name']?></li>
                             <li><b>Last Name:</b> <?=$infoClient['last_name']?></li>

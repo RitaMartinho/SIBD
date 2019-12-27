@@ -44,7 +44,14 @@
                 </section>
             </section>
             <section id="SearchResults">
-                <?php foreach ($info as $infoEmployee){?>
+                <?php if (isset($_SESSION['message'])) { ?>
+                    <div class="message">
+                        <?=$_SESSION['message']?>
+                    </div>
+                <?php unset($_SESSION['message']); } 
+                else if (empty($info)) {
+                    ?>  <h2> No employee with that name</h2> <?php
+                } else foreach ($info as $infoEmployee){?>
                     <ul>
                         <li><b>First Name:</b> <?=$infoEmployee['first_name']?></li>
                         <li><b>Last Name:</b> <?=$infoEmployee['last_name']?></li>
