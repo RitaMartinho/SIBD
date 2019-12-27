@@ -5,10 +5,9 @@
     include_once('../database/appointment.php');
 
     if(!isset($_GET['day']) || !isset($_GET['startHour']) || !isset($_GET['employee']) ){
-        //TODO
-        ?> <h1>ERROR</h1><?php
+	$_SESSION['message'] = 'Please fill out all the fields';
+	header('Location: ' . $_SERVER['HTTP_REFERER']);
 
-        //PRINT ERROR MESSAGE
     }
     else {
         $username = $_SESSION['username'];
@@ -19,7 +18,8 @@
         $last_name = $name[1];
 
         if(setAppointment($username, $day, $startHour, $first_name, $last_name)){
-            ?> <h1>APPOINTMENT ADDED</h1><?php
-        } else{ ?> <h1>APPOINTMENT REJECTED</h1><?php }
+	$_SESSION['message'] = 'Appointment Scheduled';
+        } else $_SESSION['message'] = 'Date and Hour already taken!';
+	header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
 ?>

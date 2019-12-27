@@ -46,6 +46,14 @@
             <section id="button">
                 <button type="submit" form="form1">Schedule</button>
             </section>                
+	    <?php if (isset($_SESSION['message'])) { ?>
+	    <div class="message" style="color: <?php $type=strpos($_SESSION['message'],"already");
+                            if ($type !== false){ 
+                                echo 'red'; 
+                            } else echo 'green'; ?>">
+	                       <?=$_SESSION['message']?>
+                </div>
+            <?php unset($_SESSION['message']); } ?> 
             <p>All appointments have a duration of 30min!</p>
             
         </section>
