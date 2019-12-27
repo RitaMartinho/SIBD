@@ -128,11 +128,13 @@
 
             $stmt1=$db->prepare('UPDATE account SET balance = ? where account_id=?');
             $stmt1->execute(array($destiny_balance, $destiny_account));
-
+	    
+	
+            $_SESSION['message'] = 'Money was sent!';
             return true;
         }
 
-        else{
+	else{
             $_SESSION['message'] = 'Theres not enough money in your account!';
             return false;
         }
@@ -143,8 +145,7 @@
         global $db;
 
         if(!is_numeric($destiny_account)){ //accepts any destiny account 
-            
-            echo "numeric";
+            $_SESSION['message'] = 'Quantity needs to be numeric!';
             return false;
         } 
 
@@ -153,9 +154,6 @@
 
         $origin_balance= $stmt->fetchColumn(); // to get a string and not an array
 
-
-        echo intval($origin_balance);
-        echo intval($money);
 
         if(intval($origin_balance) >= intval($money)){
 
@@ -167,10 +165,12 @@
             $stmt1=$db->prepare('UPDATE account SET balance = ? where account_id= ?');
             $stmt1->execute(array($origin_balance,$origin_account));
 
+            $_SESSION['message'] = 'Money was sent!';
             return true;
         }
-
+	
         else{
+            $_SESSION['message'] = 'Theres not enough money in your account!';
             return false;
         }
 

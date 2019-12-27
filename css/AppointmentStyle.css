@@ -1,6 +1,6 @@
 body{
     margin: 0 auto;
-    background-color: white; 
+    background-color: #edeff0;   
 }
 body section#content img{
     margin: 2em;
@@ -17,10 +17,14 @@ body section#content section#AppointmentInfo h2 {
  body section#content section#AppointmentInfo form label{
      display: block;
  }
+body .message{
+    text-align: left;
+    padding-left: 1em;
+}
 
  body button{
 
-    background:  #9099A2;
+    background:  #877D7F;
     border-radius: 10px;
     padding: 1em;
     margin-top: 1em;
@@ -31,6 +35,6 @@ body section#content section#AppointmentInfo h2 {
  
 /* FOOTER */
 body footer{
-    background-color: #D5D5D5;
+    background-color: #d8cdc2;
     padding: 0.2em;
 }

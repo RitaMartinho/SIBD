@@ -1,6 +1,6 @@
 body{
     margin: 0 auto;
-    background-color: white;
+    background-color: #edeff0;   
 }
 body section#content img{
     margin: 2em;
@@ -17,10 +17,13 @@ body section#content section#PaymentInfo h2 {
  body section#content section#PaymentInfo form label{
      display: block;
  }
-
+body .message{
+    text-align: left;
+    color: red;
+}
  body button{
 
-    background:  #D5D5D5;
+    background: #7B93B1;
     border-radius: 10px;
     padding: 1em;
     margin-top: 1em;
@@ -31,6 +34,6 @@ body section#content section#PaymentInfo h2 {
  
 /* FOOTER */
 body footer{
-    background-color:#D5D5D5;
+    background-color: #d8cdc2;
     padding: 0.2em;
 }

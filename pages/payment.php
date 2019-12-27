@@ -28,6 +28,11 @@
             <section id="button">                
                 <button type="submit" form="form1">Pay</button>
             </section>
+            <?php if (isset($_SESSION['message'])) { ?>
+                <div class="message">
+                    <?=$_SESSION['message']?>
+                </div>
+            <?php unset($_SESSION['message']); } ?>   
         </section>
     </section>
     <?php draw_footer() ?>
