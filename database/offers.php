@@ -18,7 +18,7 @@
                           card ON (card_type_id = type_of_card) 
                           INNER JOIN
                           account ON (associated_account = account_id) 
-                    WHERE account_client = ?
+                    WHERE account_id = ?
                )
                ON (insurance = insurance_id and insurer=insurer_id)');
 

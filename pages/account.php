@@ -6,6 +6,7 @@
 
     $accountInfo = getAccountIdBalanceType($_SESSION['username']);    
     $nCards = getNumberOfCards($_SESSION['username']);
+
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +30,7 @@
                 <li> ID: <?=$accountInfo['account_id']?> </li>
                 <li>Balance: <?=$accountInfo['balance']?></li>
                 <li>Type: <?= $accountInfo['type']?></li>
-                <li># Cards: <?=intval($nCards);?></li>
+                <li># Cards: <?=$nCards?></li>
             </ul>
         </section>   
         <nav id="cardInfo">

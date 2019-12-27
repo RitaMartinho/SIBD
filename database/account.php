@@ -99,7 +99,7 @@
             ON client=account_client)');
 
         $stmt->execute(array($username));
-        return $stmt->fetch();
+        return $stmt->fetchColumn();
     }
 
     function getInfoCards($username){
