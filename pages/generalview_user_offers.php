@@ -49,16 +49,19 @@
         <section id="about">
             <h2>About Moneiys Bank</h2>
             <article id="aboutBank">
-                <p>A very very sad story </p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+               
             </article>
         </section>
         <section id="aboutBranch">
             <h2>About your branch</h2>
             <article id="aboutBranchList">
                 <ul>
-                    <li>Chief:<?= " ".$Chief['first_name'] ." " .$Chief['last_name']?></li>
-                    <li>Address:<?=" ".$Address?></li>
-                    <li>Number of employees:<?=" ".$NrEmployees['nrEmployees'] ?></li>
+                    <li><b>Chief:</b><?= " ".$Chief['first_name'] ." " .$Chief['last_name']?></li>
+                    <li><b>Address:</b><?=" ".$Address?></li>
+                    <li><b>Number of employees:</b><?=" ".$NrEmployees['nrEmployees'] ?></li>
                 </ul>
             </article>
             <?php

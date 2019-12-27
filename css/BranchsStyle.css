@@ -1,6 +1,6 @@
 body{
     margin: 0 auto;
-    background-color: #edeff0;
+    background-color: white;
 }
 
 
@@ -12,6 +12,7 @@ body section#content img{
 
 /* FOOTER */
 body footer{
-    background-color: #d8cdc2;
+    
+    background-color: #D5D5D5;
     padding: 0.2em;
 }

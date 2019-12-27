@@ -27,7 +27,6 @@
                 <h2>Search:</h2>
                 <form id="form1" action="../pages/employeesSearch.php" method='get'>
                         <input type="text" name="firstName" placeholder="First Name">
-                    </label>
                     <label>
                         <input type="text" name="lastName" placeholder="Last Name">
                     </label>

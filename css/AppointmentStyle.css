@@ -1,6 +1,6 @@
 body{
     margin: 0 auto;
-    background-color: #edeff0;   
+    background-color: white; 
 }
 body section#content img{
     margin: 2em;
@@ -20,7 +20,7 @@ body section#content section#AppointmentInfo h2 {
 
  body button{
 
-    background:  #877D7F;
+    background:  #9099A2;
     border-radius: 10px;
     padding: 1em;
     margin-top: 1em;
@@ -31,6 +31,6 @@ body section#content section#AppointmentInfo h2 {
  
 /* FOOTER */
 body footer{
-    background-color: #d8cdc2;
+    background-color: #D5D5D5;
     padding: 0.2em;
 }

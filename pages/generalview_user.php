@@ -55,9 +55,9 @@
             <h2>About your branch</h2>
             <article id="aboutBranchList">
                 <ul>
-                    <li>Chief:<?= " ".$Chief['first_name'] ." " .$Chief['last_name']?></li>
-                    <li>Address:<?=" ".$Address?></li>
-                    <li>Number of employees:<?=" ".$NrEmployees['nrEmployees'] ?></li>
+                    <li><b>Chief:</b><?= " ".$Chief['first_name'] ." " .$Chief['last_name']?></li>
+                    <li><b>Address:</b><?=" ".$Address?></li>
+                    <li><b>Number of employees:</b><?=" ".$NrEmployees['nrEmployees'] ?></li>
                 </ul>
             </article>
             <?php
