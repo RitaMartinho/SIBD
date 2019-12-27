@@ -4,7 +4,7 @@
     include_once('../database/account.php');
     include_once('../includes/sessions.php');
 
-    $cardInfo = getInfoCards('nata');
+    $cardInfo = getInfoCards($_SESSION['username']);
 ?>
 
 <!DOCTYPE html>
