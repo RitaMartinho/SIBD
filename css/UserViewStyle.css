@@ -67,16 +67,16 @@ body .message{
     grid-area: Message;
     font-size: 1.5em;
 }
-body section#content #welcome{
+body div#content #welcome{
     border-bottom: 4px solid black;
 }
 
-body section#content #about{  
+body div#content #about{  
     border-bottom: 4px solid black;
 }
-body section#content #aboutBranch{
+body div#content #aboutBranch{
     border-bottom: 4px solid black;
 }
-body section#content #offers{
+body div#content #offers{
     border-bottom: 4px solid black;
 }

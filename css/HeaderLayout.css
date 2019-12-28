@@ -14,7 +14,7 @@ body header {
 body header section#logo{
     grid-area: Title;
 } 
-body header section#username{
+body header div#username{
     grid-area: Username;
 }
 

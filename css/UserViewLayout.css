@@ -1,4 +1,4 @@
-body section#content {
+body div#content {
     margin-top: 12em;
     display: grid;
     grid-template-rows: 0.1fr 1.0fr 1fr 1fr 1fr;
@@ -48,7 +48,7 @@ body section#about{
 body section#about h2{
     grid-area: AboutText;
 }
-body section#about article#aboutBank{
+body section#about div#aboutBank{
     grid-area: RandomInfo;
 }
 
@@ -63,11 +63,11 @@ body section#aboutBranch{
 body section#aboutBranch h2{
     grid-area: AboutBranchText;
 }
-body section#aboutBranch article#aboutBranchList{
+body section#aboutBranch div#aboutBranchList{
     grid-area: List;
 }
 
-body section#aboutBranch iframe{
+body article#aboutBranch iframe{
     grid-area: GoogleMaps;
     width: 25em;
     border: 1px solid #edeff0; /*MOVEE THIS*/

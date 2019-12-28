@@ -4,10 +4,10 @@
             <h1><a href="generalview_user.php"> Moneiys Bank</a></h1>
             <img src="img/bank_logo.png" alt="bank_logo">
         </section>
-        <section id="username">
+        <div id="username">
             <?= $_SESSION['username'] ?>
             <a href="../actions/action_logout.php">Logout</a>
-        </section>
+        </div>
         <nav id="operations">
                 <a href="account.php" id="SeeAccount">See account</a>
                 <a href="sendMoney.php" id="SendMoney">Send Money</a>

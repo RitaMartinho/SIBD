@@ -26,12 +26,12 @@ body header section#logo img{
 }
 
 /* USERNAME*/
-body header section#username{
+body header div#username{
     display: inline-block;
     text-align: right;
     padding: 1em 0em;
 }
-body header section#username a{
+body header div#username a{
 
     font-weight: bold;
 } 
