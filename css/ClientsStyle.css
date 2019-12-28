@@ -3,22 +3,22 @@ body{
     background-color: white; 
 }
 
-body section#content img{
+body div#content img{
     
     width: 12em;
 }
-body section#content section#ClientsInfo {
+body div#content section#ClientsInfo {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-body section#content section#ClientsInfo h2 {
+body div#content section#ClientsInfo h2 {
    padding: 0.25em 0;
 }
-body section#content section#ClientsInfo form label{
+body div#content section#ClientsInfo form label{
     display: block;
 }
-body section#content section#SearchResults {
+body div#content section#SearchResults {
     margin: 3em 0;
     border-left: 1px solid black;
     display: flex;
@@ -26,7 +26,7 @@ body section#content section#SearchResults {
     flex-direction: column;
 }
 
-body section#content section#SearchResults li {
+body div#content section#SearchResults li {
     list-style: none;
 }
 

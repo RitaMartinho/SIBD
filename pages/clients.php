@@ -23,8 +23,8 @@
 </head>
 <body>
     <?php  draw_AdminHeader();?>
-    <section id="content">
-        <section id="Client">
+    <div id="content">
+        <div id="Client">
             <img src="img/client.png" alt="welcome_admin"> 
             <section id="ClientsInfo">
                 <h2>Search:</h2>
@@ -36,12 +36,12 @@
                         <input type="text" name="lastName" placeholder="Last Name">
                     </label>
                 </form>
-                <section id="button">
+                <div id="button">
                     <button type="submit" form="form1">GO</button>
-                </section>
+                </div>
             </section>
-        </section>
-    </section>
+        </div>
+    </div>
     <?php draw_footer() ?>
     
 </body>

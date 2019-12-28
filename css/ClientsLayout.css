@@ -1,11 +1,11 @@
 
 /* CLIENTS AREA*/
 
-body section#content{
+body div#content{
 
     margin-top: 10em;
 }
-body section#Client{
+body div#Client{
     grid-area: Client;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -13,13 +13,13 @@ body section#Client{
     justify-content: center;
 }
 
-body section#Client img{
+body div#Client img{
 
     margin :20% 5%;
     grid-area: ClientPic;
 }
 
-body section#Client section#ClientsInfo{
+body div#Client section#ClientsInfo{
     display: block;
     margin : 1em;
     grid-area: ClientSearch;
