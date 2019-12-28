@@ -2,19 +2,19 @@ body{
     margin: 0 auto;
     background-color: white; 
 }
-body section#content img{
+body div#content img{
     margin: 2em;
     width: 12em;
 }
-body section#content section#SendInfo {
+body div#content section#SendInfo {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-body section#content section#SendInfo h2 {
+body div#content section#SendInfo h2 {
    padding: 0.25em 0;
 }
-body section#content section#SendInfo form label{
+body div#content section#SendInfo form label{
     display: block;
 }
 

@@ -1,4 +1,4 @@
-body section#content{
+body div#content{
     margin-top: 10em;
     display: grid;
     grid-template-columns: 0.5fr 1fr;
@@ -6,9 +6,9 @@ body section#content{
 }
 
 /* CARD INFO AREA*/
-body section#content img{
+body div#content img{
     grid-area: SendPic;
 }
-body section#content section#SendInfo{
+body div#content section#SendInfo{
     grid-area: SendInfo;
 }

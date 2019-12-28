@@ -16,7 +16,7 @@
 </head>
 <body>
     <?php draw_header();?>
-    <section id="content">
+    <div id="content">
         <img src="img/send_money.png" alt="accountlogo"> 
         <section id="SendInfo"> 
             <h2>Send Money</h2>
@@ -33,11 +33,11 @@
                     <?=$_SESSION['message']?>
                 </div>
             <?php unset($_SESSION['message']); } ?>   
-            <section id="button">
+            <div id="button">
                 <button type="submit" form="form1" >Send</button>
-            </section>             
+            </div>             
         </section>
-    </section>
+    </div>
     <?php draw_footer() ?>
 </body>
 </html>
