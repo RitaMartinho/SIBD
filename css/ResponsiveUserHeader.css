@@ -15,7 +15,6 @@
 
     body >header div#username p{
         padding: 1em;
-        font-size: 0.7rem;
     }
 
     body > header nav#operations{
@@ -46,4 +45,32 @@
         padding: 0.5em;
     }
 
+}
+
+@media (max-width: 50em){
+
+    body div#content{
+        margin-top: 14em;
+    }
+
+    body > header section#logo{
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    body > header section#logo h1{
+        display: block;
+        text-align: center;
+        padding:0em;
+        font-size: 1.0em;
+
+    }
+
+    body > header section#logo img{
+        display: block;
+        flex: 0.4;
+        padding: 0.5em;
+    }
 }

@@ -3,7 +3,7 @@
 @media (max-width: 30em){
 
     body div#content{
-        margin-top: 25em;
+        margin-top: 26em;
         font-size: 0.8em;
     }
 
@@ -11,6 +11,16 @@
         display: flex;
         flex-direction: column;
         align-items:center;
+    }
+
+    body div#content section#welcome h2{
+        padding-left: 0;
+    }
+
+
+
+    body div#content section#welcome img{
+        align-self: center;
     }
 
     body div#content section#about{
@@ -29,6 +39,17 @@
         align-items:center;
     }
 
+    body div#content section#aboutBranch h2{
+        padding-left: 0;
+    }
+
+    body div#content section#aboutBranch iframe{
+        padding: 1em;
+    }
+
+    body div#content section#aboutBranch ul{
+        padding: 1em;
+    }
     body div#content section#offers{
         display: flex;
         flex-direction: column;
@@ -36,7 +57,15 @@
         text-align: center;
     }
 
-    body div#content section#welcome img{
-        align-self: center;
+    body div#content section#offers h2{
+        padding-left: 0;
+    }
+
+}
+
+@media (max-width: 55em){
+
+    body div#content{
+        margin-top: 14em;
     }
 }

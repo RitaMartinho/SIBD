@@ -15,6 +15,8 @@
     <link href="../css/HeaderStyle.css" rel="stylesheet">
     <link href="../css/AppointmentLayout.css" rel="stylesheet">
     <link href="../css/AppointmentStyle.css" rel="stylesheet"> 
+    <link href="../css/ResponsiveUserHeader.css" rel="stylesheet">
+    <link href="../css/ResponsiveAccount.css" rel="stylesheet">
     <title>Moneiys Bank</title>
 </head>
 <body>
