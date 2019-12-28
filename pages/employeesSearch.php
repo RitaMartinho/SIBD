@@ -25,8 +25,8 @@
 </head>
 <body>
     <?php draw_AdminHeader(); ?>
-    <section id="content">
-        <section id="Client">
+    <div id="content">
+        <div id="Client">
             <img src="img/employee.png" alt="welcome_admin"> 
             <section id="ClientsInfo">
                 <h2>Search:</h2>
@@ -38,9 +38,9 @@
                         <input type="text" name="lastName" placeholder="Last Name">
                     </label>
                 </form>
-                <section id="Clientbutton">
+                <div id="Clientbutton">
                     <button type="submit" form="form1">GO</button>
-                </section>
+                </div>
                 <section id="Employeebutton">
                     <h2>Or:</h2>
                     <form>
@@ -48,7 +48,7 @@
                     </form>
                 </section>
             </section>
-            <section id="SearchResults">
+            <div id="SearchResults">
                 <?php if (isset($_SESSION['message'])) { ?>
                     <div class="message">
                         <?=$_SESSION['message']?>
@@ -71,9 +71,9 @@
                        <button type="submit">FIRE!</button>
                     </form>
                 <?php } ?>      
-                </section>
-        </section>
-    </section>
+            </div>
+        </div>
+    </div>
     
     <?php draw_footer() ?>
 

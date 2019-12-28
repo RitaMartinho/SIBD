@@ -42,18 +42,18 @@ body div#content section#ClientsInfo section#Employeebutton a{
 }
 
 
-body div#content section#SearchResults {
+body div#content div#SearchResults {
     margin: 3em 0;
     border-left: 1px solid black;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-body div#content section#SearchResults form label input{
+body div#content div#SearchResults form label input{
     display: block;
     margin: 1em;
 }
-body div#content section#SearchResults button{
+body div#content div#SearchResults button{
     margin: 1em 2em;
 }
 
