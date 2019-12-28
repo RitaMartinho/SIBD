@@ -1,9 +1,9 @@
 
-body section#content{
+body div#content{
 
     margin-top: 10em;
 }
-body section#Rating{
+body div#Rating{
     grid-area: Rating;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -11,28 +11,28 @@ body section#Rating{
     justify-content: center;
 }
 
-body section#Rating img{
+body div#Rating img{
 
     margin :20% 5%;
     grid-area: RatingPic;
 }
 
-body section#Rating section#orderby{
+body div#Rating section#orderby{
     display: block;
     margin : 1em;
     grid-area: RatingSearch;
 }
 
-body section#Rating section#average{
+body div#Rating section#average{
     margin: 1em;
     grid-area: RatingMedium;
 }
 
 
-body section#Rating section#average h2{
+body div#Rating section#average h2{
     text-align: center;
 }
 
-body section#Rating section#average p{
+body div#Rating section#average p{
     text-align: center;
 }

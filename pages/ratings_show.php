@@ -28,8 +28,8 @@
 </head>
 <body>
     <?php draw_AdminHeader();?>
-    <section id="content">
-        <section id="Rating">
+    <div id="content">
+        <div id="Rating">
             <img src="img/rating.png" alt="logo_rating"> 
             <section id="orderby">
                 <h2>Order appointments by minimum rating:</h2>
@@ -48,8 +48,8 @@
                 <h2>Average rating of all appointments</h2>
                 <p> <?= $average?></p>
             </section>
-        </section>
-    </section>
+        </div>
+    </div>
     <?php draw_footer() ?>
 </body>
 </html>
