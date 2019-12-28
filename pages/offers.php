@@ -21,6 +21,8 @@
     <link href="../css/HeaderStyleAdmin.css" rel="stylesheet">
     <link href="../css/EmployeesStyle.css" rel="stylesheet">
     <link href="../css/ClientsLayout.css" rel="stylesheet">
+    <link href="../css/ResponsiveAdmin.css" rel="stylesheet">
+    <link href="../css/ResponsiveAdminHeader.css" rel="stylesheet">
     <title>Moneiys Bank</title>
 </head>
 <body>
@@ -54,8 +56,8 @@
                 </table>
                 <div id="Clientbutton">
                     <form>
-                        <button type="submit" formaction="newOffer.php">Add Offer</button>
-                        <button type="submit" formaction="deleteOffer.php">Delete Offer</button>
+                        <button type="submit" formaction="newOffer.php#form1">Add Offer</button>
+                        <button type="submit" formaction="deleteOffer.php#form1">Delete Offer</button>
                     </form>
                 </div>
             </section>

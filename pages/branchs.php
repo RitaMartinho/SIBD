@@ -52,6 +52,8 @@
     <link href="../css/BranchsStyle.css" rel="stylesheet">
     <link href="../css/HeaderLayoutAdmin.css" rel="stylesheet"> 
     <link href="../css/HeaderStyleAdmin.css" rel="stylesheet">
+    <link href="../css/ResponsiveAdmin.css" rel="stylesheet">
+    <link href="../css/ResponsiveAdminHeader.css" rel="stylesheet">
     <title>Moneiys Bank</title>
 </head>
 <body>

@@ -19,6 +19,8 @@
     <link href="../css/HeaderStyleAdmin.css" rel="stylesheet">
     <link href="../css/AdminViewLayout.css" rel="stylesheet"> 
     <link href="../css/AdminViewStyle.css" rel="stylesheet">
+    <link href="../css/ResponsiveAdmin.css" rel="stylesheet">
+    <link href="../css/ResponsiveAdminHeader.css" rel="stylesheet">
     <title>Moneiys Bank</title>
 </head>
 <body>
