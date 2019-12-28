@@ -22,7 +22,7 @@
 </head>
 <body>
     <?php draw_header();?>
-    <section id="content">
+    <div id="content">
         <img src="img/bank-account.png" alt="accountlogo"> 
         <section id="accountInfo"> 
             <h2><?=$_SESSION['username']?> account:</h2>
@@ -30,13 +30,13 @@
                 <li> ID: <?=$accountInfo['account_id']?> </li>
                 <li>Balance: <?=$accountInfo['balance']?></li>
                 <li>Type: <?= $accountInfo['type']?></li>
-                <li># Cards: <?=$nCards?></li>
+                <li># Cards: <?=intval($nCards)?></li>
             </ul>
         </section>   
         <nav id="cardInfo">
             <a href="cards.php">See info about my cards</a>
         </nav>
-    </section>
+    </div>
     <?php draw_footer() ?>
     
 </body>

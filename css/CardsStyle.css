@@ -2,22 +2,22 @@ body{
     margin: 0 auto;
     background-color: white;
 }
-body section#content img{
+body div#content img{
     margin: 2em;
     width: 12em;
 }
 
-body section#content section#cardInfo {
+body div#content section#cardInfo {
     display: grid;
     align-items: center;
     text-align: center;
     margin: 2em 0;
     border-right: 2px solid black;
 }
-body section#content section#cardInfo ul{
+body div#content section#cardInfo ul{
     list-style: none;
 }
-body section#content section#cardInfo:last-child {
+body div#content section#cardInfo:last-child {
     border-right: none;
 }
 
@@ -25,4 +25,7 @@ body section#content section#cardInfo:last-child {
 body footer{
     background-color: #D5D5D5;
     padding: 0.2em;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
 }

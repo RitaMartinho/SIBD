@@ -4,28 +4,28 @@ body{
 }
 
 
-body section#content img{
+body div#content img{
     margin: 2em;
     width: 12em;
     height: 12em;
 }
 
-body section#content section#accountInfo {
+body div#content section#accountInfo {
     display: grid;
     align-items: center;
     text-align: center;
 }
 
-body section#content section#accountInfo ul{
+body div#content section#accountInfo ul{
     list-style-type: none;
 }
 
-body section#content nav#cardInfo{
+body div#content nav#cardInfo{
     display: grid;
     align-items: flex-end;
     text-align: center;
 }
-body section#content nav#cardInfo a{
+body div#content nav#cardInfo a{
 
     background:  #96858F;
     border-radius: 10px;

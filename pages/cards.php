@@ -21,7 +21,7 @@
 </head>
 <body>
     <?php draw_header();?>
-    <section id="content">
+    <div id="content">
         <img src="img/cards.png" alt="accountlogo"> 
         <?php $i=1; 
         foreach($cardInfo as $cardInfo) {?>
@@ -33,7 +33,7 @@
                 </ul>
             </section>
         <?php $i++; }?>
-    </section>
+        </div>
     <?php draw_footer() ?>
     
 </body>
