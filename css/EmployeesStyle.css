@@ -20,13 +20,13 @@ body div#content section#ClientsInfo {
 body div#content section#ClientsInfo h2 {
    padding: 0.25em 0;
 }
-body div#content section#Client table {
+body div#content div#Client table {
     border-collapse: collapse;
 }
-body div#content section#Client table th{
+body div#content div#Client table th{
     border: 1px solid black;
 }
-body div#content section#Client table td{
+body div#content div#Client table td{
     padding: 0.5em;;
     border: 1px solid black;
 } 

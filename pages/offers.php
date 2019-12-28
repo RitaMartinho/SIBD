@@ -25,8 +25,8 @@
 </head>
 <body>
     <?php draw_AdminHeader();?>
-    <section id="content">
-        <section id="Client">
+    <div id="content">
+        <div id="Client">
             <img src="img/offer.png" alt="offers_logo"> 
             <section id="ClientsInfo">
                 <h2>Offers Available:</h2>
@@ -52,15 +52,15 @@
                             </tr>
                         <?php } ?>
                 </table>
-                <section id="Clientbutton">
+                <div id="Clientbutton">
                     <form>
                         <button type="submit" formaction="newOffer.php">Add Offer</button>
                         <button type="submit" formaction="deleteOffer.php">Delete Offer</button>
                     </form>
-                </section>
+                </div>
             </section>
-        </section>
-    </section>
+        </div>
+    </div>
     <?php draw_footer() ?>
 </body>
 </html>
