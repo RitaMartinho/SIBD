@@ -6,14 +6,14 @@
         display: block;
     }
     
-    body > header div#username{
+    body > header div#logout{
         display: flex;
         flex-direction: row-reverse;
         padding: 0em;
-        font-size: 0.6em;
+        font-size: 0.7em;
     }
 
-    body >header div#username p{
+    body >header div#logout p{
         padding: 1em;
     }
 

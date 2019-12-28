@@ -3,7 +3,7 @@
 @media (max-width: 30em){
 
     body div#content{
-        margin-top: 26em;
+        margin-top: 27em;
         font-size: 0.8em;
     }
 
@@ -16,8 +16,6 @@
     body div#content section#welcome h2{
         padding-left: 0;
     }
-
-
 
     body div#content section#welcome img{
         align-self: center;
@@ -63,9 +61,4 @@
 
 }
 
-@media (max-width: 55em){
 
-    body div#content{
-        margin-top: 14em;
-    }
-}

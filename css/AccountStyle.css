@@ -32,7 +32,8 @@ body div#content nav#cardInfo a{
     margin: 0 8em;
     text-decoration: none;
     color: black;
-    padding: 1em 0;
+    padding: 1em;
+    border: 1em;
     border:none;
     cursor: pointer;
 
