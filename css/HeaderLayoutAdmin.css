@@ -15,7 +15,7 @@ body header section#logo{
     grid-area: Title;
 } 
 
-boyd header section#logout{
+body header section#logout{
     grid-area: Logout;
 }
 

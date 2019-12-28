@@ -20,13 +20,13 @@ body header section#username{
 
 body header nav#operations{
     grid-area: Nav;
-    display: grid;
-    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
-    grid-template-areas:"AccountLink MoneyLink AppointmentLink PaymentLink";
+    display: flex;
+    flex-direction: row;
 }
 
-body header nav#operations a#SeeAccount{
-    grid-area: AccountLink;
+body header nav#operations a{
+    display: block;
+    flex: 1;
 }
 
 
