@@ -36,7 +36,7 @@
             Last Name: <input type="text" name="lastName">
         </label>
         <label>
-            Birthday: <input type="date" name="birthday" placeholder="YYYY-MM-DD">
+            Birthday: <input type="date" name="birthday">
         </label>
         <label>
             TAX ID: <input type="text" name="taxID">

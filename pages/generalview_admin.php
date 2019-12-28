@@ -23,7 +23,7 @@
 </head>
 <body>
     <?php draw_AdminHeader();?>
-    <section id="content">
+    <div id="content">
         <section id="welcome">
             <h2>Welcome admin</h2>
             <img src="img/admin.png" alt="welcome_admin"> 
@@ -32,7 +32,7 @@
                 <li>Keep track of your bank's quality</li>
             </ul>
         </section>
-    </section>
+    </div>
     <?php draw_footer() ?>
 
 </body>

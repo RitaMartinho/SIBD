@@ -35,10 +35,10 @@ function draw_footer(){ ?>
             <h1><a href="generalview_admin.php"> Moneiys Bank</a></h1>
             <img src="img/bank_logo.png" alt="bank_logo">
         </section>
-        <section id="logout">
+        <div id="logout">
             <?= $_SESSION['username'] ?>
             <a href="../actions/action_logout.php">Logout</a>
-        </section>
+        </div>
         <nav id="operations">
                 <a href="branchs.php" id="Branchs">Branchs</a>
                 <a href="clients.php" id="Clients">Clients</a>

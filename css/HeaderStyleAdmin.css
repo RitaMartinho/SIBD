@@ -27,12 +27,12 @@ body header section#logo img{
 }
 
 /*LOGOUT*/
-body header section#logout{
+body header div#logout{
     display: inline-block;
     text-align: right;
     padding: 1em 0em;
 }
-body header section#logout a{
+body header div#logout a{
 
     font-weight: bold;
 } 
