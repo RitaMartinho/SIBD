@@ -1,30 +1,6 @@
-/* responsive */
+/* responsive user view */
 
 @media (max-width: 30em){
-
-    body > header{
-        display: block;
-    }
-    
-    body > header div#username{
-        display: flex;
-        flex-direction: row-reverse;
-        padding: 0em;
-        font-size: 0.6em;
-    }
-
-    body >header div#username p{
-        padding: 1em;
-        font-size: 0.7rem;
-    }
-
-    body > header nav#operations{
-
-        display: block;
-        color: white;
-        background-color: white;
-    }
-
 
     body div#content{
         margin-top: 25em;
@@ -63,26 +39,4 @@
     body div#content section#welcome img{
         align-self: center;
     }
-
-    body > header section#logo{
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    body > header section#logo h1{
-        display: block;
-        text-align: center;
-        padding:0em;
-        font-size: 1.0em;
-
-    }
-
-    body > header section#logo img{
-        display: block;
-        flex: 0.4;
-        padding: 0.5em;
-    }
-
 }

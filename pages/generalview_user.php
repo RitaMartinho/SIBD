@@ -22,7 +22,8 @@
     <link href="../css/HeaderStyle.css" rel="stylesheet">
     <link href="../css/UserViewStyle.css" rel="stylesheet"> 
     <link href="../css/UserViewLayout.css" rel="stylesheet">
-    <link href="../css/responsiveUserView.css" rel="stylesheet">
+    <link href="../css/ResponsiveUserView.css" rel="stylesheet">
+    <link href="../css/ResponsiveUserHeader.css" rel="stylesheet">
     <title>Moneiys Bank</title>
 </head>
 <body>
