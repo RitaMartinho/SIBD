@@ -11,18 +11,30 @@
     if(!isset($_SESSION['username']) || !verifyAdmin($_SESSION['username']) ) {
         header('Location: login.php');
     }
+    
+    if (isset($_GET['page']))
+        $page = $_GET['page'];
+    else $page = 1;
+    
+    if (isset($_GET['order']) && isset($_GET['criteria'])) {
+        $order = $_GET['order'];
+        $criteria = $_GET['criteria'];
+        $branches = getBranchAdmin($criteria, $page, $order);
+    } else {
+        $branches = getAllBranches();
+    }
 
-    function drawPagination($total_branchs, $branchs_per_page){
+    function drawPagination($total_branchs, $branchs_per_page, $criteria, $order){
         for( $i= 1; $i< intval($total_branchs)/intval($branchs_per_page); $i++){
             
             ?>
-            <a href="list_branch.php?page=<?=$i?>"><?=$i?></a>
+            <a href="?page=<?=$i?>&criteria=<?=$criteria?>&order=<?=$order?>"><?=$i?></a>
             <?php  
         }
 
         if((intval($total_branchs)%intval($branchs_per_page))!=0){
             ?>
-            <a href="list_branch.php?page=<?=$i?>"><?=$i?></a>
+            <a href="?page=<?=$i?>&criteria=<?=$criteria?>&order=<?=$order?>"><?=$i?></a>
             <?php
         }
 
@@ -46,42 +58,40 @@
     <div id="content">
         <img src="img/branch.png" alt="branchlogo">
         <div id="branchs">
-            <form method="GET" id="form1">
-                    <label>Order by:
-                        <select id="criteria">
-                            <option value="" disabled selected >None</option>
-                            <option value="Number of employees">Number of employees</option>
-                            <option value="Number of clients">Number of clients</option>
-                            <option value="Number of rooms">Number of rooms</option>
-                        </select>  
-                    </label> 
-                    <select id="order">
-                            <option value="" disabled selected >None</option>
-                            <option value="ASC">ASC</option>
-                            <option value="DESC">DESC</option>                
-                    </select>
-                    <button form="form1">See branchs</button>
-                </form>
-
-                <div id="displayed">
+            <form method="GET" action="branchs.php" id="form1">
+                <label>Order by:
+                    <select name="criteria" id="criteria">
+                        <option value="" disabled selected >None</option>
+                        <option value="Number of employees">Number of employees</option>
+                        <option value="Number of clients">Number of clients</option>
+                        <option value="Number of rooms">Number of rooms</option>
+                    </select>  
+                </label> 
+                <select name="order" id="order">
+                        <option value="" disabled selected >None</option>
+                        <option value="ASC">ASC</option>
+                        <option value="DESC">DESC</option>                
+                </select>
+                <button form="form1">See branchs</button>
+            </form>
+            <div id="displayed">
+                <?php foreach($branches as $branch) {?>
                     <ul>
-                        <li>BranchID</li>
-                        <li>Address</li>
-                        <li>Number of employees</li>
-                        <li>Number of clients</li>
-                        <li>Number of rooms</li>
+                        <li>BranchID: <?= $branch['branch_id']?></li>
+                        <li>Address: <?= $branch['address']?></li>
+                        <li>Number of employees: <?= $branch['nrEmployees']?></li>
+                        <li>Number of clients: <?= $branch['nrClients']?></li>
+                        <li>Number of rooms: <?= $branch['nrRooms']?></li>
                     </ul>
-    
-                    <div class="pagination">
-                        
-                        <?php
-                        drawPagination($total_branchs, $branchs_per_page);
-                        ?>
-                    </div>
-
-                </div>
+                <?php } ?>
+            </div>
         </div>
     </div>
+    <?php if(isset($_GET['order']) && isset($_GET['criteria'])) {?>
+        <div class="pagination">
+            <?php drawPagination($total_branchs, $branchs_per_page, $criteria, $order); ?>
+        </div>
+    <?php } ?>
     <?php draw_footer() ?>
 
 </body>

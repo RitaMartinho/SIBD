@@ -122,12 +122,46 @@
     }
 
     function getAllBranches(){
-
+ 
         global $db;
 
-        $stmt=$db->prepare('SELECT address FROM branch');
+        $query = 'SELECT branch_id,
+        address,
+        nrEmployees,
+        nrClients,
+        nrRooms
+        FROM branch
+        JOIN
+        (
+            SELECT count(*) AS nrEmployees,
+                employee_branch_id
+            FROM employee
+            GROUP BY employee_branch_id
+            
+        )
+        ON employee_branch_id = branch_id
+        JOIN
+        (
+            SELECT count(*) AS nrClients,
+                client_branch
+            FROM client
+            GROUP BY client_branch
+            
+        )
+        ON client_branch = branch_id
+        JOIN
+        (
+            SELECT count(*) AS nrRooms,
+                room_branch
+            FROM room
+            GROUP BY room_branch
+            
+        )
+        ON room_branch = branch_id ';
+        $stmt=$db->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll();
+        
     }
 
     //WORKS

@@ -9,6 +9,9 @@ body div#content img{
     width: 12em;
 }
 
+body div.pagination{
+    text-align: center;
+}
 
 /* FOOTER */
 body footer{
