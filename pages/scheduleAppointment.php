@@ -19,12 +19,13 @@
 </head>
 <body>
     <?php draw_header();?>
-    <section id="content">
+    <div id="content">
         <img src="img/appointment.png" alt="accountlogo"> 
-        <section id="AppointmentInfo">  
+        <div id="AppointmentInfo">  
             <form id="form1" action="../actions/action_scheduleAppointment.php" method="get">
                     <label>Choose a day: <input type="date" name="day" required></label> 
                     <label>Choose a start-hour:<select name="startHour" required>
+                        <option value="" disabled selected>--:--</option>
                         <option value="14:00">14:00</option>
                         <option value="14:30">14:30</option>
                         <option value="15:00">15:00</option>
@@ -33,7 +34,8 @@
                         <option value="16:30">16:30</option>
                         <option value="17:00">17:00</option>
                         <option value="17:30">17:30</option>
-                    </select>  
+                    </select>
+                    </label>  
                     <label>Choose an employee:
                         <select name="employee" required>
                             <option value="" disabled selected >List Employes</option>
@@ -43,9 +45,9 @@
                         </select>   
                     </label>
             </form>
-            <section id="button">
+            <div id="button">
                 <button type="submit" form="form1">Schedule</button>
-            </section>                
+            </div>                
 	    <?php if (isset($_SESSION['message'])) { ?>
 	    <div class="message" style="color: <?php $type=strpos($_SESSION['message'],"already");
                             if ($type !== false){ 
@@ -56,8 +58,8 @@
             <?php unset($_SESSION['message']); } ?> 
             <p>All appointments have a duration of 30min!</p>
             
-        </section>
-    </section>
+        </div>
+    </div>
     <?php draw_footer() ?>
 </body>
 </html>

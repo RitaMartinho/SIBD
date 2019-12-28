@@ -2,19 +2,19 @@ body{
     margin: 0 auto;
     background-color: #edeff0;   
 }
-body section#content img{
+body div#content img{
     margin: 2em;
     width: 12em;
 }
-body section#content section#AppointmentInfo {
+body div#content div#AppointmentInfo {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-body section#content section#AppointmentInfo h2 {
+body div#content div#AppointmentInfo h2 {
     padding: 0.25em 0;
  }
- body section#content section#AppointmentInfo form label{
+ body div#content div#AppointmentInfo form label{
      display: block;
  }
 body .message{
