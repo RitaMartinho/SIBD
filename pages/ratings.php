@@ -4,6 +4,10 @@
     include_once('../includes/sessions.php');
     include_once('../database/rating.php');
 
+    if(!isset($_SESSION['username']) || !verifyAdmin($_SESSION['username']) ) {
+        header('Location: login.php');
+    }
+
     $average=getAVGRatings();
     $average=sprintf('%0.2f', $average);
 

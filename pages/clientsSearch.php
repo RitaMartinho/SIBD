@@ -4,6 +4,10 @@
     include_once('../includes/sessions.php');
     include_once('../database/client.php');
 
+    if(!isset($_SESSION['username']) || !verifyAdmin($_SESSION['username']) ) {
+        header('Location: login.php');
+    }
+
     $age=array();
     $info=getClientInfo($_GET['firstName'],$_GET['lastName']);
    

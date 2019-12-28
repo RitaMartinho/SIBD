@@ -4,6 +4,10 @@
     include_once('../includes/sessions.php');
     include_once('../database/employee.php');
 
+    if(!isset($_SESSION['username']) || !verifyAdmin($_SESSION['username']) ) {
+        header('Location: login.php');
+    }
+
     $info=getInfoEmployee($_GET['firstName'], $_GET['lastName']);
 ?>
 
