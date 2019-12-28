@@ -2,19 +2,19 @@ body{
     margin: 0 auto;
     background-color: #edeff0;   
 }
-body section#content img{
+body div#content img{
     margin: 2em;
     width: 12em;
 }
-body section#content section#PaymentInfo {
+body div#content section#PaymentInfo {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-body section#content section#PaymentInfo h2 {
+body div#content section#PaymentInfo h2 {
     padding: 0.25em 0;
  }
- body section#content section#PaymentInfo form label{
+ body div#content section#PaymentInfo form label{
      display: block;
  }
 body .message{

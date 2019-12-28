@@ -17,7 +17,7 @@
 </head>
 <body>
     <?php draw_header(); ?>
-    <section id="content">
+    <div id="content">
         <img src="img/pay.png" alt="accountlogo"> 
         <section id="PaymentInfo"> 
             <h2>Make a payment</h2>
@@ -25,16 +25,16 @@
                 <label>To: <input type="text" name="destiny" required></label> 
                 <label>How much:<input type="text" name="quantity" required></label>
             </form>
-            <section id="button">                
+            <div id="button">                
                 <button type="submit" form="form1">Pay</button>
-            </section>
+            </div>
             <?php if (isset($_SESSION['message'])) { ?>
                 <div class="message">
                     <?=$_SESSION['message']?>
                 </div>
             <?php unset($_SESSION['message']); } ?>   
         </section>
-    </section>
+    </div>
     <?php draw_footer() ?>
 </body>
 </html>
