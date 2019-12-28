@@ -34,7 +34,7 @@
 </head>
 <body>
    <?php draw_header();?>
-    <section id="content">
+    <div id="content">
         <section id="welcome">
             <h2>Welcome to your personal client page!</h2>
             <img src="img/welcome.png" alt="welcome"> 
@@ -49,29 +49,28 @@
         </section>
         <section id="about">
             <h2>About Moneiys Bank</h2>
-            <article id="aboutBank">
+            <div id="aboutBank">
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
                     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
                     dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
-               
-            </article>
+            </div>
         </section>
         <section id="aboutBranch">
             <h2>About your branch</h2>
-            <article id="aboutBranchList">
+            <div id="aboutBranchList">
                 <ul>
                     <li><b>Chief:</b><?= " ".$Chief['first_name'] ." " .$Chief['last_name']?></li>
                     <li><b>Address:</b><?=" ".$Address?></li>
                     <li><b>Number of employees:</b><?=" ".$NrEmployees['nrEmployees'] ?></li>
                 </ul>
-            </article>
+            </div>
             <?php
             drawIFrame($Address);
             ?>
         </section>
         <section id="offers">
             <h2>Your bank gives you amazing offers</h2>
-            <section id="listOffers">
+            <div id="listOffers">
                 <table>
                     <tr>
                         <th>Insurer</th><th>Insurer</th>
@@ -85,10 +84,10 @@
                         <td>Total</td><td><?=$nrOffers?></td>
                     </tr>
                 </table>
-            </section>
+            </div>
             <img src="img/offer.png" alt="offer">
         </section>
-    </section>
+    </div>
     <?php draw_footer() ?>
 
 </body>
