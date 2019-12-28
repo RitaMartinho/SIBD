@@ -21,11 +21,11 @@ boyd header section#logout{
 
 body header nav#operations{
     grid-area: Nav;
-    display: grid;
-    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
-    grid-template-areas:"BranchsLink ClientsLink EmployeesLink OffersLink RatingsLink";
+    display: flex;
+    flex-direction: row;
 }
 
-body header nav#operations a#Branchs{
-    grid-area: BranchsLink;
+body header nav#operations a{
+    display: block;
+    flex: 1;
 }
