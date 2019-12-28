@@ -25,8 +25,8 @@
 </head>
 <body>
     <?php draw_AdminHeader();?>
-    <section id="content">
-        <section id="Client">
+    <div id="content">
+        <div id="Client">
             <img src="img/offer.png" alt="welcome_admin"> 
             <section id="ClientsInfo">
                 <h2>Offers Available:</h2>
@@ -45,7 +45,7 @@
                         <?php } ?>
                 </table>
             </section>
-            <section id="SearchResults">
+            <div id="SearchResults">
                 <form id="form1" action="../actions/action_addOffer.php">
                     <label>
                         <input type="text" name="Insurer" placeholder="Insurer">
@@ -57,12 +57,12 @@
                         <input type="text" name="CardType" placeholder="Type of Card">
                     </label>
                 </form>
-                <section id="Clientbutton">
+                <div id="Clientbutton">
                     <button type="submit" form="form1">Add Offer</button>  
-                </section>
-            </section>
-        </section>
-    </section>
+                </div>
+            </div>
+        </div>
+    </div>
     <?php draw_footer() ?>
 </body>
 </html>
