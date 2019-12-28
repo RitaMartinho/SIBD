@@ -3,6 +3,7 @@
     include_once('../database/connection.php');
     include_once('../includes/sessions.php');
     include_once('../database/branch.php');
+    include_once('../database/user.php');
 
     $total_branchs=getNumberOfBranchs();
     $branchs_per_page=2;
@@ -10,7 +11,7 @@
     if(!isset($_SESSION['username']) || !verifyAdmin($_SESSION['username']) ) {
         header('Location: login.php');
     }
-    
+
     function drawPagination($total_branchs, $branchs_per_page){
         for( $i= 1; $i< intval($total_branchs)/intval($branchs_per_page); $i++){
             

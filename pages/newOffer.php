@@ -3,6 +3,7 @@
     include_once('../database/connection.php');
     include_once('../includes/sessions.php');
     include_once('../database/offers.php');
+    include_once('../database/user.php');
 
     if(!isset($_SESSION['username']) || !verifyAdmin($_SESSION['username']) ) {
         header('Location: login.php');
