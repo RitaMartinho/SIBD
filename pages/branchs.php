@@ -20,6 +20,7 @@
         $order = $_GET['order'];
         $criteria = $_GET['criteria'];
         $branches = getBranchAdmin($criteria, $page, $order);
+        
     } else {
         $branches = getAllBranches();
     }
@@ -62,9 +63,9 @@
                 <label>Order by:
                     <select name="criteria" id="criteria">
                         <option value="" disabled selected >None</option>
-                        <option value="Number of employees">Number of employees</option>
-                        <option value="Number of clients">Number of clients</option>
-                        <option value="Number of rooms">Number of rooms</option>
+                        <option value="nrEmployees">Number of employees</option>
+                        <option value="nrClients">Number of clients</option>
+                        <option value="nrRooms">Number of rooms</option>
                     </select>  
                 </label> 
                 <select name="order" id="order">
