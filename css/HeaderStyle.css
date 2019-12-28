@@ -25,16 +25,20 @@ body header section#logo img{
     width: 3.5em;
 }
 
-/* USERNAME*/
-body header div#username{
-    display: inline-block;
-    text-align: right;
-    padding: 1em 0em;
+body > header div#username{
+    display: flex;
+    flex-direction: row-reverse;
 }
-body header div#username a{
 
+body >header div#username p{
+    padding: 1em;
+}
+body >header div#username a{
     font-weight: bold;
-} 
+    font-size: 1.5em;
+    padding: 1em;
+}
+
 
 /* NAV*/
 body header nav a{
