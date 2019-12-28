@@ -27,15 +27,21 @@ body header section#logo img{
 }
 
 /*LOGOUT*/
-body header div#logout{
-    display: inline-block;
-    text-align: right;
-    padding: 1em 0em;
-}
-body header div#logout a{
 
+body > header div#logout{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1em 0em;
+
+}
+body >header div#logout p{
+    padding: 0.4em;
+}
+body >header div#logout a{
     font-weight: bold;
-} 
+    font-size: 1.5em;
+    padding: 0.4em;
+}
 
 /* NAV*/
 body header nav a{

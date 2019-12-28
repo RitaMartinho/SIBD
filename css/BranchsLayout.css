@@ -1,5 +1,5 @@
 body div#content{
-    margin-top: 10em;
+    margin-top: 12em;
     display: grid;
     grid-template-columns: 0.25fr 1fr;
     grid-template-areas:"image data";

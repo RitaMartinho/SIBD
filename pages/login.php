@@ -10,6 +10,7 @@
 <body>
     <header>
         <h1>Welcome to Moneiys Bank</h1>
+        <img src="img/bank_logo.png" alt="logo">
     </header>
     <form action="../actions/action_login.php" method="post">
         <h3>Log in</h3>

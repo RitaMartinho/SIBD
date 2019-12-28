@@ -12,6 +12,9 @@
     <link href="../css/HeaderStyle.css" rel="stylesheet">
     <link href="../css/SendMoneyLayout.css" rel="stylesheet">
     <link href="../css/SendMoneyStyle.css" rel="stylesheet"> 
+    <link href="../css/ResponsiveUserHeader.css" rel="stylesheet">
+    <link href="../css/ResponsiveAccount.css" rel="stylesheet">
+
     <title>Moneiys Bank</title>
 </head>
 <body>

@@ -23,6 +23,8 @@
     <link href="../css/HeaderStyleAdmin.css" rel="stylesheet">
     <link href="../css/EmployeesStyle.css" rel="stylesheet">
     <link href="../css/RatingsLayout.css" rel="stylesheet">
+    <link href="../css/ResponsiveAdmin.css" rel="stylesheet">
+    <link href="../css/ResponsiveAdminHeader.css" rel="stylesheet">
     <title>Moneiys Bank</title>
 </head>
 <body>

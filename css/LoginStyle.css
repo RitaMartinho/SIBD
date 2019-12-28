@@ -7,6 +7,14 @@ body > header{
     padding-left: 1em;
     border-bottom: grey;
     border-bottom-style: solid;
+    display: flex;
+    flex-direction: row;
+}
+
+body > header img{
+    width: 6em;
+    height: 6em;
+    padding: 1em;
 }
 
 body .message{

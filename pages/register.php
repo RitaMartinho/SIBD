@@ -18,6 +18,7 @@
 <body>
     <header>
         <h1>Welcome to Moneiys Bank</h1>
+        <img src="img/bank_logo.png" alt="logo">
     </header>
     <form action='../actions/action_register.php' method='post'>
     <h3>Register</h3>
