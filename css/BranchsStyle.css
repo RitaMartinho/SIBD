@@ -4,7 +4,7 @@ body{
 }
 
 
-body section#content img{
+body div#content img{
     margin: 2em;
     width: 12em;
 }

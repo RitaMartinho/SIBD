@@ -43,9 +43,9 @@
 </head>
 <body>
     <?php draw_AdminHeader();?>
-    <section id="content">
+    <div id="content">
         <img src="img/branch.png" alt="branchlogo">
-        <section id="branchs">
+        <div id="branchs">
             <form method="GET" id="form1">
                     <label>Order by:
                         <select id="criteria">
@@ -63,7 +63,7 @@
                     <button form="form1">See branchs</button>
                 </form>
 
-                <section id="displayed">
+                <div id="displayed">
                     <ul>
                         <li>BranchID</li>
                         <li>Address</li>
@@ -79,9 +79,9 @@
                         ?>
                     </div>
 
-                </section>
-        </section>
-    </section>
+                </div>
+        </div>
+    </div>
     <?php draw_footer() ?>
 
 </body>
