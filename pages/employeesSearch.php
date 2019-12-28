@@ -50,7 +50,7 @@
             </section>
             <div id="SearchResults">
                 <?php if (isset($_SESSION['message'])) { ?>
-                    <div class="message">
+                    <div class="message" style="padding-left: 6em;padding-top: 6em;width: 50%; color: red">
                         <?=$_SESSION['message']?>
                     </div>
                 <?php unset($_SESSION['message']); } 
@@ -65,6 +65,11 @@
                         <li><b>Branch:</b> <?=$infoEmployee['branch']?></li>
                         <li><b>Employee ID:</b> <?=$infoEmployee['employee_id']?></li>   
                     </ul>
+                    <img src=<?php if( file_exists("../database/images/employees/small/".$infoEmployee['employee_id'].".jpg")) {
+                                        echo ("../database/images/employees/small/".$infoEmployee['employee_id'].".jpg");
+                                    } else echo("../database/images/employeepic.png"); ?>
+                                    
+                        width="150" height="150" alt="Employee picture">
 
                     <form id="form2" action="../actions/action_removeEmployee.php" method="get">
                        <input type="hidden" name="id" value="<?=$infoEmployee['employee_id']?>">

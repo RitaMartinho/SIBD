@@ -41,7 +41,7 @@
                 </div>
             </section>
             <div id="SearchResults">
-                <form id="form2" action="../actions/action_addEmployee.php">
+                <form id="form2" action="../actions/action_addEmployee.php" enctype="multipart/form-data" method="post">
                     <label>
                         <input type="text" name="firstName" placeholder="First Name">
                     </label>
@@ -61,10 +61,12 @@
                     <label>
                         <input type="text" name="phoneNumber" placeholder="PhoneNumber">
                     </label>
+                    Add a photo of the employee
+                    <input type="file" name="employeePic" accept="image/*">
+                    <div id="Button">
+                        <button type="submit">ADD</button>
+                    </div>
                 </form>
-                <div id="Button">
-                    <button type="submit" form="form2">ADD</button>
-                </div>
             </div>
         </div>
     </div>

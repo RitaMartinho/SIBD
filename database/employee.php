@@ -69,6 +69,7 @@
         $stmt=$db->prepare('INSERT INTO employee VALUES(?,?,?,?)');
         $stmt->execute(array($person_id,$phone_number, $branch_id, $room_id));
 
+        return $db->lastInsertId();
     }
 
 

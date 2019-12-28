@@ -3,10 +3,9 @@
     include_once('../includes/sessions.php');
     include_once('../database/employee.php');
     include_once('../database/connection.php');
-    // var_dump($_GET);
-    // die;
-    // fireEmployee(intval($_GET['id']));
-    fireEmployee(10);
+
+    fireEmployee(intval($_GET['id']));
     $_SESSION['message'] = "Employee fired!";
-    header('Location: ../pages/employees.php');
+
+    header('Location: ' . $_SERVER['HTTP_REFERER']);  
 ?>
