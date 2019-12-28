@@ -33,11 +33,12 @@
             </div>
         <?php unset($_SESSION['message']); } ?>
         <section id="welcome">
-            <h1>Welcome to your personal client page!</h1>
+            <h2>Welcome to your personal client page!</h2>
             <img src="img/welcome.png" alt="welcome"> 
             <ul>
-                <li>You can:</li>
-                <li> Manage your account</li>
+                <li><b>You can:</b></li>
+                <li><br></li>
+                <li>Manage your account</li>
                 <li>Send money to another client</li>
                 <li>Schedule an appointment</li>
                 <li>Make a payment</li>
