@@ -12,7 +12,7 @@
     <link href="../css/HeaderStyle.css" rel="stylesheet">
     <link href="../css/SendMoneyLayout.css" rel="stylesheet">
     <link href="../css/SendMoneyStyle.css" rel="stylesheet"> 
-    <title>Bank System</title>
+    <title>Moneiys Bank</title>
 </head>
 <body>
     <?php draw_header();?>

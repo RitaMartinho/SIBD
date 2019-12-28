@@ -35,7 +35,7 @@
     <link href="../css/BranchsStyle.css" rel="stylesheet">
     <link href="../css/HeaderLayoutAdmin.css" rel="stylesheet"> 
     <link href="../css/HeaderStyleAdmin.css" rel="stylesheet">
-    <title>Bank System</title>
+    <title>Moneiys Bank</title>
 </head>
 <body>
     <?php draw_AdminHeader();?>

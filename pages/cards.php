@@ -17,7 +17,7 @@
     <link href="../css/HeaderStyle.css" rel="stylesheet">
     <link href="../css/CardsLayout.css" rel="stylesheet">
     <link href="../css/CardsStyle.css" rel="stylesheet"> 
-    <title>Bank System</title>
+    <title>Moneiys Bank</title>
 </head>
 <body>
     <?php draw_header();?>

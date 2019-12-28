@@ -19,7 +19,7 @@
     <link href="../css/HeaderStyleAdmin.css" rel="stylesheet">
     <link href="../css/AdminViewLayout.css" rel="stylesheet"> 
     <link href="../css/AdminViewStyle.css" rel="stylesheet">
-    <title>Bank System</title>
+    <title>Moneiys Bank</title>
 </head>
 <body>
     <?php draw_AdminHeader();?>

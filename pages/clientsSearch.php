@@ -18,7 +18,7 @@
     <link href="../css/HeaderStyleAdmin.css" rel="stylesheet">
     <link href="../css/ClientsStyle.css" rel="stylesheet">
     <link href="../css/ClientsLayout.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Moneiys Bank</title>
 </head>
 <body>
     <?php draw_AdminHeader();?>
