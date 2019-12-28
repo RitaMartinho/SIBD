@@ -2,13 +2,22 @@ body{
     margin: 0 auto;
     background-color: white;
 }
+body h2{
 
+    padding-left: 2em;
+}
+body p{
+    text-align: justify;
+    text-justify: inter-word;
+}
 body section#offers img{
 
     margin: 2em;
     width: 12em;
 }
-
+body section#welcome li{
+    text-align: center;
+}
 body section#welcome h2{
 
     font-size: 2em;

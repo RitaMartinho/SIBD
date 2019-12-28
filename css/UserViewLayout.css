@@ -1,7 +1,7 @@
 body section#content {
     margin-top: 12em;
     display: grid;
-    grid-template-rows: 0.1fr 1.5fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1.0fr 1fr 1fr 1fr;
     grid-template-areas:"Message"
                         "Welcome" 
                         "About"
@@ -16,6 +16,7 @@ body section#welcome{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "WelcomeText WelcomePic WelcomeList";
     justify-content: center;
+    justify-items: center;
 }
 
 body section#welcome h2{
@@ -25,10 +26,12 @@ body section#welcome h2{
 
 body section#welcome img{
     margin : 1em;
+    padding: 0.5em;
     grid-area: WelcomePic;
 }
 body section#welcome ul{
     margin : 1em;
+    padding-left: 0em;
     grid-area: WelcomeList;
 }
 

@@ -4,6 +4,7 @@ body section#content {
     display: grid;
     grid-template-rows: 1.5fr;
     grid-template-areas:"Welcome";
+    
 }
 
 
@@ -14,18 +15,20 @@ body section#welcome{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "WelcomeText WelcomePic WelcomeList";
     justify-content: center;
+    justify-items: center;
 }
 
 body section#welcome h2{
-    margin : 1em;
+    padding-top: 1em;;
     grid-area: WelcomeText;
 }
 
 body section#welcome img{
-    margin : 1em;
+    margin: 1em;
     grid-area: WelcomePic;
 }
 body section#welcome ul{
-    margin : 1em;
+    padding-top: 1em;
+    padding-left: 1em;
     grid-area: WelcomeList;
 }

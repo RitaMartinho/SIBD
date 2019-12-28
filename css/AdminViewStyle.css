@@ -4,20 +4,20 @@ body{
     background-color: white;
 }
 
-body section#welcome h2{
+body h2{
 
-    font-size: 2em;
-    text-align: center;
-    margin-left: 2em;
-    margin-top: 6em;
+    padding-left: 1em;
 }
 
 body section#welcome img{
 
     width:12em;
-    align-self: center;
 }
 
+body li{
+    list-style: none;
+    text-align: center;
+}
 
 /* FOOTER */
 body footer{
