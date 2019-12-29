@@ -3,7 +3,7 @@
 @media (max-width: 30em){
 
     body div#content{
-        margin-top: 34em;
+        margin-top: 36em;
         font-size: 0.8em;
         display: flex;
         flex-direction: column;

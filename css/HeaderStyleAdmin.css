@@ -31,16 +31,14 @@ body header section#logo img{
 body > header div#logout{
     display: flex;
     flex-direction: row-reverse;
-    padding: 1em 0em;
-
 }
 body >header div#logout p{
-    padding: 0.4em;
+    padding: 1em;
 }
 body >header div#logout a{
     font-weight: bold;
     font-size: 1.5em;
-    padding: 0.4em;
+    padding: 1em;
 }
 
 /* NAV*/
