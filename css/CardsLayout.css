@@ -1,17 +1,14 @@
 body div#content{
     margin-top: 10em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:"CardPic Card1Info Card2Info";
+    grid-template-columns: 0.3fr 1fr;
+    grid-template-areas:"CardPic Card1Info";
 }
 
 /* CARD INFO AREA*/
 body div#content img{
     grid-area: CardPic;
 }
-body div#content>section#cardInfo{
+body div#content>section#cardInfo1{
     grid-area: Card1Info;
-}
-body div#content section#cardInfo:nth-child(3){ /*1st child is img */
-    grid-area: Card2Info;
 }

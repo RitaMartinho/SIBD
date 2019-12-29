@@ -26,16 +26,17 @@
     <?php draw_header();?>
     <div id="content">
         <img src="img/cards.png" alt="accountlogo"> 
-        <?php $i=1; 
-        foreach($cardInfo as $cardInfo) {?>
-            <section id="cardInfo1"> 
-                <h2>Card <?= $i ?>:</h2>
-                <ul>
-                    <li> CVV: <?= $cardInfo['cvv']?></li>
-                    <li>Expiry Date: <?= $cardInfo['expiry_date']?></li>    
-                </ul>
-            </section>
-        <?php $i++; }?>
+        <section id="cardInfo1"> 
+            <?php $i=1; 
+            foreach($cardInfo as $cardInfo) {?>
+            
+                    <h2>Card <?= $i ?>:</h2>
+                    <ul>
+                        <li> CVV: <?= $cardInfo['cvv']?></li>
+                        <li>Expiry Date: <?= $cardInfo['expiry_date']?></li>    
+                    </ul>
+            <?php $i++; }?>
+        </section>
         </div>
     <?php draw_footer() ?>
     

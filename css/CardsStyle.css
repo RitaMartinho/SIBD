@@ -7,25 +7,24 @@ body div#content img{
     width: 12em;
 }
 
-body div#content section#cardInfo {
-    display: grid;
-    align-items: center;
-    text-align: center;
-    margin: 2em 0;
-    border-right: 2px solid black;
-}
-body div#content section#cardInfo ul{
+body div#content section#cardInfo1 {
+    display: flex;
+    flex-direction: row;
+ }
+body div#content section#cardInfo1 ul{
+    flex: 1;
     list-style: none;
+    padding:0.5em;
 }
-body div#content section#cardInfo:last-child {
-    border-right: none;
+
+body div#content section#cardInfo1 h2{
+    padding: 0.5em;
 }
+
 
 /* FOOTER */
 body footer{
     background-color: #D5D5D5;
     padding: 0.2em;
-    bottom: 0;
-    position: fixed;
     width: 100%;
 }
