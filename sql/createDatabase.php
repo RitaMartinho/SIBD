@@ -156,8 +156,8 @@ $db->exec('--
     INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (48, "2001-02-09", 217549, 4);
     INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (49, "2001-11-06", NULL, 4);
     INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (50, "1998-04-19", NULL, 4);
-    INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (53, "19/04/1998", 12345, 3);
-    INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (55, "19/04/1998", 1234, 3);
+    INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (53, "1998-04-19", 12345, 3);
+    INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (55, "1998-04-19", 1234, 3);
     INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (56, "1998-12-06", 123456, 5);
     INSERT INTO client (client_id, birthdate, tax_id, client_branch) VALUES (57, "1998/04/19", 123, 5);
 
