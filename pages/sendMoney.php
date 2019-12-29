@@ -25,7 +25,7 @@
             <h2>Send Money</h2>
             <form id="form1" action="../actions/action_sendMoney.php" method="post">
                 <label> 
-                        To: <input type="text" name="destiny" required>
+                        To: <input type="text" placeholder="Destiny account ID" name="destiny" required>
                 </label>
                 <label >
                         How much?<input type="text" name="quantity" required>  
