@@ -24,7 +24,7 @@
 
 function draw_footer(){ ?>
     <footer>
-        <p>&copy; RitaEGonçalo, 2019</p>
+        <p>&copy; MoneiysBank, 2019</p>
     </footer>
 <?php } ?>
 

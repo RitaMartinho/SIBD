@@ -1,2 +1,0 @@
-# SIBD
-sibd final project
