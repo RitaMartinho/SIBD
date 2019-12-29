@@ -302,7 +302,7 @@ $db->exec('--
     INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (47, "Max", "Nash", "4688  Roane Avenue", "max", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", 0);
     INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (48, "Alexandra", "Mitchell", "1622  Saint Marys Avenue", "alex", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", 0);
     INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (49, "Audrey", "Jackson", "3503  Douglas Dairy Road", "audrey", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", 0);
-    INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (50, "Dylan", "Knox", NULL, "dylan", N"$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", 0);
+    INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (50, "Dylan", "Knox", NULL, "dylan", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", 0);
     INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (51, "Admin", "Admin", "Admin place", "admin", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", 1);
     INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (52, "rita", "martinho", "odf", "rita", "$2y$12$qZSJMEX4n.5p1BHFCqsPEOvJkHxVyk4s.fZXaX5pXKWeozxVJAMzq", NULL);
     INSERT INTO person (person_id, first_name, last_name, address, username, password, admin) VALUES (53, "Rita", "Martinho", "odf", "ritix", "$2y$12$u.TzeMwGO9QJ/NJyYcd6VOzlkaI4EsdmDhguhJOmQXAIqWz8Ku26m", NULL);
