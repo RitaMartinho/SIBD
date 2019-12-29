@@ -5,7 +5,7 @@
             <img src="img/bank_logo.png" alt="bank_logo">
         </section>
         <div id="username">
-            <?= $_SESSION['username'] ?>
+            <p><?= $_SESSION['username'] ?></p>
             <a href="../actions/action_logout.php">Logout</a>
         </div>
         <nav id="operations">
@@ -36,7 +36,7 @@ function draw_footer(){ ?>
             <img src="img/bank_logo.png" alt="bank_logo">
         </section>
         <div id="logout">
-            <?= $_SESSION['username'] ?>
+            <p><?= $_SESSION['username'] ?></p>
             <a href="../actions/action_logout.php">Logout</a>
         </div>
         <nav id="operations">
