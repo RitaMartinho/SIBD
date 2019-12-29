@@ -144,7 +144,7 @@
 
         global $db;
 
-        if(!is_numeric($destiny_account)){ //accepts any destiny account 
+        if(!is_numeric($destiny_account) || !is_numeric($money)){ //accepts any destiny account 
             $_SESSION['message'] = 'Quantity needs to be numeric!';
             return false;
         } 
